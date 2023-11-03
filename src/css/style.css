@@ -57,6 +57,7 @@ body {
    font-weight: 400;
    font-style: normal;
    line-height: normal;
+   background-color: var(--background);
 }
 
 .container-xxl {
@@ -71,7 +72,7 @@ a {
 
 /*--------frame/рамка--start--------*/
 .field-frame {
-   width: 70%;  
+   width: 70%;
    margin: 0 auto;
    background-color: var(--background);
 }
@@ -233,10 +234,12 @@ button:not(:disabled) {
    margin: 0 auto;
    max-width: 1024px;
    padding-top: 16px;
-   background-color: var(--background);
    padding-bottom: 30px;
+   background-image: url(../images/background_prepare-your-trip.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
 }
-#prepareTripUs h2{
+#prepareTripUs h2 {
    max-width: 546px;
    color: #000;
    text-align: center;
@@ -253,9 +256,9 @@ button:not(:disabled) {
    margin-bottom: 14px;
 }
 #prepareTripUs .list-item .list-number {
-   color:  var(--button-blue-2);
+   color: var(--button-blue-2);
    text-align: center;
-   font-size: 64px;   
+   font-size: 64px;
    width: 12%;
 }
 #prepareTripUs .list-item .list-container {
@@ -264,14 +267,14 @@ button:not(:disabled) {
    flex-direction: column;
    padding-left: 10px;
 }
-#prepareTripUs .list-item .list-container h3{
+#prepareTripUs .list-item .list-container h3 {
    font-size: 24px;
-   margin-bottom: 10px; 
+   margin-bottom: 10px;
 }
 #prepareTripUs .list-item .list-container .list-description {
    font-size: 16px;
 }
-#prepareTripUs .field-button{
+#prepareTripUs .field-button {
    margin: 0 auto;
    margin-top: 30px;
 }
@@ -313,12 +316,15 @@ button:not(:disabled) {
 /*------------------------ @ media ----------------------------*/
 
 @media (max-width: 374px) {
+
    /*-- prepare your trip with us start --*/
-   #prepareTripUs h2{     
-      font-size: 30px;   
+   #prepareTripUs h2 {
+      font-size: 30px;
    }
+
    /*-- prepare your trip with us end --*/
 }
+
 @media (min-width: 768px) {
    /*-- loader start --*/
    /*-- loader end --*/
@@ -463,40 +469,50 @@ button:not(:disabled) {
 
    /*-- prepare your trip with us start --*/
    #prepareTripUs {
-      padding-top: 24px;     
+      padding-top: 24px;
    }
-   #prepareTripUs h2{     
-      font-size: 50px;     
+
+   #prepareTripUs h2 {
+      font-size: 50px;
       margin-bottom: 24px;
       padding: 0px 8px 0px 0px;
    }
+
    #prepareTripUs .list-item {
       margin-bottom: 10px;
    }
+
    #prepareTripUs .list-item .list-number {
-      font-size: 100px;   
+      font-size: 100px;
       text-align: start;
    }
+
    #prepareTripUs .list-item .list-number p {
-      padding-left: 8px; 
-      margin-top: -12px;           
+      padding-left: 8px;
+      margin-top: -12px;
    }
+
    #prepareTripUs .list-item .list-number p.first {
-      padding-left: 12px;         
-   } 
-   #prepareTripUs .list-item .list-container {
-     padding-left: 4px;
+      padding-left: 12px;
    }
-   #prepareTripUs .list-item .list-container h3{
+
+   #prepareTripUs .list-item .list-container {
+      padding-left: 4px;
+   }
+
+   #prepareTripUs .list-item .list-container h3 {
       font-size: 40px;
-      margin-bottom: 8px; 
-   }    
+      margin-bottom: 8px;
+   }
+
    #prepareTripUs .list-item .list-container .list-description {
       font-size: 20px;
    }
-   #prepareTripUs .field-button{
+
+   #prepareTripUs .field-button {
       margin-top: 26px;
    }
+
    /*-- prepare your trip with us end --*/
 
 
