@@ -235,9 +235,7 @@ button:not(:disabled) {
    max-width: 1024px;
    padding-top: 16px;
    padding-bottom: 30px;
-   background-image: url(../images/background_prepare-your-trip.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
+   background-color: var(--background);
 }
 #prepareTripUs h2 {
    max-width: 546px;
