@@ -206,6 +206,165 @@ button:not(:disabled) {
 /*-- main-block-TUI end --*/
 
 
+#contacts .registration-form {
+   text-align: center;
+   margin: 0 auto;
+}
+
+#modal-overlay #form-window .input-wrapper,
+#contacts .registration-form .input-wrapper {
+   width: 311px;
+   height: 43px;
+   margin-bottom: 24px;
+}
+
+#modal-overlay #form-window .input-wrapper {
+   width: 327px;
+}
+
+#modal-overlay #form-window .input-wrapper input,
+#contacts .registration-form .input-wrapper input {
+   width: 100%;
+   height: 100%;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 20px;
+   background-color: transparent;
+   padding: 6px 24px;
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#modal-overlay #form-window .input-wrapper input::placeholder,
+#contacts .registration-form .input-wrapper input::placeholder {
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#modal-overlay #form-window button,
+#contacts .registration-form button {
+   margin-bottom: 32px;
+   border: none;
+   height: 50px;
+}
+
+#contacts .registration-form button p {
+   margin: 0;
+}
+
+/* modal windows start */
+#modal-overlay {
+   position: fixed;
+   z-index: 2004;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--color-blue-1);
+   display: none;
+}
+
+#modal-overlay #form-window {
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   width: 343px;
+   height: 291px;
+   padding: 67px 8px 40px 8px;
+   background-color: var(--background);
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 20px;
+}
+
+#modal-overlay #second-window #close-second-window,
+#modal-overlay #form-window #close-form-window {
+   position: absolute;
+   top: 16px;
+   right: 6px;
+   background-color: transparent;
+   border: none;
+   height: 35px;
+   width: 55px;
+}
+
+#modal-overlay #second-window {
+   display: none;
+   text-align: center;
+   width: 343px;
+   height: 185px;
+   padding: 67px 69px 40px 69px;
+   background-color: var(--background);
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-family: JetBrains Mono;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#modal-overlay #second-window p {
+   margin: 0;
+}
+
+#modal-overlay .icon-close {
+   width: 20px;
+   height: 20px;
+   color: var(--text-default);
+}
+
+/* classes for validation errors */
+#contacts .registration-form .error-text,
+#modal-overlay .error-text {
+   color: var(--color-error) !important;
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 18px;
+   margin-left: 12px;
+   margin-top: -2px;
+}
+
+#contacts .registration-form .error-box,
+#modal-overlay .error-box {
+   border: 1px solid var(--color-error) !important;
+   color: var(--color-error) !important;
+}
+
+#contacts .registration-form .error-box::placeholder,
+#modal-overlay .error-box::placeholder {
+   color: var(--color-error) !important;
+}
+
+#modal-overlay .registration-form .input-wrapper input:focus,
+#contacts .registration-form .input-wrapper input:focus {
+   outline: none;
+}
+
+#modal-overlay .registration-form .input-wrapper input:autofill,
+#contacts .registration-form .input-wrapper input:autofill {
+   transition: background-color 5000s ease-in-out 0s;
+   -webkit-text-fill-color: var(--text-default);
+}
+
+.grecaptcha-badge {
+   display: none !important;
+}
+
 /*-- travel search (plugin) start --*/
 #travelSearch {}
 
