@@ -505,7 +505,6 @@ button:not(:disabled) {
       margin-top: 10px;
    }
 
-
    #modal-overlay #second-window #close-second-window,
    #modal-overlay #form-window #close-form-window {
       top: 23px;
