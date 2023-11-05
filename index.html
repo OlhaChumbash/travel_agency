@@ -22,33 +22,7 @@
    <!--"loader start"-->
    <div id="loader"></div>
    <!--"loader end"-->
-   <div class="order-btn" onclick="openForm()">Записатись на заняття</div>
-   <section id="modal-overlay">
-      <form id="form-window" class="registration-form" method="post" accept-charset="utf-8"
-          action="https://intita.com/api/v1/entrant">
-          <svg id="close-form-window" type="button" class="icon-close">
-              <use xlink:href="">XXX</use>
-          </svg>
-          <div class="input-wrapper">
-              <input class="input-name" maxlength="30" type="text" name="first_name" placeholder="Ім’я*" value="">
-              <p class="error-text"></p>
-          </div>
-          <div class="input-wrapper">
-              <input class="phone-number" type="text" name="phone" placeholder="Телефон*" value="">
-              <p class="error-text"></p>
-          </div>
-          <button class="check-form order-btn" type="submit">
-              <p>Записатись на заняття</p>
-          </button>
-          <input type="hidden" name="organization_id" value="115">
-      </form>
-      <div id="second-window">
-          <svg class="icon-close" id="close-second-window" type="button">
-              <use xlink:href="">XXX</use>
-          </svg>
-          <span class="form-name-content"> Дякую! <br>Я зателефоную Вам найближчим часом!</span>
-      </div>
-  </section>
+
    <div id="wrapper" class="container-xxl">
       <!--"header start"-->
       <header id="header"></header>
@@ -57,6 +31,36 @@
       <!--"main-block-TUI start"-->
       <section id="mainTUI"></section>
       <!--"main-block-TUI end"-->
+
+      <!--"form-block start"-->
+      <div class="order-btn" onclick="openForm()">Записатись на заняття</div>
+      <section id="modal-overlay">
+         <form id="form-window" class="registration-form" method="post" accept-charset="utf-8"
+            action="https://intita.com/api/v1/entrant">
+            <span id="close-form-window" type="button" class="icon-close">&#215;</span>
+            <div class="input-wrapper">
+               <input class="input-name" maxlength="30" type="text" name="name" placeholder="Ім’я*" value="">
+               <p class="error-text"></p>
+            </div>
+            <div class="input-wrapper">
+               <input class="phone-number" type="text" name="phone" placeholder="Телефон*" value="">
+               <p class="error-text"></p>
+            </div>
+            <div class="field-button">
+               <div class="img-button">
+                  <button class="text-button check-form order-btn" type="submit">
+                     <p>Залишити заявку</p>
+                  </button>
+               </div>
+            </div>
+            <input type="hidden" name="organization_id" value="115">
+         </form>
+         <div id="second-window">
+            <span id="close-second-window" type="button" class="icon-close">&#215;</span>
+            <span class="form-name-content"> Дякую! <br>Я зателефоную Вам найближчим часом!</span>
+         </div>
+      </section>
+      <!--"form-block end"-->
 
       <!--"travel search (plugin) start"-->
       <section id="travelSearch"></section>
@@ -104,18 +108,17 @@
       crossorigin="anonymous"></script> -->
    <!-- recaptcha -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-   crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
-<!-- recaptcha -->
-<script type="text/javascript" async=""
-   src="https://www.gstatic.com/recaptcha/releases/gEr-ODersURoIfof1hiDm7R5/recaptcha__ru.js"
-   crossorigin="anonymous"
-   integrity="sha384-TLQJmdPnLiPAQT4yetwoOrytOZ6gFBz1x2lmoy5A/z26Q7wBq8QWOoxzSlcobUUY"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LcwRRUaAAAAADavxcmw5ShOEUt1xMBmRAcPf6QP"></script>
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+   <!-- recaptcha -->
+   <script type="text/javascript" async=""
+      src="https://www.gstatic.com/recaptcha/releases/gEr-ODersURoIfof1hiDm7R5/recaptcha__ru.js" crossorigin="anonymous"
+      integrity="sha384-TLQJmdPnLiPAQT4yetwoOrytOZ6gFBz1x2lmoy5A/z26Q7wBq8QWOoxzSlcobUUY"></script>
+   <script src="https://www.google.com/recaptcha/api.js?render=6LcwRRUaAAAAADavxcmw5ShOEUt1xMBmRAcPf6QP"></script>
    <script src="src/js/script.js"></script>
 </body>
 
