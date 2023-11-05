@@ -214,7 +214,7 @@ button:not(:disabled) {
    left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgba(36, 59, 115, 0.90);;
+   background-color: rgba(36, 59, 115, 0.90);   
    display: none;
 }
 
@@ -235,16 +235,18 @@ button:not(:disabled) {
 }
 
 #modal-overlay #form-window .input-wrapper,
-#contacts .registration-form .input-wrapper {
-   width: 313px;
+#form-window .input-wrapper {
+   max-width: 313px;
+   width: 100%;
    height: 42px;
    margin-bottom: 24px;
 }
 
 #modal-overlay #form-window .input-wrapper input,
-#contacts .registration-form .input-wrapper input {
+#form-window .input-wrapper input {
    width: 100%;
    height: 42px;
+   max-width: 337px;
    border: 1px solid var(--color-blue-1);
    border-radius: 20px;
    background-color: transparent;
@@ -255,25 +257,24 @@ button:not(:disabled) {
 }
 
 #modal-overlay #form-window .input-wrapper input::placeholder,
-#contacts .registration-form .input-wrapper input::placeholder {
+#form-window .input-wrapper input::placeholder {
    color: var(--color-black);
    font-family: 'Forum';
    font-size: 16px;
 }
 
 #modal-overlay #second-window #close-second-window,
-#modal-overlay #form-window #close-form-window {  
-    position: absolute;
-    height: 35px;
-    width: 35px;
-    top: 17px;
-    right: 28px;
-    line-height: 20px;
-    font-size: 55px;
-    cursor: pointer;
-    color: var(--button-blue-1);
+#modal-overlay #form-window #close-form-window {
+   position: absolute;
+   height: 35px;
+   width: 35px;
+   top: 17px;
+   right: 28px;
+   line-height: 20px;
+   font-size: 55px;
+   cursor: pointer;
+   color: var(--button-blue-1);
 }
-
 
 #modal-overlay #second-window {
    display: none;
@@ -300,41 +301,43 @@ button:not(:disabled) {
    height: 20px;
    color: var(--text-default);
 }
-#form-window  .field-button .img-button .text-button{
+
+#form-window .field-button .img-button .text-button {
    width: 232px;
    height: 42px;
    font-size: 20px;
 }
-#form-window  .field-button .img-button .text-button p {
+
+#form-window .field-button .img-button .text-button p {
    margin: 0;
 }
 
 /* classes for validation errors */
-#contacts .registration-form .error-text,
+#form-window .error-text,
 #modal-overlay .error-text {
    color: var(--color-error-text) !important;
    font-size: 14px;
-   margin-left: 8px;   
+   margin-left: 8px;
 }
 
-#contacts .registration-form .error-box,
+#form-window .error-box,
 #modal-overlay .error-box {
    border: 1px solid var(--color-error) !important;
    color: var(--color-error) !important;
 }
 
-#contacts .registration-form .error-box::placeholder,
+#form-window .error-box::placeholder,
 #modal-overlay .error-box::placeholder {
    color: var(--color-error) !important;
 }
 
 #modal-overlay .registration-form .input-wrapper input:focus,
-#contacts .registration-form .input-wrapper input:focus {
+#form-window .input-wrapper input:focus {
    outline: none;
 }
 
 #modal-overlay .registration-form .input-wrapper input:autofill,
-#contacts .registration-form .input-wrapper input:autofill {
+#form-window .input-wrapper input:autofill {
    transition: background-color 5000s ease-in-out 0s;
    -webkit-text-fill-color: var(--color-black);
 }
@@ -476,6 +479,44 @@ button:not(:disabled) {
    /*-- main-block-TUI start --*/
    /*-- main-block-TUI end --*/
 
+   /*--form-block start"--*/
+   #modal-overlay #form-window {
+      padding: 85px 12px 94px 12px;
+   }
+
+   #modal-overlay #form-window .input-wrapper input,
+   #form-window .input-wrapper input {
+      padding: 12px 10px 12px 12px;
+      height: 46px;
+   }
+
+   #modal-overlay #form-window .input-wrapper input::placeholder,
+   #form-window .input-wrapper input::placeholder {
+      font-size: 20px;
+   }
+
+   #form-window .field-button .img-button .text-button {
+      width: 272px;
+      height: 49px;
+      font-size: 26px;
+   }
+
+   #form-window .field-button {
+      margin-top: 10px;
+   }
+
+
+   #modal-overlay #second-window #close-second-window,
+   #modal-overlay #form-window #close-form-window {
+      top: 23px;
+      right: 35px;
+   }
+
+   #modal-overlay #form-window .input-wrapper,
+   #form-window .input-wrapper {
+      margin-bottom: 32px;
+   }
+   /*--form-block end"--*/
 
    /*-- travel search (plugin) start --*/
    /*-- travel search (plugin) end --*/
