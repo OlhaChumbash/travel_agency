@@ -57,6 +57,7 @@ body {
    font-weight: 400;
    font-style: normal;
    line-height: normal;
+   background-color: var(--background);
 }
 
 .container-xxl {
@@ -69,13 +70,9 @@ a {
 }
 
 
-
-
-
 /*--------frame/рамка--start--------*/
 .field-frame {
    width: 70%;
-   height: 100vh;
    margin: 0 auto;
    background-color: var(--background);
 }
@@ -313,8 +310,54 @@ button:not(:disabled) {
 
 
 /*-- prepare your trip with us start --*/
-#prepareTripUs {}
-
+#prepareTripUs {
+   font-family: 'Forum';
+   font-weight: 400;
+   margin: 0 auto;
+   max-width: 1024px;
+   padding-top: 16px;
+   padding-bottom: 30px;
+   background-color: var(--background);
+}
+#prepareTripUs h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-bottom: 16px;
+   padding: 0 50px 0 44px;
+   line-height: 1.1;
+}
+#prepareTripUs .list-item {
+   margin: 0 auto;
+   max-width: 730px;
+   display: flex;
+   margin-bottom: 14px;
+}
+#prepareTripUs .list-item .list-number {
+   color: var(--button-blue-2);
+   text-align: center;
+   font-size: 64px;
+   width: 12%;
+}
+#prepareTripUs .list-item .list-container {
+   width: 88%;
+   display: flex;
+   flex-direction: column;
+   padding-left: 10px;
+}
+#prepareTripUs .list-item .list-container h3 {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+#prepareTripUs .list-item .list-container .list-description {
+   font-size: 16px;
+}
+#prepareTripUs .field-button {
+   margin: 0 auto;
+   margin-top: 30px;
+}
 /*-- prepare your trip with us end --*/
 
 
@@ -351,6 +394,16 @@ button:not(:disabled) {
 
 /*=============================================================*/
 /*------------------------ @ media ----------------------------*/
+
+@media (max-width: 374px) {
+
+   /*-- prepare your trip with us start --*/
+   #prepareTripUs h2 {
+      font-size: 30px;
+   }
+
+   /*-- prepare your trip with us end --*/
+}
 
 @media (min-width: 768px) {
    /*-- loader start --*/
@@ -596,6 +649,51 @@ button:not(:disabled) {
 
 
    /*-- prepare your trip with us start --*/
+   #prepareTripUs {
+      padding-top: 24px;
+   }
+
+   #prepareTripUs h2 {
+      font-size: 50px;
+      margin-bottom: 24px;
+      padding: 0px 8px 0px 0px;
+   }
+
+   #prepareTripUs .list-item {
+      margin-bottom: 10px;
+   }
+
+   #prepareTripUs .list-item .list-number {
+      font-size: 100px;
+      text-align: start;
+   }
+
+   #prepareTripUs .list-item .list-number p {
+      padding-left: 8px;
+      margin-top: -12px;
+   }
+
+   #prepareTripUs .list-item .list-number p.first {
+      padding-left: 12px;
+   }
+
+   #prepareTripUs .list-item .list-container {
+      padding-left: 4px;
+   }
+
+   #prepareTripUs .list-item .list-container h3 {
+      font-size: 40px;
+      margin-bottom: 8px;
+   }
+
+   #prepareTripUs .list-item .list-container .list-description {
+      font-size: 20px;
+   }
+
+   #prepareTripUs .field-button {
+      margin-top: 26px;
+   }
+
    /*-- prepare your trip with us end --*/
 
 
