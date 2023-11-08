@@ -187,19 +187,101 @@ button:not(:disabled) {
 
 /*===================== mobile version 375px ===================== */
 /*-- loader start --*/
+
 #loader {}
 
 /*-- loader end --*/
 
 
 /*-- header start --*/
+ .container-xxl{
+   padding: 0px!important ;
+}
 #header {}
 
 /*-- header end --*/
 
 
 /*-- main-block-TUI start --*/
-#mainTUI {}
+
+#mainTUI .wraper-main{
+   width: 100%;
+}
+#mainTUI .conteiner{
+   background-image: url(../images/main_init_mobile-min.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+#mainTUI .title{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 44px 30.5px;
+}
+#mainTUI .title-h1{
+   margin: 67px 0 60px 0;
+   width: 320px;
+   color: white;
+   font-family: Genos;
+   font-size: 64px;
+   font-weight: 700;
+   line-height: 77px;
+   letter-spacing: 0em;
+   text-align: center;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+   
+
+}
+#mainTUI .title-p{
+   color: white;
+   margin: 0 0 24px 0;
+   font-family: Montserrat;
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 29px;
+   letter-spacing: 0em;
+   text-align: left;
+}
+#mainTUI .box-button {
+   border: 1px solid #243B73;
+   padding: 1px ;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   margin: 36px 0;
+   min-width: 310px;
+   text-align: center;
+}
+#mainTUI .button-main {
+   background: none;
+   border: none;
+   color: #243B73;
+   font-family: Montserrat;
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 24px;
+   letter-spacing: 0em;
+   text-align: center;
+
+}
+#mainTUI .div-icons {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   min-width: 265px;
+   margin: 32px 0 0 0;
+}
+#mainTUI .icons{
+   width: 36px;
+   height: 36px;
+   text-align: center;
+   margin: 0 16px;
+}
+#mainTUI .sharing-box{
+   display: none;
+}
+
 
 /*-- main-block-TUI end --*/
 
@@ -624,7 +706,108 @@ button:not(:disabled) {
 
 
    /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
+   #mainTUI .conteiner{
+      position: relative;
+   }
+   #mainTUI .title{
+      padding: 45px 30.5px;
+   }
+   #mainTUI .title-h1{
+      font-family: Genos;
+      font-size: 97px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 500px;
+   }
+   #mainTUI .title-p{
+      margin: -31px 0 54px 0;
+   }
+   #mainTUI .div-icons{
+      display: flex;
+      min-width: 0!important;
+      position: absolute;
+      top: 20%;
+      left: 2.5%;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   #mainTUI .icons{
+      text-align: center;
+      margin: 13px 0;
+   }
+   #mainTUI .icons:nth-of-type(1){
+      order: 4;
+   }
+   #mainTUI .icons:nth-of-type(2){
+      order: 5;
+   }
+   #mainTUI .icons:nth-of-type(3){
+      order: 3;
+   }
+   #mainTUI .icons:nth-of-type(4){
+      order: 5;
+   }
+   #mainTUI .icons:nth-of-type(5){
+      order: 1 ;
+   }
+   #mainTUI .border-box-top{
+      width: 2px;
+      height: 78px;
+      background: #D9D9D9;
+      margin: -25px 0 0 20px;
+   }
+   #mainTUI .border-box-bottom{
+      width: 2px;
+      height: 75px;
+      background: #D9D9D9;
+      order: 6;
+      margin: -9px 0 0 19px;
+   }
+   #mainTUI .box-button{
+      margin: -10px 0 0 0 ;
+      width: 310px;
+      height: 50px;
+   }
+   #mainTUI .button-main{
+      color: var(--blue-1, #243B73);
+      font-family: Forum;  
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+   }
+   #mainTUI .sharing-box {
+      display: flex;
+      min-width: 0!important;
+      position: absolute;
+      top: 47%;
+      right: 2.8%;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   #mainTUI .sharing {
+      margin: 0 0 55px 0;
+   }
+   #mainTUI .twitter{
+      margin-right: 10px;
+   }
+   #mainTUI .sharing a{
+      display: inline-block;
+      transition: transform 0.3s ease;
+   }
+   #mainTUI .sharing a:hover{
+        transform: scale(1.6);  
+   }
+   .icons a{
+      display: inline-block;
+      transition: transform 0.3s ease;
+   }
+   .icons a:hover{
+      transform: scale(1.6);  
+   }
+   
+/*-- main-block-TUI end --*/
 
 
    /*-- travel search (plugin) start --*/

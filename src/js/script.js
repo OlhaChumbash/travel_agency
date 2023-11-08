@@ -111,18 +111,15 @@ elem.addEventListener("click", (event) => {
    if (checkName() && checkPhone()) {
        scrollControllerModal.disabledScroll();
        isFormValid = true;
+      
    }
 })
 ); // close the second window
-document
-.getElementById("close-second-window")
-.addEventListener("click", () => {
+document.getElementById("close-second-window").addEventListener("click", () => {
    document.getElementById("second-window").style.display = "none";
    document.getElementById("modal-overlay").style.display = "none";
    // field clearing
-   document
-       .querySelectorAll(".registration-form input")
-       .forEach((elem) => (elem.value = ""));
+   document.querySelectorAll(".registration-form input").forEach((elem) => (elem.value = ""));
    location.reload(); // update
 });
 // phone number mask
@@ -130,17 +127,17 @@ jQuery(".phone-number").inputmask({
 mask: "+38 (999) 999-99-99",
 greedy: false,
 });
+
 // reCAPTCHA
 listenSubmit();
-function listenSubmit() {
+function listenSubmit() {   
 document.querySelectorAll(".check-form").forEach((elem) =>
    elem.addEventListener("click", (event) => {
        event.preventDefault();
        // submit to the server if the form is valid
        if (isFormValid) {
            grecaptcha.ready(function () {
-               grecaptcha
-                   .execute(
+               grecaptcha.execute(
                        "6LcwRRUaAAAAADavxcmw5ShOEUt1xMBmRAcPf6QP",
                        { action: "submit" }
                    )
@@ -151,6 +148,7 @@ document.querySelectorAll(".check-form").forEach((elem) =>
                            const entrantFormData = new FormData(
                                elemForCheckCaptcha
                            );
+
                            entrantFormData.append(
                                "g-recaptcha-response",
                                token
