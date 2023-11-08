@@ -24,8 +24,85 @@
    <!--"loader end"-->
 
    <div id="wrapper" class="container-xxl">
-      <!--"header start"-->
-      <header id="header"></header>
+      <!--header start-->
+      <header id="header">
+         <div class="hamburger-menu">
+            <div class="row">
+               <div class="col-sm-3">
+                  <a href="index.html" target="_blank">
+                     <img class="icon_img" src="./src/images/logo.png" alt="Logo"></a>
+               </div>
+               <div class="col-sm-5 menu-block">
+                  <div class="menu">
+                     <ul class="list-unstyled d-flex menu-setion">
+                        <li class="me-4"><a class="" href="#">Популярніші напрямки</a></li>
+                        <li class="me-4"><a class="" href="#">Відгуки</a></li>
+                        <li class="me-4"><a class="" href="#">Найчастіші запитання</a></li>
+                        <li class="me-4"><a class="" href="#">Контакти</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-sm-4 menu-block">
+                  <div class="justify-content-end d-flex">
+                     <div class="mob-desktop mx-5">
+                        <a class="lang-select me-1 active-lang-ua" href="#" id="uaLang">Ua</a>
+                        <div class="vertical"></div>
+                        <a class="mx-1 lang-en" href="index-en" id="enLang">En</a>
+                     </div>
+                  </div>
+               </div>
+               <input id="menu__toggle" type="checkbox" />
+               <label id="dropdownMenuButton" class="menu__btn" for="menu__toggle" onclick="toggleMenu()">
+                  <span></span>
+               </label>
+               <div class="menu__box" id="menuBox">
+                  <a href="index.html" target="_blank">
+                     <img class="header-burger icon-img" src="./src/images/logo.png" alt="Logo"></a>
+                  <ul>
+                     <li><a class="menu__item" href="#"
+                           onclick="navigateTo('popularDestinations'); closeMenu();">Популярніші напрямки</a>
+                     </li>
+                     <li><a class="menu__item" href="#" onclick="navigateTo('reviews'); closeMenu()">Відгуки</a>
+                     </li>
+                     <li><a class="menu__item" href="#" onclick="navigateTo('questionsAnswers'); closeMenu()">Найчастіші
+                           запитання</a>
+                     </li>
+                     <li><a class="menu__item menu__item__contacts" href="#"
+                           onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
+                  </ul>
+                  <button class="header-nav-btn">Зв’язатись з оператором</button>
+                  <div class="share-section text-center">
+                     <h2 class="text-center text-share">Поділитись</h2>
+                  </div>
+                  <div class="social-icons">
+                     <div class="icons-start">
+                        <ul class="social-options list-unstyled d-flex icons-menu">
+                           <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://it.uspih.vn.ua"
+                                 target="_blank"><i class="icon-Facebook"></i></a>
+                           </li>
+                           <li><a href="https://twitter.com/intent/tweet?url=https://it.uspih.vn.ua" target="_blank"><i
+                                    class="icon-twitter"></i></a>
+                           </li>
+                           <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://it.uspih.vn.ua"
+                                 target="_blank"><i class="icon-linkedin"></i></a>
+                           </li>
+                           <li><a href="https://t.me/share/url?url=https://it.uspih.vn.ua" target="_blank"><i
+                                    class="icon-Telegram"></i></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="text-center">
+                     <div class="switch-languages">
+                        <a class="text-language" href="#" id="uaLang">Ua</a>
+                        <a class="mx-1 text-language" href="index-en" id="enLang">En</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
       <!--"header end"-->
 
       <!--"main-block-TUI start"-->
