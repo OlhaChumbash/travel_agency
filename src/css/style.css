@@ -65,7 +65,6 @@ body {
    font-weight: 400;
    font-style: normal;
    line-height: normal;
-   background: url(../images/bg.png), lightgray 50% / cover no-repeat;
 }
 
 .container-xxl {
@@ -276,13 +275,14 @@ button:not(:disabled) {
 }
 
 #header .menu__box a img {
-   margin-bottom: 40px;
    margin-left: 16px;
+   margin-bottom: 8px;
 }
 
 #header #menu__toggle:checked~.menu__box {
    height: 100vh;
    background: linear-gradient(157deg, rgba(226, 211, 206, 0.16) -5.39%, rgba(226, 211, 206, 0.15) 108.05%);
+   background: rgba(36, 59, 115, 0.90);
    backdrop-filter: blur(23.72395133972168px);
    border-radius: 0px;
    top: 0;
@@ -349,6 +349,10 @@ button:not(:disabled) {
    border: 1px solid var(--color-blue-1);
    background-color: var(--сolor-white);
    color: var(--color-blue-1);
+}
+
+#header .hamburger-menu .row .menu-wrap-bg {
+   padding-top: 40px;
 }
 
 #header .hamburger-menu .row .menu__box .header-nav-btn:hover,
@@ -649,6 +653,86 @@ button:not(:disabled) {
 
 
    /*-- header start --*/
+   #header .hamburger-menu {
+      height: 67px;
+   }
+
+   #header .menu__btn {
+      display: none;
+   }
+
+   #header .hamburger-menu .row {
+      display: flex;
+   }
+
+   #header .hamburger-menu .row div a img {
+      padding-top: 12px;
+      margin-left: 50px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt {
+      width: 100%;
+      margin-top: -40px;
+      padding: 0;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu {
+      display: flex;
+      justify-content: center;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop {
+      margin-left: -30px;
+      padding: 0;
+      margin-top: -4px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a {
+      font-size: 20px;
+      color: var(--text-white);
+      font-weight: 400;
+      line-height: normal;
+      font-family: 'Forum';
+      margin: 0 12px;
+   }
+
+   #header .hamburger-menu .row .mob-desktop {
+      position: absolute;
+      top: 20px;
+      right: 70px;
+      display: flex;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language {
+      font-family: 'Forum';
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--color-gray);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:first-child {
+      color: var(--сolor-white);
+      margin-right: 16px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:hover,
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:active {
+      color: var(--сolor-white);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:last-child {
+      color: var(--сolor-white);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:first-child {
+      color: var(--color-gray);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:hover,
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:active {
+      color: var(--сolor-white);
+   }
+
    /*-- header end --*/
 
 
