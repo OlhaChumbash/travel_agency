@@ -1,106 +1,107 @@
 @font-face {
-   font-family: 'Forum';
-   src: url('Forum.eot');
-   src: local('Forum'),
-      url('Forum.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Forum.woff2') format('woff2'),
-      url('../fonts/Forum.woff') format('woff'),
-      url('../fonts/Forum.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+    font-family: 'Forum';
+    src: url('Forum.eot');
+    src: local('Forum'),
+        url('Forum.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Forum.woff2') format('woff2'),
+        url('../fonts/Forum.woff') format('woff'),
+        url('../fonts/Forum.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-   font-family: 'Genos';
-   src: local('Genos'),
-      local('Genos-bold'),
-      url('../fonts/Genos-Bold.ttf') format('truetype');
-   font-weight: 700;
-   font-style: normal;
-   line-height: normal;
-   font-size: 64px;
+    font-family: 'Genos';
+    src: local('Genos'),
+        local('Genos-bold'),
+        url('../fonts/Genos-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    font-size: 64px;
 }
 
 
 :root {
-   --background: #E2D3CE;
-   --button-white: #fff;
-   --button-blue-1: #243B73;
-   --button-blue-2: #6B7BB1;
-   --button-gray: #A9A9A9;
-   --сolor-white: #fff;
-   --color-black: #000;
-   --color-beige: #E2D3CE;
-   --color-blue-1: #243B73;
-   --color-blue-2: #6B7BB1;
-   --color-gray: #A9A9A9;
-   --color-error: #f00;
-   --icon-color-white: #fff;
-   --icon-color-beige: #E2D3CE;
-   --icon-color-gray: #A9A9A9;
-   --text-white: #fff;
-   --text-beige: #E2D3CE;
-   --text-gray: #A9A9A9;
+    --background: #E2D3CE;
+    --button-white: #fff;
+    --button-blue-1: #243B73;
+    --button-blue-2: #6B7BB1;
+    --button-gray: #A9A9A9;
+    --сolor-white: #fff;
+    --color-black: #000;
+    --color-beige: #E2D3CE;
+    --color-blue-1: #243B73;
+    --color-blue-2: #6B7BB1;
+    --color-gray: #A9A9A9;
+    --color-error: #f00;
+    --icon-color-white: #fff;
+    --icon-color-beige: #E2D3CE;
+    --icon-color-gray: #A9A9A9;
+    --text-white: #fff;
+    --text-beige: #E2D3CE;
+    --text-gray: #A9A9A9;
 }
 
 *,
 *::before,
 *::after {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-   font-family: "Roboto";
-   font-size: 20px;
-   font-weight: 400;
-   font-style: normal;
-   line-height: normal;
-   background-color: var(--background);
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    background-color: var(--background);
 }
 
 .container-xxl {
-   max-width: 1024px;
+    max-width: 1024px;
 }
 
 a {
-   text-decoration: none;
-   cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
 /*--------frame/рамка--start--------*/
 .field-frame {
-   width: 70%;
-   margin: 0 auto;
-   background-color: var(--background);
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--background);
 }
 
 .under-frame {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: flex-start;
-   border: 1px solid var(--color-blue-1);
-   border-radius: 20px;
-   margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid var(--color-blue-1);
+    border-radius: 20px;
+    margin-top: 30px;
 }
 
 .element-frame {
-   width: 31px;
-   background-color: var(--background);
-   padding: 0px 10px 0px 10px;
-   margin: -17px;
-   text-align: center;
+    width: 31px;
+    background-color: var(--background);
+    padding: 0px 10px 0px 10px;
+    margin: -17px;
+    text-align: center;
 }
 
 .above-frame {
-   background-color: var(--background);
-   border: 1px solid var(--color-blue-1);
-   padding: 17px;
-   border-radius: 20px;
-   margin: 23px -18px 7px -18px;
+    background-color: var(--background);
+    border: 1px solid var(--color-blue-1);
+    padding: 17px;
+    border-radius: 20px;
+    width: 105%;
+    margin: 23px -18px 7px -18px;
 }
 
 /* !зразок не видаляти!
@@ -120,58 +121,58 @@ a {
 
 /*--------button--start--------*/
 .field-button {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 20px;
-   margin: 0px 0px 0px 0px;
-   width: 272px;
-   height: 83px;
-   border: 0px solid var(--color-blue-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 0px 0px 0px 0px;
+    width: 272px;
+    height: 83px;
+    border: 0px solid var(--color-blue-1);
 }
 
 .img-button {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 230px;
-   height: 90px;
-   background-image: url(../images/frame_button.png);
-   background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 90px;
+    background-image: url(../images/frame_button.png);
+    background-repeat: no-repeat;
 }
 
 .text-button {
-   width: 272px;
-   height: 49px;
-   margin: 0px 0px 0px 0px;
-   background-color: var(--button-blue-1);
-   color: var(--text-white);
-   font-family: 'Forum';
-   font-size: 26px;
-   font-weight: 400;
+    width: 272px;
+    height: 49px;
+    margin: 0px 0px 0px 0px;
+    background-color: var(--button-blue-1);
+    color: var(--text-white);
+    font-family: 'Forum';
+    font-size: 26px;
+    font-weight: 400;
 }
 
 .text-button:hover,
 .text-button:active {
-   background-color: var(--button-blue-2);
+    background-color: var(--button-blue-2);
 }
 
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
 button:not(:disabled) {
-   cursor: pointer;
-   width: 272px;
-   height: 49px;
-   border-radius: 20px;
-   border: 0px;
-   margin: 0px -20px 0px -20px;
+    cursor: pointer;
+    width: 272px;
+    height: 49px;
+    border-radius: 20px;
+    border: 0px;
+    margin: 0px -20px 0px -20px;
 }
 
 /* --inActive button--*/
 .text-button .inActive {
-   background-color: var(--button-gray);
-   pointer-events: none;
+    background-color: var(--button-gray);
+    pointer-events: none;
 }
 
 /*!зразок не видаляти!
@@ -193,9 +194,10 @@ button:not(:disabled) {
 
 
 /*-- header start --*/
- .container-xxl{
-   padding: 0px!important ;
+.container-xxl {
+    padding: 0px !important;
 }
+
 #header {}
 
 /*-- header end --*/
@@ -203,82 +205,91 @@ button:not(:disabled) {
 
 /*-- main-block-TUI start --*/
 
-#mainTUI .wraper-main{
-   width: 100%;
+#mainTUI .wraper-main {
+    width: 100%;
 }
-#mainTUI .conteiner{
-   background-image: url(../images/main_init_mobile-min.png);
-   background-size: cover;
-   background-repeat: no-repeat;
+
+#mainTUI .conteiner {
+    background-image: url(../images/main_init_mobile-min.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-#mainTUI .title{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 44px 30.5px;
+
+#mainTUI .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 44px 30.5px;
 }
-#mainTUI .title-h1{
-   margin: 67px 0 60px 0;
-   width: 320px;
-   color: white;
-   font-family: Genos;
-   font-size: 64px;
-   font-weight: 700;
-   line-height: 77px;
-   letter-spacing: 0em;
-   text-align: center;
-   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
-   
+
+#mainTUI .title-h1 {
+    margin: 67px 0 60px 0;
+    width: 320px;
+    color: white;
+    font-family: Genos;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+
 
 }
-#mainTUI .title-p{
-   color: white;
-   margin: 0 0 24px 0;
-   font-family: Montserrat;
-   font-size: 24px;
-   font-weight: 400;
-   line-height: 29px;
-   letter-spacing: 0em;
-   text-align: left;
+
+#mainTUI .title-p {
+    color: white;
+    margin: 0 0 24px 0;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
 }
+
 #mainTUI .box-button {
-   border: 1px solid #243B73;
-   padding: 1px ;
-   border-radius: 4px;
-   background-color: #FFFFFF;
-   margin: 36px 0;
-   min-width: 310px;
-   text-align: center;
+    border: 1px solid #243B73;
+    padding: 1px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    margin: 36px 0;
+    min-width: 310px;
+    text-align: center;
 }
+
 #mainTUI .button-main {
-   background: none;
-   border: none;
-   color: #243B73;
-   font-family: Montserrat;
-   font-size: 25px;
-   font-weight: 400;
-   line-height: 24px;
-   letter-spacing: 0em;
-   text-align: center;
+    background: none;
+    border: none;
+    color: #243B73;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
 
 }
+
 #mainTUI .div-icons {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-around;
-   min-width: 265px;
-   margin: 32px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 265px;
+    margin: 32px 0 0 0;
 }
-#mainTUI .icons{
-   width: 36px;
-   height: 36px;
-   text-align: center;
-   margin: 0 16px;
+
+#mainTUI .icons {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    margin: 0 16px;
 }
-#mainTUI .sharing-box{
-   display: none;
+
+#mainTUI .sharing-box {
+    display: none;
 }
 
 
@@ -311,53 +322,61 @@ button:not(:disabled) {
 
 /*-- prepare your trip with us start --*/
 #prepareTripUs {
-   font-family: 'Forum';
-   font-weight: 400;
-   margin: 0 auto;
-   max-width: 1024px;
-   padding-top: 16px;
-   padding-bottom: 30px;
-   background-color: var(--background);
+    font-family: 'Forum';
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-top: 16px;
+    padding-bottom: 30px;
+    background-color: var(--background);
 }
+
 #prepareTripUs h2 {
-   max-width: 546px;
-   color: #000;
-   text-align: center;
-   font-size: 40px;
-   margin: 0 auto;
-   margin-bottom: 16px;
-   padding: 0 50px 0 44px;
-   line-height: 1.1;
+    max-width: 546px;
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    padding: 0 50px 0 44px;
+    line-height: 1.1;
 }
+
 #prepareTripUs .list-item {
-   margin: 0 auto;
-   max-width: 730px;
-   display: flex;
-   margin-bottom: 14px;
+    margin: 0 auto;
+    max-width: 730px;
+    display: flex;
+    margin-bottom: 14px;
 }
+
 #prepareTripUs .list-item .list-number {
-   color: var(--button-blue-2);
-   text-align: center;
-   font-size: 64px;
-   width: 12%;
+    color: var(--button-blue-2);
+    text-align: center;
+    font-size: 64px;
+    width: 12%;
 }
+
 #prepareTripUs .list-item .list-container {
-   width: 88%;
-   display: flex;
-   flex-direction: column;
-   padding-left: 10px;
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
 }
+
 #prepareTripUs .list-item .list-container h3 {
-   font-size: 24px;
-   margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
+
 #prepareTripUs .list-item .list-container .list-description {
-   font-size: 16px;
+    font-size: 16px;
 }
+
 #prepareTripUs .field-button {
-   margin: 0 auto;
-   margin-top: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
+
 /*-- prepare your trip with us end --*/
 
 
@@ -368,7 +387,61 @@ button:not(:disabled) {
 
 
 /*-- questions and answers start --*/
-#questionsAnswers {}
+#questionsAnswers .field-frame {
+    width: 90%;
+}
+
+#questionsAnswers .element-frame {
+    width: 51px;
+}
+
+#questionsAnswers .accordion,
+.accordion-header,
+.accordion-body {
+    background-color: var(--background);
+    font-size: 16px;
+    line-height: 17.66px;
+    color: var(--color-black);
+    padding: 0;
+}
+.accordion-body {
+    padding-top: 12px;
+}
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {  
+    height: 100%;
+}
+.accordion-flush .accordion-item .accordion-button{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    font-size: 20px;
+    line-height: 22.08px;
+    color: var(--color-black);
+    margin: 0 auto;
+    padding: 0;
+    /* padding-bottom: 12px;     */
+}
+
+
+.accordion-item {
+    --bs-accordion-btn-focus-border-color: var(--background);
+    --bs-accordion-btn-focus-box-shadow: var(--background);
+}
+
+/* .accordion-button::after {
+    content: "\e900";
+    color: #fff;
+    font-family: 'icomoon', sans-serif;
+    font-size: 12px;
+    background-image: unset;
+} */
+
+/* Переопределение переменных аккордеона Bootstrap */
+
+
+
+
 
 /*-- questions and answers end --*/
 
@@ -397,121 +470,121 @@ button:not(:disabled) {
 
 @media (max-width: 374px) {
 
-   /*-- prepare your trip with us start --*/
-   #prepareTripUs h2 {
-      font-size: 30px;
-   }
+    /*-- prepare your trip with us start --*/
+    #prepareTripUs h2 {
+        font-size: 30px;
+    }
 
-   /*-- prepare your trip with us end --*/
+    /*-- prepare your trip with us end --*/
 }
 
 @media (min-width: 768px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
+    /*-- loader start --*/
+    /*-- loader end --*/
 
 
-   /*-- header start --*/
-   /*-- header end --*/
+    /*-- header start --*/
+    /*-- header end --*/
 
 
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
+    /*-- main-block-TUI start --*/
+    /*-- main-block-TUI end --*/
 
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
+    /*-- travel search (plugin) start --*/
+    /*-- travel search (plugin) end --*/
 
 
-   /*-- types tours start --*/
-   /*-- types tours end --*/
+    /*-- types tours start --*/
+    /*-- types tours end --*/
 
 
-   /*-- more popular destinations start --*/
-   /*-- more popular destinations end --*/
+    /*-- more popular destinations start --*/
+    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+    /*-- instagram gallery (plugin) start --*/
+    /*-- instagram gallery (plugin) end --*/
 
 
-   /*-- prepare your trip with us start --*/
-   /*-- prepare your trip with us end --*/
+    /*-- prepare your trip with us start --*/
+    /*-- prepare your trip with us end --*/
 
 
-   /*-- reviews start --*/
-   /*-- reviews end --*/
+    /*-- reviews start --*/
+    /*-- reviews end --*/
 
 
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
+    /*-- questions and answers start --*/
+    /*-- questions and answers end --*/
 
 
-   /*-- contacts start --*/
-   /*-- contacts end --*/
+    /*-- contacts start --*/
+    /*-- contacts end --*/
 
 
-   /*-- form window start --*/
-   /*-- form window end --*/
+    /*-- form window start --*/
+    /*-- form window end --*/
 
 
-   /*-- footer start --*/
-   /*-- footer end --*/
+    /*-- footer start --*/
+    /*-- footer end --*/
 }
 
 
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
+    /*-- loader start --*/
+    /*-- loader end --*/
 
 
-   /*-- header start --*/
-   /*-- header end --*/
+    /*-- header start --*/
+    /*-- header end --*/
 
 
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
+    /*-- main-block-TUI start --*/
+    /*-- main-block-TUI end --*/
 
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
+    /*-- travel search (plugin) start --*/
+    /*-- travel search (plugin) end --*/
 
 
-   /*-- types tours start --*/
-   /*-- types tours end --*/
+    /*-- types tours start --*/
+    /*-- types tours end --*/
 
 
-   /*-- more popular destinations start --*/
-   /*-- more popular destinations end --*/
+    /*-- more popular destinations start --*/
+    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+    /*-- instagram gallery (plugin) start --*/
+    /*-- instagram gallery (plugin) end --*/
 
 
-   /*-- prepare your trip with us start --*/
-   /*-- prepare your trip with us end --*/
+    /*-- prepare your trip with us start --*/
+    /*-- prepare your trip with us end --*/
 
 
-   /*-- reviews start --*/
-   /*-- reviews end --*/
+    /*-- reviews start --*/
+    /*-- reviews end --*/
 
 
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
+    /*-- questions and answers start --*/
+    /*-- questions and answers end --*/
 
 
-   /*-- contacts start --*/
-   /*-- contacts end --*/
+    /*-- contacts start --*/
+    /*-- contacts end --*/
 
 
-   /*-- form window start --*/
-   /*-- form window end --*/
+    /*-- form window start --*/
+    /*-- form window end --*/
 
 
-   /*-- footer start --*/
-   /*-- footer end --*/
+    /*-- footer start --*/
+    /*-- footer end --*/
 }
 
 
@@ -519,202 +592,223 @@ button:not(:disabled) {
 
 /*-----------------------------------------------------*/
 @media (min-width: 1024px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
+    /*-- loader start --*/
+    /*-- loader end --*/
 
 
-   /*-- header start --*/
-   /*-- header end --*/
+    /*-- header start --*/
+    /*-- header end --*/
 
 
-   /*-- main-block-TUI start --*/
-   #mainTUI .conteiner{
-      position: relative;
-   }
-   #mainTUI .title{
-      padding: 45px 30.5px;
-   }
-   #mainTUI .title-h1{
-      font-family: Genos;
-      font-size: 97px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      width: 500px;
-   }
-   #mainTUI .title-p{
-      margin: -31px 0 54px 0;
-   }
-   #mainTUI .div-icons{
-      display: flex;
-      min-width: 0!important;
-      position: absolute;
-      top: 20%;
-      left: 2.5%;
-      flex-direction: column;
-      align-items: flex-start;
-   }
-   #mainTUI .icons{
-      text-align: center;
-      margin: 13px 0;
-   }
-   #mainTUI .icons:nth-of-type(1){
-      order: 4;
-   }
-   #mainTUI .icons:nth-of-type(2){
-      order: 5;
-   }
-   #mainTUI .icons:nth-of-type(3){
-      order: 3;
-   }
-   #mainTUI .icons:nth-of-type(4){
-      order: 5;
-   }
-   #mainTUI .icons:nth-of-type(5){
-      order: 1 ;
-   }
-   #mainTUI .border-box-top{
-      width: 2px;
-      height: 78px;
-      background: #D9D9D9;
-      margin: -25px 0 0 20px;
-   }
-   #mainTUI .border-box-bottom{
-      width: 2px;
-      height: 75px;
-      background: #D9D9D9;
-      order: 6;
-      margin: -9px 0 0 19px;
-   }
-   #mainTUI .box-button{
-      margin: -10px 0 0 0 ;
-      width: 310px;
-      height: 50px;
-   }
-   #mainTUI .button-main{
-      color: var(--blue-1, #243B73);
-      font-family: Forum;  
-      font-size: 26px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-   }
-   #mainTUI .sharing-box {
-      display: flex;
-      min-width: 0!important;
-      position: absolute;
-      top: 47%;
-      right: 2.8%;
-      flex-direction: column;
-      align-items: flex-start;
-   }
-   #mainTUI .sharing {
-      margin: 0 0 55px 0;
-   }
-   #mainTUI .twitter{
-      margin-right: 10px;
-   }
-   #mainTUI .sharing a{
-      display: inline-block;
-      transition: transform 0.3s ease;
-   }
-   #mainTUI .sharing a:hover{
-        transform: scale(1.6);  
-   }
-   .icons a{
-      display: inline-block;
-      transition: transform 0.3s ease;
-   }
-   .icons a:hover{
-      transform: scale(1.6);  
-   }
-   
-/*-- main-block-TUI end --*/
+    /*-- main-block-TUI start --*/
+    #mainTUI .conteiner {
+        position: relative;
+    }
+
+    #mainTUI .title {
+        padding: 45px 30.5px;
+    }
+
+    #mainTUI .title-h1 {
+        font-family: Genos;
+        font-size: 97px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 500px;
+    }
+
+    #mainTUI .title-p {
+        margin: -31px 0 54px 0;
+    }
+
+    #mainTUI .div-icons {
+        display: flex;
+        min-width: 0 !important;
+        position: absolute;
+        top: 20%;
+        left: 2.5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #mainTUI .icons {
+        text-align: center;
+        margin: 13px 0;
+    }
+
+    #mainTUI .icons:nth-of-type(1) {
+        order: 4;
+    }
+
+    #mainTUI .icons:nth-of-type(2) {
+        order: 5;
+    }
+
+    #mainTUI .icons:nth-of-type(3) {
+        order: 3;
+    }
+
+    #mainTUI .icons:nth-of-type(4) {
+        order: 5;
+    }
+
+    #mainTUI .icons:nth-of-type(5) {
+        order: 1;
+    }
+
+    #mainTUI .border-box-top {
+        width: 2px;
+        height: 78px;
+        background: #D9D9D9;
+        margin: -25px 0 0 20px;
+    }
+
+    #mainTUI .border-box-bottom {
+        width: 2px;
+        height: 75px;
+        background: #D9D9D9;
+        order: 6;
+        margin: -9px 0 0 19px;
+    }
+
+    #mainTUI .box-button {
+        margin: -10px 0 0 0;
+        width: 310px;
+        height: 50px;
+    }
+
+    #mainTUI .button-main {
+        color: var(--blue-1, #243B73);
+        font-family: Forum;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #mainTUI .sharing-box {
+        display: flex;
+        min-width: 0 !important;
+        position: absolute;
+        top: 47%;
+        right: 2.8%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #mainTUI .sharing {
+        margin: 0 0 55px 0;
+    }
+
+    #mainTUI .twitter {
+        margin-right: 10px;
+    }
+
+    #mainTUI .sharing a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    #mainTUI .sharing a:hover {
+        transform: scale(1.6);
+    }
+
+    .icons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .icons a:hover {
+        transform: scale(1.6);
+    }
+
+    /*-- main-block-TUI end --*/
 
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
+    /*-- travel search (plugin) start --*/
+    /*-- travel search (plugin) end --*/
 
 
-   /*-- types tours start --*/
-   /*-- types tours end --*/
+    /*-- types tours start --*/
+    /*-- types tours end --*/
 
 
-   /*-- more popular destinations start --*/
-   /*-- more popular destinations end --*/
+    /*-- more popular destinations start --*/
+    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+    /*-- instagram gallery (plugin) start --*/
+    /*-- instagram gallery (plugin) end --*/
 
 
-   /*-- prepare your trip with us start --*/
-   #prepareTripUs {
-      padding-top: 24px;
-   }
+    /*-- prepare your trip with us start --*/
+    #prepareTripUs {
+        padding-top: 24px;
+    }
 
-   #prepareTripUs h2 {
-      font-size: 50px;
-      margin-bottom: 24px;
-      padding: 0px 8px 0px 0px;
-   }
+    #prepareTripUs h2 {
+        font-size: 50px;
+        margin-bottom: 24px;
+        padding: 0px 8px 0px 0px;
+    }
 
-   #prepareTripUs .list-item {
-      margin-bottom: 10px;
-   }
+    #prepareTripUs .list-item {
+        margin-bottom: 10px;
+    }
 
-   #prepareTripUs .list-item .list-number {
-      font-size: 100px;
-      text-align: start;
-   }
+    #prepareTripUs .list-item .list-number {
+        font-size: 100px;
+        text-align: start;
+    }
 
-   #prepareTripUs .list-item .list-number p {
-      padding-left: 8px;
-      margin-top: -12px;
-   }
+    #prepareTripUs .list-item .list-number p {
+        padding-left: 8px;
+        margin-top: -12px;
+    }
 
-   #prepareTripUs .list-item .list-number p.first {
-      padding-left: 12px;
-   }
+    #prepareTripUs .list-item .list-number p.first {
+        padding-left: 12px;
+    }
 
-   #prepareTripUs .list-item .list-container {
-      padding-left: 4px;
-   }
+    #prepareTripUs .list-item .list-container {
+        padding-left: 4px;
+    }
 
-   #prepareTripUs .list-item .list-container h3 {
-      font-size: 40px;
-      margin-bottom: 8px;
-   }
+    #prepareTripUs .list-item .list-container h3 {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
 
-   #prepareTripUs .list-item .list-container .list-description {
-      font-size: 20px;
-   }
+    #prepareTripUs .list-item .list-container .list-description {
+        font-size: 20px;
+    }
 
-   #prepareTripUs .field-button {
-      margin-top: 26px;
-   }
+    #prepareTripUs .field-button {
+        margin-top: 26px;
+    }
 
-   /*-- prepare your trip with us end --*/
-
-
-   /*-- reviews start --*/
-   /*-- reviews end --*/
+    /*-- prepare your trip with us end --*/
 
 
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
+    /*-- reviews start --*/
+    /*-- reviews end --*/
 
 
-   /*-- contacts start --*/
-   /*-- contacts end --*/
+    /*-- questions and answers start --*/
+    /*-- questions and answers end --*/
 
 
-   /*-- form window start --*/
-   /*-- form window end --*/
+    /*-- contacts start --*/
+    /*-- contacts end --*/
 
 
-   /*-- footer start --*/
-   /*-- footer end --*/
+    /*-- form window start --*/
+    /*-- form window end --*/
+
+
+    /*-- footer start --*/
+    /*-- footer end --*/
 }
 
 /*-----------------------------------------------------*/
