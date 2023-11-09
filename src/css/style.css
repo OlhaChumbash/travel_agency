@@ -304,7 +304,9 @@ button:not(:disabled) {
 
 
 /*-- instagram gallery (plugin) start --*/
-#instagramGallery {}
+#instagramGallery .widbox-load-button {
+   width: 140px;
+}
 
 /*-- instagram gallery (plugin) end --*/
 
