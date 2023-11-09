@@ -305,7 +305,7 @@ button:not(:disabled) {
 
 /*-- instagram gallery (plugin) start --*/
 #instagramGallery .widbox-load-button {
-   width: 140px;
+   width: 120px;
 }
 
 /*-- instagram gallery (plugin) end --*/
@@ -460,7 +460,13 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
-
+@media (min-width:900px) {
+   /*-- instagram gallery (plugin) start --*/
+   #instagramGallery .widbox-load-button {
+      width: 140px;
+   }
+   /*-- instagram gallery (plugin) end --*/
+}
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
