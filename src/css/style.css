@@ -419,30 +419,26 @@ button:not(:disabled) {
     line-height: 22.08px;
     color: var(--color-black);
     margin: 0 auto;
-    padding: 0;
-    /* padding-bottom: 12px;     */
+    padding: 0;   
 }
-
 
 .accordion-item {
     --bs-accordion-btn-focus-border-color: var(--background);
     --bs-accordion-btn-focus-box-shadow: var(--background);
 }
 
-/* .accordion-button::after {
-    content: "\e900";
-    color: #fff;
-    font-family: 'icomoon', sans-serif;
-    font-size: 12px;
-    background-image: unset;
-} */
-
-/* Переопределение переменных аккордеона Bootstrap */
-
-
-
-
-
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    content: "\e906";  
+}
+.accordion-button::after {
+    flex-shrink: 0;
+    color: #243B73;    
+    margin-left: auto;
+    content: "\e904"; 
+    font-family: 'icomoon';     
+    background-image: none;
+}
 /*-- questions and answers end --*/
 
 
