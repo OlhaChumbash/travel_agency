@@ -109,7 +109,7 @@ a {
             <div class="element-frame">
                 <img src="./src/images/frame.png" alt="It is frame">
             </div>
-            <div class="above-frame"> 
+            <div class="above-frame">
               Lorem text
             </div>
         </div>
@@ -177,7 +177,7 @@ button:not(:disabled) {
 /*!зразок не видаляти!
       <div class="field-button">
         <div class="img-button">
-          <button class="text-button">Залишити завку</button> 
+          <button class="text-button">Залишити завку</button>
         </div>
       </div>
 */
@@ -193,9 +193,10 @@ button:not(:disabled) {
 
 
 /*-- header start --*/
- .container-xxl{
-   padding: 0px!important ;
+.container-xxl {
+   padding: 0px !important;
 }
+
 #header {}
 
 /*-- header end --*/
@@ -203,22 +204,25 @@ button:not(:disabled) {
 
 /*-- main-block-TUI start --*/
 
-#mainTUI .wraper-main{
+#mainTUI .wraper-main {
    width: 100%;
 }
-#mainTUI .conteiner{
+
+#mainTUI .conteiner {
    background-image: url(../images/main_init_mobile-min.png);
    background-size: cover;
    background-repeat: no-repeat;
 }
-#mainTUI .title{
+
+#mainTUI .title {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 44px 30.5px;
 }
-#mainTUI .title-h1{
+
+#mainTUI .title-h1 {
    margin: 67px 0 60px 0;
    width: 320px;
    color: white;
@@ -229,10 +233,11 @@ button:not(:disabled) {
    letter-spacing: 0em;
    text-align: center;
    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
-   
+
 
 }
-#mainTUI .title-p{
+
+#mainTUI .title-p {
    color: white;
    margin: 0 0 24px 0;
    font-family: Montserrat;
@@ -242,15 +247,17 @@ button:not(:disabled) {
    letter-spacing: 0em;
    text-align: left;
 }
+
 #mainTUI .box-button {
    border: 1px solid #243B73;
-   padding: 1px ;
+   padding: 1px;
    border-radius: 4px;
    background-color: #FFFFFF;
    margin: 36px 0;
    min-width: 310px;
    text-align: center;
 }
+
 #mainTUI .button-main {
    background: none;
    border: none;
@@ -263,6 +270,7 @@ button:not(:disabled) {
    text-align: center;
 
 }
+
 #mainTUI .div-icons {
    display: flex;
    flex-direction: row;
@@ -271,13 +279,15 @@ button:not(:disabled) {
    min-width: 265px;
    margin: 32px 0 0 0;
 }
-#mainTUI .icons{
+
+#mainTUI .icons {
    width: 36px;
    height: 36px;
    text-align: center;
    margin: 0 16px;
 }
-#mainTUI .sharing-box{
+
+#mainTUI .sharing-box {
    display: none;
 }
 
@@ -319,6 +329,7 @@ button:not(:disabled) {
    padding-bottom: 30px;
    background-color: var(--background);
 }
+
 #prepareTripUs h2 {
    max-width: 546px;
    color: #000;
@@ -329,35 +340,42 @@ button:not(:disabled) {
    padding: 0 50px 0 44px;
    line-height: 1.1;
 }
+
 #prepareTripUs .list-item {
    margin: 0 auto;
    max-width: 730px;
    display: flex;
    margin-bottom: 14px;
 }
+
 #prepareTripUs .list-item .list-number {
    color: var(--button-blue-2);
    text-align: center;
    font-size: 64px;
    width: 12%;
 }
+
 #prepareTripUs .list-item .list-container {
    width: 88%;
    display: flex;
    flex-direction: column;
    padding-left: 10px;
 }
+
 #prepareTripUs .list-item .list-container h3 {
    font-size: 24px;
    margin-bottom: 10px;
 }
+
 #prepareTripUs .list-item .list-container .list-description {
    font-size: 16px;
 }
+
 #prepareTripUs .field-button {
    margin: 0 auto;
    margin-top: 30px;
 }
+
 /*-- prepare your trip with us end --*/
 
 
@@ -374,7 +392,83 @@ button:not(:disabled) {
 
 
 /*-- contacts start --*/
-#contacts {}
+#contacts {
+   padding: 16px 0 0;
+}
+
+#contacts h2 {
+   font-family: 'Forum';
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-align: center;
+}
+
+#contacts .contacts-wrap .field-frame {
+   width: 330px;
+   margin: 0 auto;
+   background-color: var(--background);
+}
+
+#contacts .contacts-wrap .field-frame .under-frame {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 20px;
+   margin-top: 27px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .element-frame {
+   width: auto;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info {
+   padding: 0;
+   margin-top: 17px;
+   width: 342px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group {
+   padding: 29px 0 0 16px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 30px;
+   font-family: 'Forum';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:nth-child(2) {
+   align-items: flex-start;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item svg {
+   margin-right: 16px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item p {
+   margin-bottom: 0;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item .phone a p:first-child {
+   margin-bottom: 12px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
+   width: 330px;
+   height: 133px;
+   margin: 0 6px 16px 6px;
+}
+
+/*=============================================================*/
 
 /*-- contacts end --*/
 
@@ -528,13 +622,15 @@ button:not(:disabled) {
 
 
    /*-- main-block-TUI start --*/
-   #mainTUI .conteiner{
+   #mainTUI .conteiner {
       position: relative;
    }
-   #mainTUI .title{
+
+   #mainTUI .title {
       padding: 45px 30.5px;
    }
-   #mainTUI .title-h1{
+
+   #mainTUI .title-h1 {
       font-family: Genos;
       font-size: 97px;
       font-style: normal;
@@ -542,94 +638,113 @@ button:not(:disabled) {
       line-height: normal;
       width: 500px;
    }
-   #mainTUI .title-p{
+
+   #mainTUI .title-p {
       margin: -31px 0 54px 0;
    }
-   #mainTUI .div-icons{
+
+   #mainTUI .div-icons {
       display: flex;
-      min-width: 0!important;
+      min-width: 0 !important;
       position: absolute;
       top: 20%;
       left: 2.5%;
       flex-direction: column;
       align-items: flex-start;
    }
-   #mainTUI .icons{
+
+   #mainTUI .icons {
       text-align: center;
       margin: 13px 0;
    }
-   #mainTUI .icons:nth-of-type(1){
+
+   #mainTUI .icons:nth-of-type(1) {
       order: 4;
    }
-   #mainTUI .icons:nth-of-type(2){
+
+   #mainTUI .icons:nth-of-type(2) {
       order: 5;
    }
-   #mainTUI .icons:nth-of-type(3){
+
+   #mainTUI .icons:nth-of-type(3) {
       order: 3;
    }
-   #mainTUI .icons:nth-of-type(4){
+
+   #mainTUI .icons:nth-of-type(4) {
       order: 5;
    }
-   #mainTUI .icons:nth-of-type(5){
-      order: 1 ;
+
+   #mainTUI .icons:nth-of-type(5) {
+      order: 1;
    }
-   #mainTUI .border-box-top{
+
+   #mainTUI .border-box-top {
       width: 2px;
       height: 78px;
       background: #D9D9D9;
       margin: -25px 0 0 20px;
    }
-   #mainTUI .border-box-bottom{
+
+   #mainTUI .border-box-bottom {
       width: 2px;
       height: 75px;
       background: #D9D9D9;
       order: 6;
       margin: -9px 0 0 19px;
    }
-   #mainTUI .box-button{
-      margin: -10px 0 0 0 ;
+
+   #mainTUI .box-button {
+      margin: -10px 0 0 0;
       width: 310px;
       height: 50px;
    }
-   #mainTUI .button-main{
+
+   #mainTUI .button-main {
       color: var(--blue-1, #243B73);
-      font-family: Forum;  
+      font-family: Forum;
       font-size: 26px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
    }
+
    #mainTUI .sharing-box {
       display: flex;
-      min-width: 0!important;
+      min-width: 0 !important;
       position: absolute;
       top: 47%;
       right: 2.8%;
       flex-direction: column;
       align-items: flex-start;
    }
+
    #mainTUI .sharing {
       margin: 0 0 55px 0;
    }
-   #mainTUI .twitter{
+
+   #mainTUI .twitter {
       margin-right: 10px;
    }
-   #mainTUI .sharing a{
+
+   #mainTUI .sharing a {
       display: inline-block;
       transition: transform 0.3s ease;
    }
-   #mainTUI .sharing a:hover{
-        transform: scale(1.6);  
+
+   #mainTUI .sharing a:hover {
+      transform: scale(1.6);
    }
-   .icons a{
+
+   .icons a {
       display: inline-block;
       transition: transform 0.3s ease;
    }
-   .icons a:hover{
-      transform: scale(1.6);  
+
+   .icons a:hover {
+      transform: scale(1.6);
    }
-   
-/*-- main-block-TUI end --*/
+
+   /*-- main-block-TUI end --*/
 
 
    /*-- travel search (plugin) start --*/
