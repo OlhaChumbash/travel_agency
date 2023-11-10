@@ -83,12 +83,12 @@ a {
     align-items: center;
     justify-content: flex-start;
     border: 1px solid var(--color-blue-1);
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 30px;
 }
 
 .element-frame {
-    width: 31px;
+    width: 51px;
     background-color: var(--background);
     padding: 0px 10px 0px 10px;
     margin: -17px;
@@ -99,9 +99,9 @@ a {
     background-color: var(--background);
     border: 1px solid var(--color-blue-1);
     padding: 17px;
-    border-radius: 20px;
-    width: 105%;
-    margin: 23px -18px 7px -18px;
+    border-radius: 10px;
+    width: 103%;
+    margin: 21px -18px 5px -18px;
 }
 
 /* !зразок не видаляти!
@@ -387,12 +387,18 @@ button:not(:disabled) {
 
 
 /*-- questions and answers start --*/
-#questionsAnswers .field-frame {
-    width: 90%;
+#questionsAnswers h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-bottom: 16px;  
+   line-height: 1.1;
+   font-family: 'Forum';
 }
-
-#questionsAnswers .element-frame {
-    width: 51px;
+#questionsAnswers .accordion .field-frame {
+    width: 90%;    
 }
 
 #questionsAnswers .accordion,
@@ -404,40 +410,50 @@ button:not(:disabled) {
     color: var(--color-black);
     padding: 0;
 }
-.accordion-body {
+#questionsAnswers .accordion-body {
     padding-top: 12px;
+    font-family: 'Forum';
 }
-.accordion-flush .accordion-item .accordion-button,
-.accordion-flush .accordion-item .accordion-button.collapsed {  
-    height: 100%;
+#questionsAnswers .accordion-flush .accordion-item .accordion-button,
+#questionsAnswers .accordion-flush .accordion-item .accordion-button.collapsed {  
+    height: 100%;    
 }
-.accordion-flush .accordion-item .accordion-button{
+#questionsAnswers .accordion-flush .accordion-item .accordion-button{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: space-between;
     background-color: var(--background);
     font-size: 20px;
     line-height: 22.08px;
     color: var(--color-black);
     margin: 0 auto;
-    padding: 0;   
+    padding: 0;  
+    font-family: 'Forum'; 
 }
 
-.accordion-item {
+#questionsAnswers .accordion-item {
     --bs-accordion-btn-focus-border-color: var(--background);
     --bs-accordion-btn-focus-box-shadow: var(--background);
 }
 
-.accordion-button:not(.collapsed)::after {
+#questionsAnswers .accordion-button:not(.collapsed)::after {
     background-image: none;
-    content: "\e900";
-}
-.accordion-button::after {
+    content: "\e901";
+   }
+#questionsAnswers .accordion-button::after {
+    font-size: 18px;
     flex-shrink: 0;
     color: #243B73;    
     margin-left: auto;
-    content: "\e902";
+    content: "\e901";
     font-family: 'icomoon';     
     background-image: none;
+   }
+   
+#questionsAnswers .accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
+   margin-right: -10px;
+   margin-left: 10px;
 }
 /*-- questions and answers end --*/
 
@@ -792,6 +808,34 @@ button:not(:disabled) {
 
 
     /*-- questions and answers start --*/
+   #questionsAnswers{
+      margin-bottom: 24px;  
+   }
+   #questionsAnswers h2 {          
+      font-size: 50px;      
+      margin-bottom: 25px;      
+   }
+   #questionsAnswers .accordion .field-frame {
+       width: 79%;
+   }
+   #questionsAnswers .element-frame {
+       width: 120px;
+   }
+   #questionsAnswers  .above-frame {    
+      width: 110%;    
+  }
+   #questionsAnswers .accordion,
+   .accordion-header,
+   .accordion-body {
+       font-size: 16px;    
+   }
+   #questionsAnswers .accordion-body {       
+       font-size: 20px;         
+   }
+   #questionsAnswers .accordion-flush .accordion-item .accordion-button{      
+       font-size: 26px;          
+   }     
+
     /*-- questions and answers end --*/
 
 
