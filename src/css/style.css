@@ -435,7 +435,7 @@ button:not(:disabled) {
     flex-shrink: 0;
     color: #243B73;    
     margin-left: auto;
-    content: "\e904"; 
+    content: "\e902"; 
     font-family: 'icomoon';     
     background-image: none;
 }
