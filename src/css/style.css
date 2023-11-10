@@ -429,13 +429,13 @@ button:not(:disabled) {
 
 .accordion-button:not(.collapsed)::after {
     background-image: none;
-    content: "\e906";  
+    content: "\e900";
 }
 .accordion-button::after {
     flex-shrink: 0;
     color: #243B73;    
     margin-left: auto;
-    content: "\e902"; 
+    content: "\e902";
     font-family: 'icomoon';     
     background-image: none;
 }
