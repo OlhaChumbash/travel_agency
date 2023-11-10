@@ -60,10 +60,6 @@ body {
    background-color: var(--background);
 }
 
-.container-xxl {
-   max-width: 1024px;
-}
-
 a {
    text-decoration: none;
    cursor: pointer;
@@ -393,6 +389,7 @@ button:not(:disabled) {
 
 /*-- contacts start --*/
 #contacts {
+   max-width: 1440px;
    padding: 16px 0 0;
 }
 
@@ -428,6 +425,7 @@ button:not(:disabled) {
 #contacts .contacts-wrap .field-frame .under-frame .contact-info {
    padding: 0;
    margin-top: 17px;
+   margin-bottom: 5px;
    width: 342px;
 }
 
@@ -454,18 +452,32 @@ button:not(:disabled) {
    margin-right: 16px;
 }
 
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child svg {
+   margin-left: 4px;
+   margin-top: -1.5px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child p {
+   margin-left: 6px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item a {
+   color: var(--color-black);
+}
+
 #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item p {
    margin-bottom: 0;
 }
 
-#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item .phone a p:first-child {
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item .phone a:first-child p {
    margin-bottom: 12px;
 }
+
 
 #contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
    width: 330px;
    height: 133px;
-   margin: 0 6px 16px 6px;
+   margin: 0 6px 10px 6px;
 }
 
 /*=============================================================*/
