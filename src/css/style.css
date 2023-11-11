@@ -654,6 +654,7 @@ button:not(:disabled) {
    margin-top: 17px;
    margin-bottom: 5px;
    width: 342px;
+   border-radius: 20px;
 }
 
 #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group {
@@ -713,6 +714,7 @@ button:not(:disabled) {
    margin-top: 17px;
    margin-bottom: 5px;
    width: 342px;
+   border-radius: 20px;
 }
 
 #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window {
@@ -720,9 +722,9 @@ button:not(:disabled) {
    flex-direction: column;
    align-items: center;
    background-color: var(--background);
-   width: 90%;
+   width: 100%;
    max-width: 408px;
-   padding: 16px 12px 24px 12px;
+   padding: 15px 12px 16px 12px;
    border-radius: 20px;
    margin: 0 auto;
 }
@@ -753,10 +755,16 @@ button:not(:disabled) {
    font-size: 16px;
 }
 
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button {
+   height: 83px;
+   width: 225px;
+}
+
 #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button {
    width: 232px;
    height: 42px;
    font-size: 20px;
+   padding: 10px 0;
 }
 
 #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button p {
@@ -811,14 +819,11 @@ button:not(:disabled) {
 
 #contacts .contacts-wrap .field-frame .under-frame .contact-form .second-window #close-second-window-btn {
    position: absolute;
-   /* height: 35px;
-   width: 35px; */
    top: 17px;
    right: 28px;
    line-height: 20px;
    font-size: 55px;
    cursor: pointer;
-   /* color: var(--button-blue-1); */
    width: 20px;
    height: 20px;
    color: var(--text-default);
