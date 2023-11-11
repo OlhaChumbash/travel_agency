@@ -433,9 +433,10 @@ button:not(:disabled) {
 
 
 /*-- types tours start --*/
-#typesTours{
-   margin-top: 16px;
+#typesTours{ 
+   padding-top: 16px;
    margin: 0 auto;
+   max-width: 654px;
 }
 #typesTours h2 {
    max-width: 546px;
@@ -449,8 +450,8 @@ button:not(:disabled) {
    font-family: "Forum";
 }
 #typesTours h5 {
+   font-family: 'Manrope';
    margin: 12px 0px 0px 0px;
-   /* font-family: Manrope; */
 }
 .types-tours_wrapper {  
    display: flex;
@@ -861,8 +862,8 @@ button:not(:disabled) {
 
    /*-- types tours start --*/
    #typesTours{
-      margin-top: 24px;
-      max-width: 900px;
+      padding-top: 24px;
+      max-width: 745px;
    }
    #typesTours h2 {
       max-width: 546px;
@@ -878,13 +879,12 @@ button:not(:disabled) {
    }
    .types-tours_wrapper {     
       flex-direction: row;
-      justify-content: center; 
+      justify-content: space-between; 
       padding: 0px;   
    }
    .types-tours_row {    
-      margin-bottom: 0px;
-      margin-right: 60px;
-      width: 50%;
+      margin-bottom: 0px;     
+      width: 45%;
    }
    .types-tours_row:last-child{
       margin-right: 0px;
@@ -982,4 +982,11 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
+@media (min-width: 1440px) {
+   /*-- types tours start --*/
+   #typesTours{ 
+      max-width: 1048px;
+   }
+/*-- types tours end --*/
+}
 /*-----------------------------------------------------*/
