@@ -62,7 +62,9 @@ body {
 }
 
 .container-xxl {
-   max-width: 1024px;
+   max-width: 1440px;
+   --bs-gutter-x: 0rem;
+   padding: 0px !important;
 }
 
 a {
@@ -194,10 +196,6 @@ button:not(:disabled) {
 
 
 /*-- header start --*/
-.container-xxl {
-   padding: 0px !important;
-}
-
 #header {}
 
 /*-- header end --*/
@@ -238,8 +236,6 @@ button:not(:disabled) {
    letter-spacing: 0em;
    text-align: center;
    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
-
-
 }
 
 #mainTUI .title-p {
@@ -273,7 +269,6 @@ button:not(:disabled) {
    line-height: 24px;
    letter-spacing: 0em;
    text-align: center;
-
 }
 
 #mainTUI .div-icons {
@@ -299,6 +294,7 @@ button:not(:disabled) {
 
 /*-- main-block-TUI end --*/
 
+
 /*-- form-block start --*/
 #modal-overlay {
    position: fixed;
@@ -307,7 +303,7 @@ button:not(:disabled) {
    left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgba(36, 59, 115, 0.90);   
+   background-color: rgba(36, 59, 115, 0.90);
    display: none;
 }
 
@@ -438,7 +434,9 @@ button:not(:disabled) {
 .grecaptcha-badge {
    display: none !important;
 }
+
 /*-- form-block end --*/
+
 
 /*-- travel search (plugin) start --*/
 #travelSearch {}
@@ -474,7 +472,6 @@ button:not(:disabled) {
    max-width: 1024px;
    padding-top: 16px;
    padding-bottom: 30px;
-   background-color: var(--background);
 }
 
 #prepareTripUs h2 {
@@ -526,8 +523,86 @@ button:not(:disabled) {
 /*-- prepare your trip with us end --*/
 
 
+/*-- background-between start --*/
+
+.background-between {
+   width: 100%;
+   position: relative;
+}
+
+.background-between .img-background {
+   object-fit: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   margin: -70px 0px 0px 0px;
+}
+
+/*-- background-between end --*/
+
+
 /*-- reviews start --*/
-#reviews {}
+#reviews .reviews-section {
+   position: relative;
+   padding: 0px 0px 30px 0px;
+   font-family: 'Forum';
+   font-size: 20px;
+   color: #000;
+
+}
+
+#reviews .reviews-section .title h2 {
+   font-family: 'Forum';
+   font-weight: 400;
+   font-size: 40px;
+   text-align: center;
+   margin: 16px 0px 16px 0px;
+
+}
+
+#reviews .reviews-section .swiper {
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+   margin: 0px auto;
+   padding: 0px 0px 0px 0px;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 343px;
+   min-height: 420px;
+   padding: 15px 22px 0px 22px;
+   margin: 0px auto;
+   background-image: url(../images/reviews/frame-reviews.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   overflow: hidden;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content h5 {
+   text-align: center;
+   font-size: 24px;
+   line-height: 30px;
+   font-weight: 400;
+   margin: 15px 0px 10px 0px;
+}
+
+#reviews .reviews-section .swiper-pagination {
+   bottom: 0px;
+   font-size: 22px;
+   color: var(--button-blue-2);
+}
+
+#reviews .reviews-section .swiper-pagination-bullet {
+   width: 20px;
+   height: 20px;
+   line-height: 20px;
+   font-size: 14px;
+   background-color: var(--button-blue-2);
+}
 
 /*-- reviews end --*/
 
@@ -568,7 +643,42 @@ button:not(:disabled) {
    }
 
    /*-- prepare your trip with us end --*/
+
+
+   /*-- reviews start --*/
+   #reviews .reviews-section {
+      font-size: 18px;
+   }
+
+   /*-- reviews end--*/
 }
+
+/*-----------------------------------------------------*/
+
+
+@media (max-width:991px) {
+
+   /*-- reviews start --*/
+   .swiper-button-next:after,
+   .swiper-rtl .swiper-button-prev:after {
+      display: none;
+   }
+
+   .swiper-button-prev:after,
+   .swiper-rtl .swiper-button-next:after {
+      display: none;
+   }
+
+   .icon-swiper2_prev,
+   .icon-swiper2_next {
+      display: none;
+   }
+
+   /*-- reviews end--*/
+}
+
+/*-----------------------------------------------------*/
+
 
 @media (min-width: 768px) {
    /*-- loader start --*/
@@ -602,10 +712,17 @@ button:not(:disabled) {
    /*-- prepare your trip with us start --*/
    /*-- prepare your trip with us end --*/
 
+   /*-- background-between start --*/
 
-   /*-- reviews start --*/
-   /*-- reviews end --*/
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -200px 0px 0px 0px;
+   }
 
+   /*-- background-between end --*/
 
    /*-- questions and answers start --*/
    /*-- questions and answers end --*/
@@ -622,6 +739,9 @@ button:not(:disabled) {
    /*-- footer start --*/
    /*-- footer end --*/
 }
+
+/*-----------------------------------------------------*/
+
 
 @media (min-width:900px) {
 
@@ -645,6 +765,7 @@ button:not(:disabled) {
 
    /*-- main-block-TUI start --*/
    /*-- main-block-TUI end --*/
+
 
    /*--form-block start"--*/
    #modal-overlay #form-window {
@@ -682,7 +803,9 @@ button:not(:disabled) {
    #form-window .input-wrapper {
       margin-bottom: 32px;
    }
+
    /*--form-block end"--*/
+
 
    /*-- travel search (plugin) start --*/
    /*-- travel search (plugin) end --*/
@@ -704,7 +827,60 @@ button:not(:disabled) {
    /*-- prepare your trip with us end --*/
 
 
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -300px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- reviews start --*/
+   #reviews .reviews-section {
+      max-width: 875px;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   #reviews .reviews-section .title h2 {
+      font-size: 50px;
+   }
+
+   #reviews .reviews-section .swiper {
+      max-width: 736px;
+   }
+
+   #reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
+      max-width: 361px;
+      height: 434px;
+      padding: 30px 30px 55px 30px;
+   }
+
+   .swiper-button-next:after,
+   .swiper-rtl .swiper-button-prev:after {
+      display: none;
+   }
+
+   .swiper-button-prev:after,
+   .swiper-rtl .swiper-button-next:after {
+      display: none;
+   }
+
+   .icon-swiper2_prev,
+   .icon-swiper2_next {
+      font-size: 100px;
+      top: 58%;
+   }
+
+   #reviews .reviews-section .swiper-pagination {
+      bottom: -20px;
+   }
+
    /*-- reviews end --*/
 
 
@@ -928,7 +1104,96 @@ button:not(:disabled) {
    /*-- prepare your trip with us end --*/
 
 
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -400px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- reviews start --*/
+   /*-- reviews end --*/
+
+
+   /*-- questions and answers start --*/
+   /*-- questions and answers end --*/
+
+
+   /*-- contacts start --*/
+   /*-- contacts end --*/
+
+
+   /*-- form window start --*/
+   /*-- form window end --*/
+
+
+   /*-- footer start --*/
+   /*-- footer end --*/
+}
+
+/*-----------------------------------------------------*/
+
+@media (min-width: 1440px) {
+   /*-- loader start --*/
+   /*-- loader end --*/
+
+
+   /*-- header start --*/
+   /*-- header end --*/
+
+
+   /*-- main-block-TUI start --*/
+   /*-- main-block-TUI end --*/
+
+
+   /*-- travel search (plugin) start --*/
+   /*-- travel search (plugin) end --*/
+
+
+   /*-- types tours start --*/
+   /*-- types tours end --*/
+
+
+   /*-- more popular destinations start --*/
+   /*-- more popular destinations end --*/
+
+
+   /*-- instagram gallery (plugin) start --*/
+   /*-- instagram gallery (plugin) end --*/
+
+
+   /*-- prepare your trip with us start --*/
+   /*-- prepare your trip with us end --*/
+
+
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -500px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- reviews start --*/
+   #reviews .reviews-section {
+      max-width: 1250px;
+   }
+
+   #reviews .reviews-section .swiper {
+      max-width: 1111px;
+   }
+
    /*-- reviews end --*/
 
 
