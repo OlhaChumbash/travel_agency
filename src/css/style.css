@@ -21,14 +21,6 @@
    font-size: 64px;
 }
 
-@font-face {
-   font-family: 'Manrope';
-   src: local('Manrope-Regular'),
-      url('../fonts/Manrope-Regular.ttf') format('truetype');
-   font-weight: 400;
-   font-style: normal;
-}
-
 
 :root {
    --background: #E2D3CE;
@@ -205,9 +197,6 @@ button:not(:disabled) {
 .container-xxl {
    padding: 0px !important;
 }
-
-
-#header {}
 
 #header .hamburger-menu {
    background: linear-gradient(157deg, rgba(226, 211, 206, 0.16) -5.39%, rgba(226, 211, 206, 0.15) 108.05%);
@@ -702,6 +691,7 @@ button:not(:disabled) {
 .grecaptcha-badge {
    display: none !important;
 }
+
 /*-- form-block end --*/
 
 /*-- travel search (plugin) start --*/
@@ -946,6 +936,7 @@ button:not(:disabled) {
    #form-window .input-wrapper {
       margin-bottom: 32px;
    }
+
    /*--form-block end"--*/
 
    /*-- travel search (plugin) start --*/
