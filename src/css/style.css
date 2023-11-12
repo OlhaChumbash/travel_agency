@@ -206,6 +206,7 @@ button:not(:disabled) {
    padding: 0px !important;
 }
 
+
 #header {}
 
 #header .hamburger-menu {
@@ -470,10 +471,14 @@ button:not(:disabled) {
 
 #mainTUI .wraper-main {
    width: 100%;
+   background-image: url(../images/main_init_mobile-min.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: 0 auto;
+
 }
 
 #mainTUI .conteiner {
-   background-image: url(../images/main_init_mobile-min.png);
    background-size: cover;
    background-repeat: no-repeat;
 }
@@ -566,7 +571,7 @@ button:not(:disabled) {
    left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgba(36, 59, 115, 0.90);   
+   background-color: rgba(36, 59, 115, 0.90);
    display: none;
 }
 
@@ -718,7 +723,9 @@ button:not(:disabled) {
 
 
 /*-- instagram gallery (plugin) start --*/
-#instagramGallery {}
+#instagramGallery .widbox-load-button {
+   width: 120px;
+}
 
 /*-- instagram gallery (plugin) end --*/
 
@@ -880,7 +887,15 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
+@media (min-width:900px) {
 
+   /*-- instagram gallery (plugin) start --*/
+   #instagramGallery .widbox-load-button {
+      width: 140px;
+   }
+
+   /*-- instagram gallery (plugin) end --*/
+}
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
