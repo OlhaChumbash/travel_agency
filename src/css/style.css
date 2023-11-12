@@ -208,10 +208,13 @@ button:not(:disabled) {
 
 #mainTUI .wraper-main {
    width: 100%;
+   background-image: url(../images/main_init_mobile-min.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: 0 auto;
 }
 
 #mainTUI .conteiner {
-   background-image: url(../images/main_init_mobile-min.png);
    background-size: cover;
    background-repeat: no-repeat;
 }
@@ -456,7 +459,9 @@ button:not(:disabled) {
 
 
 /*-- instagram gallery (plugin) start --*/
-#instagramGallery {}
+#instagramGallery .widbox-load-button {
+   width: 120px;
+}
 
 /*-- instagram gallery (plugin) end --*/
 
@@ -702,7 +707,15 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
+@media (min-width:900px) {
 
+   /*-- instagram gallery (plugin) start --*/
+   #instagramGallery .widbox-load-button {
+      width: 140px;
+   }
+
+   /*-- instagram gallery (plugin) end --*/
+}
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
