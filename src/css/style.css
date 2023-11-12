@@ -1375,6 +1375,17 @@ button:not(:disabled) {
    #prepareTripUs .list-item {
       max-width: 1024px;
    }
+
+   /*-- contacts start --*/
+   #contacts .contacts-wrap .field-frame:first-child {
+      margin-right: 55px;
+   }
+
+   #contacts .contacts-wrap .field-frame:last-child {
+      margin-left: 55px;
+   }
+
+   /*-- contacts end --*/
 }
 
 /*-----------------------------------------------------*/
