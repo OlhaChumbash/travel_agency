@@ -84,12 +84,12 @@ a {
    align-items: center;
    justify-content: flex-start;
    border: 1px solid var(--color-blue-1);
-   border-radius: 20px;
+   border-radius: 10px;
    margin-top: 30px;
 }
 
 .element-frame {
-   width: 31px;
+   width: 51px;
    background-color: var(--background);
    padding: 0px 10px 0px 10px;
    margin: -17px;
@@ -100,8 +100,9 @@ a {
    background-color: var(--background);
    border: 1px solid var(--color-blue-1);
    padding: 17px;
-   border-radius: 20px;
-   margin: 23px -18px 7px -18px;
+   border-radius: 10px;
+   width: 103%;
+   margin: 21px -18px 5px -18px;
 }
 
 /* !зразок не видаляти!
@@ -191,7 +192,6 @@ button:not(:disabled) {
 #loader {}
 
 /*-- loader end --*/
-
 
 /*-- header start --*/
 .container-xxl {
@@ -455,9 +455,7 @@ button:not(:disabled) {
 
 /*-- header end --*/
 
-
 /*-- main-block-TUI start --*/
-
 #mainTUI .wraper-main {
    width: 100%;
    background-image: url(../images/main_init_mobile-min.png);
@@ -548,7 +546,6 @@ button:not(:disabled) {
 #mainTUI .sharing-box {
    display: none;
 }
-
 
 /*-- main-block-TUI end --*/
 
@@ -725,9 +722,8 @@ button:not(:disabled) {
    font-family: 'Forum';
    font-weight: 400;
    margin: 0 auto;
-   max-width: 1024px;
-   padding-top: 16px;
-   padding-bottom: 30px;
+   max-width: 1440px;
+   padding: 16px 16px 30px 12px;
    background-color: var(--background);
 }
 
@@ -738,15 +734,15 @@ button:not(:disabled) {
    font-size: 40px;
    margin: 0 auto;
    margin-bottom: 16px;
-   padding: 0 50px 0 44px;
+   padding: 0 48px 0 44px;
    line-height: 1.1;
 }
 
 #prepareTripUs .list-item {
    margin: 0 auto;
-   max-width: 730px;
    display: flex;
    margin-bottom: 14px;
+   max-width: 1024px;
 }
 
 #prepareTripUs .list-item .list-number {
@@ -754,6 +750,10 @@ button:not(:disabled) {
    text-align: center;
    font-size: 64px;
    width: 12%;
+}
+
+#prepareTripUs .list-item .list-number p {
+   margin: 0;
 }
 
 #prepareTripUs .list-item .list-container {
@@ -787,13 +787,302 @@ button:not(:disabled) {
 
 
 /*-- questions and answers start --*/
-#questionsAnswers {}
+#questionsAnswers {
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+#questionsAnswers h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-bottom: 16px;
+   line-height: 1.1;
+   font-family: 'Forum';
+}
+
+#questionsAnswers .accordion .field-frame {
+   width: 90%;
+}
+
+#questionsAnswers .accordion,
+.accordion-header,
+.accordion-body {
+   background-color: var(--background);
+   font-size: 16px;
+   line-height: 17.66px;
+   color: var(--color-black);
+   padding: 0;
+}
+
+#questionsAnswers .accordion-body {
+   padding-top: 12px;
+   font-family: 'Forum';
+}
+
+#questionsAnswers .accordion-flush .accordion-item .accordion-button,
+#questionsAnswers .accordion-flush .accordion-item .accordion-button.collapsed {
+   height: 100%;
+}
+
+#questionsAnswers .accordion-flush .accordion-item .accordion-button {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--background);
+   font-size: 20px;
+   line-height: 22.08px;
+   color: var(--color-black);
+   margin: 0 auto;
+   padding: 0;
+   font-family: 'Forum';
+}
+
+#questionsAnswers .accordion-item {
+   --bs-accordion-btn-focus-border-color: var(--background);
+   --bs-accordion-btn-focus-box-shadow: var(--background);
+}
+
+#questionsAnswers .accordion-button:not(.collapsed)::after {
+   background-image: none;
+   content: "\e901";
+}
+
+#questionsAnswers .accordion-button::after {
+   font-size: 18px;
+   flex-shrink: 0;
+   color: #243B73;
+   margin-left: auto;
+   content: "\e901";
+   font-family: 'icomoon';
+   background-image: none;
+}
+
+#questionsAnswers .accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
+   margin-right: -10px;
+   margin-left: 10px;
+}
 
 /*-- questions and answers end --*/
 
 
 /*-- contacts start --*/
-#contacts {}
+#contacts {
+   max-width: 1440px;
+   padding: 16px 0 0;
+}
+
+#contacts h2 {
+   font-family: 'Forum';
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-align: center;
+}
+
+#contacts .contacts-wrap .field-frame {
+   width: 330px;
+   margin: 0 auto;
+   background-color: var(--background);
+}
+
+#contacts .contacts-wrap .field-frame .under-frame {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 20px;
+   margin-top: 27px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .element-frame {
+   width: auto;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info {
+   padding: 0;
+   margin-top: 17px;
+   margin-bottom: 5px;
+   width: 342px;
+   border-radius: 20px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group {
+   padding: 29px 0 0 16px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 30px;
+   font-family: 'Forum';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:nth-child(2) {
+   align-items: flex-start;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item svg {
+   margin-right: 16px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child svg {
+   margin-left: 4px;
+   margin-top: -1.5px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child p {
+   margin-left: 6px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item a {
+   color: var(--color-black);
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item p {
+   margin-bottom: 0;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item .phone a:first-child p {
+   margin-bottom: 12px;
+}
+
+
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
+   width: 330px;
+   height: 133px;
+   margin: 0 6px 10px 6px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form {
+   padding: 0;
+   margin-top: 17px;
+   margin-bottom: 5px;
+   width: 342px;
+   border-radius: 20px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--background);
+   width: 100%;
+   max-width: 408px;
+   padding: 15px 12px 16px 12px;
+   border-radius: 20px;
+   margin: 0 auto;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper {
+   max-width: 313px;
+   width: 100%;
+   height: 42px;
+   margin-bottom: 24px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input {
+   width: 100%;
+   height: 42px;
+   max-width: 337px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 20px;
+   background-color: transparent;
+   padding: 12px;
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input::placeholder {
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button {
+   height: 83px;
+   width: 225px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button {
+   width: 232px;
+   height: 42px;
+   font-size: 20px;
+   padding: 10px 0;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button p {
+   margin: 0;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper .error-text {
+   color: var(--color-error-text) !important;
+   font-size: 14px;
+   margin-left: 8px;
+}
+
+.form-window .error-box {
+   border: 1px solid var(--color-error) !important;
+   color: var(--color-error) !important;
+}
+
+.form-window .error-box::placeholder {
+   color: var(--color-error) !important;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .registration-form .input-wrapper input:focus {
+   outline: none;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .registration-form .input-wrapper input:autofill {
+   transition: background-color 5000s ease-in-out 0s;
+   -webkit-text-fill-color: var(--color-black);
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .second-window {
+   display: none;
+   text-align: center;
+   width: 343px;
+   height: 157px;
+   padding: 65px 20px 30px 20px;
+   background-color: var(--background);
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'Forum';
+   border-radius: 20px;
+   font-size: 20px;
+}
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .second-window p {
+   margin: 0;
+}
+
+
+
+#contacts .contacts-wrap .field-frame .under-frame .contact-form .second-window #close-second-window-btn {
+   position: absolute;
+   top: 17px;
+   right: 28px;
+   line-height: 20px;
+   font-size: 55px;
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   color: var(--text-default);
+}
 
 /*-- contacts end --*/
 
@@ -805,7 +1094,9 @@ button:not(:disabled) {
 
 
 /*-- footer start --*/
-#footer {}
+#footer {
+   margin-top: 24px;
+}
 
 /*-- footer end --*/
 
@@ -854,6 +1145,10 @@ button:not(:disabled) {
 
 
    /*-- prepare your trip with us start --*/
+   #prepareTripUs .list-item {
+      max-width: 680px;
+   }
+
    /*-- prepare your trip with us end --*/
 
 
@@ -956,6 +1251,10 @@ button:not(:disabled) {
 
 
    /*-- prepare your trip with us start --*/
+   #prepareTripUs .list-item {
+      max-width: 680px;
+   }
+
    /*-- prepare your trip with us end --*/
 
 
@@ -1228,6 +1527,7 @@ button:not(:disabled) {
 
    #prepareTripUs .list-item {
       margin-bottom: 10px;
+      max-width: 747px;
    }
 
    #prepareTripUs .list-item .list-number {
@@ -1269,10 +1569,137 @@ button:not(:disabled) {
 
 
    /*-- questions and answers start --*/
+   #questionsAnswers {
+      margin-bottom: 24px;
+   }
+
+   #questionsAnswers h2 {
+      font-size: 50px;
+      margin-bottom: 25px;
+   }
+
+   #questionsAnswers .accordion .field-frame {
+      width: 79%;
+   }
+
+   #questionsAnswers .element-frame {
+      width: 120px;
+   }
+
+   #questionsAnswers .above-frame {
+      width: 110%;
+   }
+
+   #questionsAnswers .accordion,
+   .accordion-header,
+   .accordion-body {
+      font-size: 16px;
+   }
+
+   #questionsAnswers .accordion-body {
+      font-size: 20px;
+   }
+
+   #questionsAnswers .accordion-flush .accordion-item .accordion-button {
+      font-size: 26px;
+   }
+
    /*-- questions and answers end --*/
 
 
    /*-- contacts start --*/
+   #contacts {
+      margin: 0 auto;
+      padding: 24px 0 0;
+   }
+
+
+   #contacts h2 {
+      font-size: 50px;
+   }
+
+   #contacts .contacts-wrap {
+      display: flex;
+      justify-content: center;
+   }
+
+   #contacts .contacts-wrap .field-frame {
+      margin: 0;
+      width: 371px;
+   }
+
+   #contacts .contacts-wrap .field-frame:first-child {
+      margin-right: 28px;
+   }
+
+   #contacts .contacts-wrap .field-frame:last-child {
+      margin-left: 28px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame {
+      margin-top: 30px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .element-frame {
+      margin-top: -21px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info,
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form {
+      width: 408px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group {
+      padding: 44px 0 0 34px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item {
+      font-size: 20px;
+      margin-bottom: 45px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child {
+      margin-bottom: 23px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
+      width: 352px;
+      height: 133px;
+      margin: 0 0 27px 24px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window {
+      padding: 84px 46px 99px 48px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper {
+      height: 45px;
+      margin-bottom: 32px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input {
+      height: 45px;
+      padding: 14px 0 12px 12px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input::placeholder {
+      font-size: 20px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button {
+      height: 83px;
+      width: 225px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button {
+      width: 272px;
+      height: 49px;
+      margin: 0px -24px -11px -24px;
+      font-size: 26px;
+   }
+
    /*-- contacts end --*/
 
 
@@ -1281,7 +1708,28 @@ button:not(:disabled) {
 
 
    /*-- footer start --*/
+   #footer {
+      margin-top: 32px;
+   }
+
    /*-- footer end --*/
+}
+
+@media (min-width: 1440px) {
+   #prepareTripUs .list-item {
+      max-width: 1024px;
+   }
+
+   /*-- contacts start --*/
+   #contacts .contacts-wrap .field-frame:first-child {
+      margin-right: 55px;
+   }
+
+   #contacts .contacts-wrap .field-frame:last-child {
+      margin-left: 55px;
+   }
+
+   /*-- contacts end --*/
 }
 
 /*-----------------------------------------------------*/
