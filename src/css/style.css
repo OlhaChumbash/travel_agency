@@ -454,7 +454,6 @@ button:not(:disabled) {
 
 /*-- header end --*/
 
-
 /*-- main-block-TUI start --*/
 #mainTUI .wraper-main {
    width: 100%;
@@ -1967,10 +1966,137 @@ button:not(:disabled) {
 
 
    /*-- questions and answers start --*/
+   #questionsAnswers {
+      margin-bottom: 24px;
+   }
+
+   #questionsAnswers h2 {
+      font-size: 50px;
+      margin-bottom: 25px;
+   }
+
+   #questionsAnswers .accordion .field-frame {
+      width: 79%;
+   }
+
+   #questionsAnswers .element-frame {
+      width: 120px;
+   }
+
+   #questionsAnswers .above-frame {
+      width: 110%;
+   }
+
+   #questionsAnswers .accordion,
+   .accordion-header,
+   .accordion-body {
+      font-size: 16px;
+   }
+
+   #questionsAnswers .accordion-body {
+      font-size: 20px;
+   }
+
+   #questionsAnswers .accordion-flush .accordion-item .accordion-button {
+      font-size: 26px;
+   }
+
    /*-- questions and answers end --*/
 
 
    /*-- contacts start --*/
+   #contacts {
+      margin: 0 auto;
+      padding: 24px 0 0;
+   }
+
+
+   #contacts h2 {
+      font-size: 50px;
+   }
+
+   #contacts .contacts-wrap {
+      display: flex;
+      justify-content: center;
+   }
+
+   #contacts .contacts-wrap .field-frame {
+      margin: 0;
+      width: 371px;
+   }
+
+   #contacts .contacts-wrap .field-frame:first-child {
+      margin-right: 28px;
+   }
+
+   #contacts .contacts-wrap .field-frame:last-child {
+      margin-left: 55px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame {
+      margin-top: 30px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .element-frame {
+      margin-top: -21px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info,
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form {
+      width: 408px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group {
+      padding: 44px 0 0 34px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item {
+      font-size: 20px;
+      margin-bottom: 45px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child {
+      margin-bottom: 23px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
+      width: 352px;
+      height: 133px;
+      margin: 0 0 27px 24px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window {
+      padding: 84px 46px 99px 48px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper {
+      height: 45px;
+      margin-bottom: 32px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input {
+      height: 45px;
+      padding: 14px 0 12px 12px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input::placeholder {
+      font-size: 20px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button {
+      height: 83px;
+      width: 225px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button {
+      width: 272px;
+      height: 49px;
+      margin: 0px -24px -11px -24px;
+      font-size: 26px;
+   }
+
    /*-- contacts end --*/
 
 
@@ -1979,7 +2105,17 @@ button:not(:disabled) {
 
 
    /*-- footer start --*/
+   #footer {
+      margin-top: 32px;
+   }
+
    /*-- footer end --*/
+}
+
+@media (min-width: 1440px) {
+   #prepareTripUs .list-item {
+      max-width: 1024px;
+   }
 }
 
 /*-----------------------------------------------------*/
