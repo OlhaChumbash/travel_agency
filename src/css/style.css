@@ -110,7 +110,7 @@ a {
             <div class="element-frame">
                 <img src="./src/images/frame.png" alt="It is frame">
             </div>
-            <div class="above-frame"> 
+            <div class="above-frame">
               Lorem text
             </div>
         </div>
@@ -178,7 +178,7 @@ button:not(:disabled) {
 /*!зразок не видаляти!
       <div class="field-button">
         <div class="img-button">
-          <button class="text-button">Залишити завку</button> 
+          <button class="text-button">Залишити завку</button>
         </div>
       </div>
 */
@@ -198,7 +198,260 @@ button:not(:disabled) {
    padding: 0px !important;
 }
 
-#header {}
+#header .hamburger-menu {
+   background: linear-gradient(157deg, rgba(226, 211, 206, 0.16) -5.39%, rgba(226, 211, 206, 0.15) 108.05%);
+   border-radius: 0px;
+   height: 59px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1;
+}
+
+#header #menu__toggle {
+   opacity: 0;
+}
+
+#header .menu__btn {
+   display: flex;
+   position: absolute;
+   top: 26px;
+   right: 28px;
+   width: 50px;
+   height: 28px;
+   cursor: pointer;
+   z-index: 999;
+}
+
+#header .menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   border-radius: 4px;
+   background-color: var(--сolor-white);
+}
+
+#header .menu__btn>span::before {
+   content: "";
+   top: -12px;
+}
+
+#header .menu__btn>span::after {
+   content: "";
+   top: 12px;
+}
+
+.pointer {
+   cursor: pointer;
+}
+
+#header .menu__box {
+   position: fixed;
+   visibility: hidden;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 8px 0 0 0;
+}
+
+#header .menu__box ul {
+   list-style: none;
+   padding: 0;
+   margin: 0 auto;
+   max-width: 343px;
+}
+
+#header .menu__box a img {
+   margin-left: 16px;
+   margin-bottom: 8px;
+}
+
+#header #menu__toggle:checked~.menu__box {
+   height: 100vh;
+   background: rgba(36, 59, 115, 0.90);
+   backdrop-filter: blur(23.72395133972168px);
+   border-radius: 0px;
+   top: 0;
+   z-index: 2;
+   z-index: 2;
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item {
+   display: block;
+   padding-bottom: 24px;
+   color: var(--сolor-white);
+   font-family: 'Forum';
+   font-size: 20px;
+   font-weight: 400;
+   text-decoration: none;
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item__contacts {
+   padding-bottom: 42px;
+}
+
+#header #menu__toggle:checked~.menu__btn>span {
+   transform: rotate(45deg);
+}
+
+#header #menu__toggle:checked~.menu__btn>span::before {
+   top: 0;
+   transform: rotate(0);
+}
+
+#header #menu__toggle:checked~.menu__btn>span::after {
+   top: 0;
+   transform: rotate(90deg);
+}
+
+#header #menu__toggle:checked~.menu__box {
+   visibility: visible;
+   right: 0;
+}
+
+#header .menu {
+   display: none;
+}
+
+#header .mob-lang-select {
+   display: block;
+   padding-top: 17px;
+}
+
+#header .mob-desktop {
+   display: none;
+}
+
+#header .hamburger-menu .row .menu__box .header-nav-btn {
+   display: block;
+   width: 307px;
+   height: 46px;
+   font-family: 'Montserrat';
+   font-size: 20px;
+   font-weight: 400;
+   border-radius: 0;
+   margin: 0 auto 42px auto;
+   border-radius: 4px;
+   border: 1px solid var(--color-blue-1);
+   background-color: var(--сolor-white);
+   color: var(--color-blue-1);
+}
+
+#header .hamburger-menu .row .menu-wrap-bg {
+   padding-top: 40px;
+}
+
+#header .hamburger-menu .row .menu__box .header-nav-btn:hover,
+#header .hamburger-menu .row .menu__box .header-nav-btn:active,
+#header .hamburger-menu .row .menu__box .header-nav-btn:focus {
+   background-color: var(--color-blue-1);
+   color: var(--сolor-white);
+}
+
+#header .hamburger-menu .row .menu__box .header-nav-btn:disabled {
+   background-color: var(--button-gray);
+   color: var(--color-blue-1);
+}
+
+#header a {
+   text-decoration: none;
+}
+
+#header .icon_img {
+   padding: 8px;
+   padding-left: 16px;
+}
+
+#header .row {
+   margin-right: 0;
+}
+
+#header .hamburger-menu .row .menu__box .share-section {
+   border-top: 2px solid var(--сolor-white);
+   width: 278px;
+   margin: 0 auto;
+   padding-top: 8px;
+}
+
+#header .hamburger-menu .row .menu__box .share-section h2 {
+   font-family: 'Forum';
+   font-size: 20px;
+   font-weight: 400;
+   color: var(--сolor-white);
+   margin-bottom: 0;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons {
+   margin-top: 26px;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li {
+   margin: 0 16px;
+   font-size: 23px;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-Facebook,
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-linkedin {
+   font-size: 24px;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-twitter,
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-Telegram {
+   font-size: 22px;
+}
+
+#header .social-options {
+   display: none;
+   list-style: none;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+#header .social-options li a {
+   text-decoration: none;
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   font-family: 'Manrope';
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language {
+   font-size: 20px;
+   color: var(--color-gray);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language:first-child {
+   color: var(--сolor-white);
+   margin-bottom: 20px;
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language:hover,
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language:active {
+   color: var(--сolor-white);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:last-child {
+   color: var(--сolor-white);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:first-child {
+   color: var(--color-gray);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:hover,
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:active {
+   color: var(--сolor-white);
+}
 
 /*-- header end --*/
 
@@ -307,7 +560,7 @@ button:not(:disabled) {
    left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgba(36, 59, 115, 0.90);   
+   background-color: rgba(36, 59, 115, 0.90);
    display: none;
 }
 
@@ -438,6 +691,7 @@ button:not(:disabled) {
 .grecaptcha-badge {
    display: none !important;
 }
+
 /*-- form-block end --*/
 
 /*-- travel search (plugin) start --*/
@@ -682,6 +936,7 @@ button:not(:disabled) {
    #form-window .input-wrapper {
       margin-bottom: 32px;
    }
+
    /*--form-block end"--*/
 
    /*-- travel search (plugin) start --*/
@@ -734,6 +989,87 @@ button:not(:disabled) {
 
 
    /*-- header start --*/
+   #header .hamburger-menu {
+      height: 67px;
+      backdrop-filter: blur(23.72395133972168px);
+   }
+
+   #header .menu__btn {
+      display: none;
+   }
+
+   #header .hamburger-menu .row {
+      display: flex;
+   }
+
+   #header .hamburger-menu .row div a img {
+      padding-top: 12px;
+      margin-left: 50px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt {
+      width: 100%;
+      margin-top: -40px;
+      padding: 0;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu {
+      display: flex;
+      justify-content: center;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop {
+      margin-left: -30px;
+      padding: 0;
+      margin-top: -4px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a {
+      font-size: 20px;
+      color: var(--text-white);
+      font-weight: 400;
+      line-height: normal;
+      font-family: 'Forum';
+      margin: 0 12px;
+   }
+
+   #header .hamburger-menu .row .mob-desktop {
+      position: absolute;
+      top: 20px;
+      right: 70px;
+      display: flex;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language {
+      font-family: 'Forum';
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--color-gray);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:first-child {
+      color: var(--сolor-white);
+      margin-right: 16px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:hover,
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:active {
+      color: var(--сolor-white);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:last-child {
+      color: var(--сolor-white);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:first-child {
+      color: var(--color-gray);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:hover,
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:active {
+      color: var(--сolor-white);
+   }
+
    /*-- header end --*/
 
 

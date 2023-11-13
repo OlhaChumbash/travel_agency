@@ -1,3 +1,22 @@
+//burger menu start
+function toggleMenu() {
+   const menuBox = document.getElementById('menuBox');
+   menuBox.classList.toggle('active');
+}
+
+function navigateTo(sectionId) {
+   const element = document.getElementById(sectionId);
+   if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+   }
+}
+
+function closeMenu() {
+   const menuToggle = document.getElementById('menu__toggle');
+   menuToggle.checked = false;
+   document.body.style.overflow = "auto";
+}
+//burger menu end
 const scrollControllerModal = {
    disabledScroll() {
        document.body.style.overflow = "hidden";
@@ -11,7 +30,7 @@ const scrollControllerModal = {
    document.getElementById("modal-overlay").style.display = "block";
    scrollControllerModal.disabledScroll();
 }
- 
+
  // close form window
  document.getElementById("close-form-window").addEventListener("click", () => {
    document.getElementById("form-window").style.display = "none";
@@ -111,7 +130,7 @@ elem.addEventListener("click", (event) => {
    if (checkName() && checkPhone()) {
        scrollControllerModal.disabledScroll();
        isFormValid = true;
-      
+
    }
 })
 ); // close the second window
@@ -130,7 +149,7 @@ greedy: false,
 
 // reCAPTCHA
 listenSubmit();
-function listenSubmit() {   
+function listenSubmit() {
 document.querySelectorAll(".check-form").forEach((elem) =>
    elem.addEventListener("click", (event) => {
        event.preventDefault();

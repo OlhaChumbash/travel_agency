@@ -13,15 +13,17 @@
    <meta name="description" content="Турагенція у Вінниці. Турагент Вінниця">
    <meta name="keywords"
       content="Турагенція Вінниця, турагенція, підбір турів в Вінниці, автобусні турі з Вінниці в Европу">
-   <meta property="og:title" content="Підбір турів у Вінниці">
-   <meta property="og:description" content="Турагенція у Вінниці. Турагент Вінниця">
    <meta property="og:type" content="website">
    <meta property="og:url" content="https://travelagency.intita.com/">
-   <meta name="image" property="og:image" content="https://travelagency.intita.com/src/images/main_init_mobile-min.png">
+   <meta property="og:title" content="Турагенція TUI в Вінниці">
+   <meta property="og:description"
+      content="Підберемо найкращі варіанти для вашого відпочинку! Подорож з намі буде комфортною та цікавою!">
+   <meta property="og:image" content="https://travelagency.intita.com/src/images/sharing-img.jpg">
    <!--sharing on twitter start-->
-   <meta name="twitter:title" content="Підбір турів у Вінниці">
-   <meta name="twitter:image" content="https://travelagency.intita.com/src/images/main_init_mobile-min.png">
-   <meta name="twitter:description" content="Турагенція у Вінниці. Турагент Вінниця">
+   <meta name="twitter:title" content="Турагенція  TUI в Вінниці">
+   <meta name="twitter:image" content="https://travelagency.intita.com/src/images/sharing-img.jpg">
+   <meta name="twitter:description"
+      content="Підберемо найкращі варіанти для вашого відпочинку! Подорож з намі буде комфортною та цікавою!">
    <meta name="twitter:url" content="https://travelagency.intita.com/">
    <meta name="twitter:card" content="summary">
    <!--sharing on twitter end-->
@@ -43,8 +45,83 @@
    <!--"loader end"-->
 
    <div id="wrapper">
-      <!--"header start"-->
-      <header id="header"></header>
+      <!--header start-->
+      <header id="header">
+         <div class="hamburger-menu">
+            <div class="row">
+               <div>
+                  <a href="index.html" target="_blank">
+                     <img class="icon_img" src="./src/images/logo.png" alt="Logo"></a>
+               </div>
+               <div class="menu-block menu-wrap-dt">
+                  <div class="menu">
+                     <ul class="list-unstyled d-flex menu-desktop">
+                        <li><a class="" href="#popularDestinations">Популярніші напрямки</a></li>
+                        <li><a class="" href="#reviews">Відгуки</a></li>
+                        <li><a class="" href="#questionsAnswers">Найчастіші запитання</a></li>
+                        <li><a class="" href="#contacts">Контакти</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mob-desktop switch-languages">
+                     <a class="text-language" href="#" id="uaLang">Ua</a>
+                     <a class="text-language" href="index-en.html" id="enLang">Eng</a>
+                  </div>
+               </div>
+               <input id="menu__toggle" type="checkbox" />
+               <label id="dropdownMenuButton" class="menu__btn" for="menu__toggle" onclick="toggleMenu()">
+                  <span></span>
+               </label>
+               <div class="menu__box" id="menuBox">
+                  <a href="index.html" target="_blank">
+                     <img class="header-burger icon-img" src="./src/images/logo.png" alt="Logo"></a>
+                  <div class="menu-wrap-bg">
+                     <ul>
+                        <li><a class="menu__item" href="#"
+                              onclick="navigateTo('popularDestinations'); closeMenu();">Популярніші напрямки</a>
+                        </li>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('reviews'); closeMenu()">Відгуки</a>
+                        </li>
+                        <li><a class="menu__item" href="#"
+                              onclick="navigateTo('questionsAnswers'); closeMenu()">Найчастіші
+                              запитання</a>
+                        </li>
+                        <li><a class="menu__item menu__item__contacts" href="#"
+                              onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
+                     </ul>
+                     <button class="header-nav-btn">Зв’язатись з оператором</button>
+                     <div class="share-section text-center">
+                        <h2 class="text-center text-share">Поділитись</h2>
+                     </div>
+                     <div class="social-icons">
+                        <div class="icons-start">
+                           <ul class="social-options list-unstyled d-flex icons-menu">
+                              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-Facebook"></i></a>
+                              </li>
+                              <li><a href="https://twitter.com/intent/tweet?url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-twitter"></i></a>
+                              </li>
+                              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-linkedin"></i></a>
+                              </li>
+                              <li><a href="https://t.me/share/url?url=https://https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-Telegram"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <div class="switch-languages">
+                           <a class="text-language" href="#" id="uaLang">Ua</a>
+                           <a class="text-language" href="index-en.html" id="enLang">En</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
       <!--"header end"-->
 
       <!--"main-block-TUI start"-->
@@ -188,7 +265,8 @@
          <!--"prepare your trip with us button"-->
          <div class="field-button">
             <div class="img-button">
-               <button id="prepareTripUs-button" class="text-button order-btn" onclick="openForm()">Залишити завку</button>
+               <button id="prepareTripUs-button" class="text-button order-btn" onclick="openForm()">Залишити
+                  завку</button>
             </div>
          </div>
       </section>
@@ -213,16 +291,18 @@
       <!--"footer start"-->
       <footer id="footer" class="container-xxl"></footer>
       <!--"footer end"-->
+
    </div>
    <!--instagram start-->
    <script src="https://widbox.sfo3.cdn.digitaloceanspaces.com/scripts/widbox.min.js" defer></script>
-    <!--instagram end-->
+   <!--instagram end-->
    <!--Boostrap 5.3.2 start-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
    <!--Boostrap 5.3.2 end-->
-   <script id="itTourWidgetScriptJsx" tourTab="1" euroTab="1" guidedTab="1" ticketsTab="1" src="https://www.ittour.com.ua/tour_search.jsx?id=44D42601GO022788017384376&ver=3"></script>
+   <script id="itTourWidgetScriptJsx" tourTab="1" euroTab="1" guidedTab="1" ticketsTab="1"
+      src="https://www.ittour.com.ua/tour_search.jsx?id=44D42601GO022788017384376&ver=3"></script>
    <!-- recaptcha -->
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
