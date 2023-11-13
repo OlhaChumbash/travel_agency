@@ -698,7 +698,54 @@ button:not(:disabled) {
 
 
 /*-- types tours start --*/
-#typesTours {}
+#typesTours{ 
+   padding-top: 16px;
+   margin: 0 auto;
+   max-width: 654px;
+   margin-bottom: 16px;
+}
+#typesTours h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-bottom: 12px;
+   padding: 0 50px 0 44px;
+   line-height: 1.1;
+   font-family: "Forum";
+}
+#typesTours h5 {
+   font-family: 'Manrope';
+   margin: 12px 0px 0px 0px;
+}
+.types-tours_wrapper {  
+   display: flex;
+   flex-direction: column;
+   padding: 0px 34px;
+}
+.types-tours_row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+.types-tours_row:last-child{
+   margin-bottom: 0px;
+}
+.types-tours_item {
+   display: flex;
+   flex-direction: column;
+}
+.types-tours_img {
+   margin: 0 auto;
+}
+.types-tours_img img{
+  width: 54px;
+  height: auto;
+}
+.types-tours_text {
+}
 
 /*-- types tours end --*/
 
@@ -1678,6 +1725,48 @@ button:not(:disabled) {
 
 
    /*-- types tours start --*/
+   #typesTours{
+      padding-top: 24px;
+      max-width: 745px;
+      margin-bottom: 32px;
+   }
+   #typesTours h2 {
+      max-width: 546px;
+      color: #000;
+      text-align: center;
+      font-size: 50px;
+      margin: 0 auto;
+      margin-bottom: 24px;   
+      
+   }
+   #typesTours h5 {
+      margin: 12px 0px 0px 0px;
+   }
+   .types-tours_wrapper {     
+      flex-direction: row;
+      justify-content: space-between; 
+      padding: 0px;   
+   }
+   .types-tours_row {    
+      margin-bottom: 0px;     
+      width: 45%;
+   }
+   .types-tours_row:last-child{
+      margin-right: 0px;
+   }
+   .types-tours_item {
+      display: flex;
+      flex-direction: column;
+   }
+   .types-tours_img {
+      margin: 0 auto;
+   }
+   .types-tours_img img{
+     width: 54px;
+     height: auto;
+   }
+   .types-tours_text {
+   }
    /*-- types tours end --*/
 
 
@@ -2113,9 +2202,18 @@ button:not(:disabled) {
 }
 
 @media (min-width: 1440px) {
+   /*-- types tours start --*/
+   #typesTours{ 
+      max-width: 1048px;
+   }
+/*-- types tours end --*/
+
+
+/*-- prepare your trip with us start --*/
    #prepareTripUs .list-item {
       max-width: 1024px;
-   }
+   }   
+/*-- prepare your trip with us end --*/
 }
 
 /*-----------------------------------------------------*/

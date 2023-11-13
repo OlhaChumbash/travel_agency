@@ -43,7 +43,7 @@
    <!--"loader start"-->
    <div id="loader"></div>
    <!--"loader end"-->
-
+  
    <div id="wrapper">
       <!--header start-->
       <header id="header">
@@ -89,7 +89,7 @@
                         <li><a class="menu__item menu__item__contacts" href="#"
                               onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
                      </ul>
-                     <button class="header-nav-btn">Зв’язатись з оператором</button>
+                     <button class="header-nav-btn check-form">Зв’язатись з оператором</button>
                      <div class="share-section text-center">
                         <h2 class="text-center text-share">Поділитись</h2>
                      </div>
@@ -122,7 +122,7 @@
             </div>
          </div>
       </header>
-      <!--"header end"-->
+    <!--"header end"-->
 
       <!--"main-block-TUI start"-->
       <section id="mainTUI">
@@ -133,7 +133,7 @@
                   <p class="title-p">+38(097) 720-85-54</p>
                   <p class="title-p">+38(097) 999-89-39</p>
                   <div class="box-button">
-                     <button class="button-main">Зв’язатись з оператором</button>
+                     <button class="button-main" onclick="openForm()"> Зв’язатись з оператором</button>
                   </div>
                   <div class="div-icons">
                      <div class="border-box-top"></div>
@@ -213,7 +213,51 @@
       <!--"travel search (plugin) end"-->
 
       <!--"types tours start"-->
-      <section id="typesTours" class="container-xxl"></section>
+      <section id="typesTours">
+         <h2>Типи турів</h2>
+         <div class="types-tours_wrapper">
+            <div class="types-tours_row">
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_planet.png" alt="Зображення планети">
+                  </div>
+                  <h5 class="types-tours_text">Країни</h5>                  
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_ship.png" alt="Зображення корабля">
+                  </div>
+                  <h5 class="types-tours_text">Круїзи</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_bus.png" alt="Зображення автобуса">
+                  </div>
+                  <h5 class="types-tours_text">Автобусні</h5>
+               </div>
+            </div>
+            <div class="types-tours_row">
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_mountains.png" alt="Зображення гiр">
+                  </div>
+                  <h5 class="types-tours_text">Гірські</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_sea.png" alt="Зображення моря">
+                  </div>
+                  <h5 class="types-tours_text">Морські</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_buildings.png" alt="Зображення будiвель">
+                  </div>
+                  <h5 class="types-tours_text">Екскурсії</h5>
+               </div>
+            </div>
+         </div>
+      </section>
       <!--"types tours end"-->
 
       <!--"more popular destinations start"-->
@@ -588,7 +632,7 @@
       <!--"footer start"-->
       <footer id="footer"></footer>
       <!--"footer end"-->
-   </div>
+
 
 
    <!--instagram start-->
