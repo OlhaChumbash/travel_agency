@@ -6,13 +6,13 @@
     --color-about-red: #fe15104d;
     --color-about-yellow: #5497a7;
     --color-about-purple: #b9b9eb;
-    --background-body: #b8e5e3aa;
+    --background: linear-gradient(180deg, #6B7BB1 5.88%, rgba(6, 124, 161, 0.00) 96.45%);;
     --backgtound-burger-menu: #cac7c7;
     --student-about-color-light: #fff;
     --student-about-color-dark: #333;
     --background-blocks: #fff;
     --background-mentors: #51aeffa9;
-    --background-buttons: #7ae7d794;
+    --background-buttons: #243B73;
     --text-light-color: #fff;
     --text-dark-color: #2f497a;
 }
@@ -31,13 +31,11 @@ h2 {
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    color: var(--text-dark-color);
+    line-height: normal;  
 }
 
 body {
     font-family: Roboto;
-    background-color: var(--background-body);
 }
 
 .center_containerd {
@@ -74,12 +72,11 @@ body {
 
 /*---------------------------*/
 .header-link {
-    color: #2f497a;
+    color: #000000;
     text-decoration: none;
     position: relative;
     display: inline-block;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 18px;  
     height: 100%;
 }
 
@@ -139,15 +136,14 @@ body {
 }
 
 .mentors {
-    background: var(--background-mentors);
+    background: linear-gradient(180deg, #243B73 25.88%, rgba(6, 124, 161, 0.00) 96.45%);
     width: 180px;
     height: 120px;
     display: flex;
     justify-content: center;
     border-radius: 0px 25px;
     flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+    align-items: center; 
 }
 
 .mySwiper {
@@ -163,8 +159,7 @@ body {
     line-height: 19px;
     font-weight: 300;
     margin-right: 8px;
-    z-index: 23;
-    color: #2f497a;
+    z-index: 23;   
     font-weight: 400;
 }
 
@@ -189,7 +184,8 @@ body {
 
 .link_intita {
     text-decoration: none;
-    color: #2f497a;
+    color: #000000;
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -271,12 +267,11 @@ body {
     display: flex;
     width: 960px;
     height: 600px;
-    background: var(--background-blocks);
+    background: var(--background);
     border-radius: 50px;
     margin: 0 auto;
     justify-content: center;
-    margin-bottom: 40px;
-    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;   
 }
 
 .picture_intita {
@@ -306,8 +301,7 @@ body {
     font-size: 28px;
     font-weight: 300;
     line-height: 20px;
-    letter-spacing: 0em;
-    color: #51afff;
+    letter-spacing: 0em;   
     font-weight: 400;
 }
 
@@ -317,14 +311,13 @@ body {
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0em;
-    color: #5497a7;
     font-weight: 400;
 }
 
 .container_about_one {
     width: 380px;
     height: 71px;
-    background: #2f497a;
+    background-color: rgba(254, 88, 85, 0.8);
     border-radius: 50px;
     text-align: center;
     font-size: 18px;
@@ -332,15 +325,14 @@ body {
     letter-spacing: 0em;
     padding: 16px 17px 16px 18px;
     margin: 0 auto;
-    margin-top: 107px;
-    color: var(--text-light-color);
+    margin-top: 107px; 
     font-weight: 400;
 }
 
 .container_about_two {
     width: 380px;
     height: 92px;
-    background: #51afff;
+    background: #FFFFFF;
     border-radius: 0px 30px;
     text-align: center;
     font-size: 18px;
@@ -348,36 +340,33 @@ body {
     letter-spacing: 0em;
     padding: 16px 44px 16px 44px;
     margin: 0 auto;
-    margin-top: 24px;
-    color: var(--text-light-color);
+    margin-top: 24px;  
     font-weight: 400;
 }
 
 .container_about_three {
     width: 380px;
     height: 72px;
-    background: #2f497a;
+    background: #8A8AFC;
     border-radius: 50px;
     margin: 0 auto;
     margin-top: 24px;
     text-align: center;
     font-size: 18px;
-    padding: 16px 71px 16px 71px;
-    color: var(--text-light-color);
+    padding: 16px 71px 16px 71px;  
     font-weight: 400;
 }
 
 .container_about_four {
     width: 380px;
     height: 55px;
-    background: #51afff;
+    background-color: rgba(255, 213, 46, 0.7);
     padding: 16px 57px 16px 57px;
     font-size: 18px;
     line-height: 25px;
     margin: 0 auto;
     margin-top: 24px;
-    border-radius: 0 25px;
-    color: var(--text-light-color);
+    border-radius: 0 25px;   
     font-weight: 400;
 }
 
@@ -396,8 +385,7 @@ body {
     font-size: 16px;
     padding-top: 8px;
     text-align: center;
-    line-height: 20px;
-    color: #2f497a;
+    line-height: 20px;  
     width: 50px;
 }
 
@@ -481,23 +469,21 @@ body {
 }
 
 .container_students {
-    background: var(--background-blocks);
+    background: var(--background);
     margin: 0 auto;
     margin-bottom: 40px;
     width: 960px;
     margin-top: 40px;
     border-radius: 50px;
-    padding-bottom: 40px;
-    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+    padding-bottom: 40px;  
 }
 
-.container_students h2 {
-    color: #5497a7;
+.container_students h2 {   
     padding-top: 25px;
+    font-weight: 400;
 }
 
-.picture_team {
-    box-shadow: 0px 5px 5px 0px #d9d9d999;
+.picture_team { 
     border-radius: 100px 100px 100px 0px;
     width: 100px;
     height: 100px;
@@ -515,8 +501,7 @@ body {
     line-height: 19px;
     letter-spacing: 0em;
     text-align: center;
-    width: 91px;
-    color: #2f497a;
+    width: 91px;  
     font-weight: 400;
 }
 
@@ -526,7 +511,7 @@ body {
     color: var(--student-about-color-dark);
     font-size: 14px;
     line-height: 16px;
-    color: #5497a7;
+    color: #666666;
     font-weight: 400;
     text-align: left;
 }
@@ -537,7 +522,7 @@ body {
     color: var(--student-about-color-dark);
     font-size: 14px;
     line-height: 16px;
-    color: #5497a7;
+    color: #666666;
     font-weight: 400;
     text-align: left;
 }
@@ -576,14 +561,14 @@ body {
     height: 40px;
     top: 0;
     left: 0;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 18px;    
     text-align: center;
     padding-top: 10px;
     border-radius: 40px;
     display: inline-block;
     transition: all 0.5s;
     border-radius: 25px 25px 0 25px;
+    color: var(--student-about-color-light);
 }
 
 .btn-white {
@@ -647,10 +632,10 @@ body {
 
 .progect {
     width: 591px;
-}
-
+   }
+   
 .progect p {
-    color: #5497a7;;
+   color: #000000;   
 }
 
 .dix_button {
@@ -939,7 +924,6 @@ body {
     }
 
     .mentors {
-        background: var(--background-mentors);
         width: 180px;
         height: 120px;
         display: flex;
@@ -1439,7 +1423,6 @@ body {
     }
 
     .mentors {
-        background: var(--background-mentors);
         width: 180px;
         height: 120px;
         display: flex;
@@ -1510,8 +1493,7 @@ body {
         bottom: 45px;
     }
 
-    .mentors {
-        background: var(--background-mentors);
+    .mentors {      
         width: 180px;
         height: 120px;
         display: flex;
