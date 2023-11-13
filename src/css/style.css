@@ -462,7 +462,6 @@ button:not(:disabled) {
    background-size: cover;
    background-repeat: no-repeat;
    margin: 0 auto;
-
 }
 
 #mainTUI .conteiner {
@@ -724,6 +723,7 @@ button:not(:disabled) {
    margin: 0 auto;
    max-width: 1440px;
    padding: 16px 16px 30px 12px;
+   margin-top: 16px;
    background-color: var(--background);
 }
 
@@ -1516,7 +1516,7 @@ button:not(:disabled) {
 
    /*-- prepare your trip with us start --*/
    #prepareTripUs {
-      padding-top: 24px;
+      margin-top: 24px;
    }
 
    #prepareTripUs h2 {
@@ -1633,7 +1633,7 @@ button:not(:disabled) {
    }
 
    #contacts .contacts-wrap .field-frame:last-child {
-      margin-left: 28px;
+      margin-left: 55px;   
    }
 
    #contacts .contacts-wrap .field-frame .under-frame {
@@ -1719,17 +1719,7 @@ button:not(:disabled) {
    #prepareTripUs .list-item {
       max-width: 1024px;
    }
-
-   /*-- contacts start --*/
-   #contacts .contacts-wrap .field-frame:first-child {
-      margin-right: 55px;
-   }
-
-   #contacts .contacts-wrap .field-frame:last-child {
-      margin-left: 55px;
-   }
-
-   /*-- contacts end --*/
 }
 
 /*-----------------------------------------------------*/
+
