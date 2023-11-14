@@ -941,6 +941,8 @@ button:not(:disabled) {
    line-height: 17.66px;
    color: var(--color-black);
    padding: 0;
+   --bs-accordion-bg: none;
+   --bs-accordion-border-color: none;
 }
 
 #questionsAnswers .accordion-body {
