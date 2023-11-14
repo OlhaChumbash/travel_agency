@@ -34,6 +34,7 @@
 
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <link rel="stylesheet" href="src/css/icomoon.css">
    <link rel="stylesheet" href="src/css/style.css">
 </head>
@@ -42,7 +43,7 @@
    <!--"loader start"-->
    <div id="loader"></div>
    <!--"loader end"-->
-
+  
    <div id="wrapper">
       <!--header start-->
       <header id="header">
@@ -88,7 +89,7 @@
                         <li><a class="menu__item menu__item__contacts" href="#"
                               onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
                      </ul>
-                     <button class="header-nav-btn">Зв’язатись з оператором</button>
+                     <button class="header-nav-btn check-form">Зв’язатись з оператором</button>
                      <div class="share-section text-center">
                         <h2 class="text-center text-share">Поділитись</h2>
                      </div>
@@ -121,7 +122,7 @@
             </div>
          </div>
       </header>
-      <!--"header end"-->
+    <!--"header end"-->
 
       <!--"main-block-TUI start"-->
       <section id="mainTUI">
@@ -132,7 +133,7 @@
                   <p class="title-p">+38(097) 720-85-54</p>
                   <p class="title-p">+38(097) 999-89-39</p>
                   <div class="box-button">
-                     <button class="button-main">Зв’язатись з оператором</button>
+                     <button class="button-main" onclick="openForm()"> Зв’язатись з оператором</button>
                   </div>
                   <div class="div-icons">
                      <div class="border-box-top"></div>
@@ -212,7 +213,51 @@
       <!--"travel search (plugin) end"-->
 
       <!--"types tours start"-->
-      <section id="typesTours" class="container-xxl"></section>
+      <section id="typesTours">
+         <h2>Типи турів</h2>
+         <div class="types-tours_wrapper">
+            <div class="types-tours_row">
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_planet.png" alt="Зображення планети">
+                  </div>
+                  <h5 class="types-tours_text">Країни</h5>                  
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_ship.png" alt="Зображення корабля">
+                  </div>
+                  <h5 class="types-tours_text">Круїзи</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_bus.png" alt="Зображення автобуса">
+                  </div>
+                  <h5 class="types-tours_text">Автобусні</h5>
+               </div>
+            </div>
+            <div class="types-tours_row">
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_mountains.png" alt="Зображення гiр">
+                  </div>
+                  <h5 class="types-tours_text">Гірські</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_sea.png" alt="Зображення моря">
+                  </div>
+                  <h5 class="types-tours_text">Морські</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_buildings.png" alt="Зображення будiвель">
+                  </div>
+                  <h5 class="types-tours_text">Екскурсії</h5>
+               </div>
+            </div>
+         </div>
+      </section>
       <!--"types tours end"-->
 
       <!--"more popular destinations start"-->
@@ -273,8 +318,92 @@
       </section>
       <!--"prepare your trip with us end"-->
 
+      <div class="background-between">
+         <img class="img-background" src="./src/images/reviews/reviews_background.jpg" alt="There is background">
+      </div>
+
       <!--"reviews start"-->
-      <section id="reviews"></section>
+      <section id="reviews" class="container-xxl">
+         <div class="reviews-section">
+            <div class="title">
+               <h2>Відгуки</h2>
+            </div>
+            <div class="swiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Віталік Богданюк</h5>
+                        <p>Вже багато років користуємось послугами цього оператора. <br> Кожного разу відпочинок на
+                           висоті,
+                           дуже якісний підбір готелів та рекомендації екскурсій! <br>Відпочинок як для
+                           дорослих так і сім’ям з дітьми, всі ваші побажання будуть завжди враховані, а поки будете
+                           обирати ваш майбутній відпочинок розглядаючи фото та відео, вас ще й пригостять чашечкою
+                           смачної
+                           кави ;) <br>Окремо дякую Олі за роботу та особливий підхід до кожного клієнту!</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Oлена Нiжнiк</h5>
+                        <p>Багато разів їздили через дане агенство. <br>Завжди приємна дівчина Ольга надавала якісну
+                           інформацію що до готелів. <br> <br>Відпочинок завжди був підібраний згідно нашим
+                           побажанням, на вищому рівні, багато емоцій і радощів. <br><br>Рекомендую дане агенство.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Оксана Шляховенко</h5>
+                        <p>Неодноразово відпочивали разом з турагенцією TUI. <br> Менеджер Олічка дуже якісно підбирає
+                           відпочинок під всі ваші побажання. <br> Порадить, підкаже, допоможе з вибором. <br> <br>
+                           Рекомендую, звертайтесь і ви справді не пожалкуєте👍👍👍.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Natalie Lykhvar</h5>
+                        <p>Все супер, підібрали класний відпочинок, а головне подарували нам яскраві емоції та
+                           перезагрузку. <br> <br> Рекомендую, оператор Ольга завжди на зв’язку 👍</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Інна Жосан</h5>
+                        <p>Мені все сподобалось, оператор Ольга була на зв‘язку в потрібні моменти за що їй щире дякую!
+                           <br> Рекомендую даного туроператора.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Iнна Мельник</h5>
+                        <p>Найкращий тур агент для моєї родини та знайомих. <br>Завжди враховуює всі
+                           побажання, комунікабельна, привітна. <br>Має завжди найновішу інформацію. <br>Підбирає
+                           подорожі на любий бюджет зі 100% якістю відпочинку.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Макс Маланський</h5>
+                        <p>Професійно підібраний тур в Домінікану. <br>Все сподобалось. <br>Дякую за сервіс.
+                           <br>Рекомендую.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Вiкторiя Сухоцка</h5>
+                        <p>Професійно, <br>майстер своєї справи👍👍👍<br>Рекомендую👍👍👍👍.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev icon-swiper2_prev"></div>
+            <div class="swiper-button-next icon-swiper2_next"></div>
+         </div>
+      </section>
       <!--"reviews end"-->
 
       <!--"questions and answers start"-->
@@ -503,29 +632,33 @@
       <!--"footer start"-->
       <footer id="footer"></footer>
       <!--"footer end"-->
-   </div>
+
 
 
    <!--instagram start-->
    <script src="https://widbox.sfo3.cdn.digitaloceanspaces.com/scripts/widbox.min.js" defer></script>
    <!--instagram end-->
+
    <!--Boostrap 5.3.2 start-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
    <!--Boostrap 5.3.2 end-->
+
    <script id="itTourWidgetScriptJsx" tourTab="1" euroTab="1" guidedTab="1" ticketsTab="1"
       src="https://www.ittour.com.ua/tour_search.jsx?id=44D42601GO022788017384376&ver=3"></script>
-   <!-- recaptcha -->
+
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
    <!-- recaptcha -->
    <script type="text/javascript" async=""
       src="https://www.gstatic.com/recaptcha/releases/gEr-ODersURoIfof1hiDm7R5/recaptcha__ru.js" crossorigin="anonymous"
       integrity="sha384-TLQJmdPnLiPAQT4yetwoOrytOZ6gFBz1x2lmoy5A/z26Q7wBq8QWOoxzSlcobUUY"></script>
    <script src="https://www.google.com/recaptcha/api.js?render=6LcwRRUaAAAAADavxcmw5ShOEUt1xMBmRAcPf6QP"></script>
+
    <script src="src/js/script.js"></script>
 </body>
 
