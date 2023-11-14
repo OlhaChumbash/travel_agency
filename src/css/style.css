@@ -292,6 +292,16 @@ button:not(:disabled) {
    text-decoration: none;
 }
 
+#header .hamburger-menu .row .menu__box li .menu__item:hover {
+   color: var(--color-beige);
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item:active,
+#header .hamburger-menu .row .menu__box li .menu__item:focus {
+   color: var(--сolor-white);
+   text-decoration: underline;
+}
+
 #header .hamburger-menu .row .menu__box li .menu__item__contacts {
    padding-bottom: 42px;
 }
