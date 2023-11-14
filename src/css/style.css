@@ -594,11 +594,6 @@ button:not(:disabled) {
 }
 #mainTUI .button-main:hover{
    color: var(--white, #FFF);
-   font-family: Montserrat;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
 }
 #mainTUI .box-button:active{
    border-radius: 4px;
@@ -607,11 +602,6 @@ button:not(:disabled) {
 }
 #mainTUI .button-main:active{
    color: var(--white, #FFF);
-   font-family: Montserrat;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
 }
 #mainTUI .box-button:disabled{
    border-radius: 4px;
@@ -620,11 +610,6 @@ button:not(:disabled) {
 }
 #mainTUI .button-main:disabled{
    color: var(--blue-1, #243B73);
-   font-family: Montserrat;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
 }  
 
 #mainTUI .button-main {
