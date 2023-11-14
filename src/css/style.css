@@ -1301,26 +1301,29 @@ button:not(:disabled) {
       display: flex;
    }
 
-   #header .hamburger-menu .row div a img {
-      padding-top: 12px;
-      margin-left: 50px;
+   #header .hamburger-menu .row .menu-wrap-dt {
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 1024px;
+      padding: 0;
+      /* margin-left: 4px; */
    }
 
-   #header .hamburger-menu .row .menu-wrap-dt {
-      width: 100%;
-      margin-top: -40px;
-      padding: 0;
+   #header .hamburger-menu .row .menu-wrap-dt div a img {
+      padding-top: 12px;
    }
 
    #header .hamburger-menu .row .menu-wrap-dt .menu {
       display: flex;
       justify-content: center;
+      margin-left: 8px;
+      margin-right: 32px;
    }
 
    #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop {
-      margin-left: -30px;
       padding: 0;
-      margin-top: -4px;
+      margin-top: 19px;
+
    }
 
    #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a {
@@ -1333,9 +1336,7 @@ button:not(:disabled) {
    }
 
    #header .hamburger-menu .row .mob-desktop {
-      position: absolute;
-      top: 20px;
-      right: 70px;
+      margin-top: 20px;
       display: flex;
    }
 
@@ -1633,7 +1634,7 @@ button:not(:disabled) {
    }
 
    #contacts .contacts-wrap .field-frame:last-child {
-      margin-left: 55px;   
+      margin-left: 55px;
    }
 
    #contacts .contacts-wrap .field-frame .under-frame {
@@ -1715,6 +1716,27 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
+@media (min-width: 1101px) {
+
+   /*-- header start --*/
+   #header .hamburger-menu .row .menu-wrap-dt {
+      margin: auto;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .logo-container {
+      margin-left: -36px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu {
+      display: flex;
+      justify-content: center;
+      margin-left: 8px;
+      margin-right: 64px;
+   }
+
+   /*-- header end --*/
+}
+
 @media (min-width: 1440px) {
    #prepareTripUs .list-item {
       max-width: 1024px;
@@ -1722,4 +1744,3 @@ button:not(:disabled) {
 }
 
 /*-----------------------------------------------------*/
-

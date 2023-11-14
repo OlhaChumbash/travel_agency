@@ -1,22 +1,42 @@
-//burger menu start
+// burger menu start
+const menuBox = document.getElementById('menuBox');
 function toggleMenu() {
-   const menuBox = document.getElementById('menuBox');
    menuBox.classList.toggle('active');
+
+   if (menuBox.classList.contains('active')) {
+      disableScroll();
+   } else {
+      enableScroll();
+   }
 }
 
 function navigateTo(sectionId) {
    const element = document.getElementById(sectionId);
    if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      menuBox.classList.remove('active');
+      closeMenu();
    }
 }
 
 function closeMenu() {
    const menuToggle = document.getElementById('menu__toggle');
    menuToggle.checked = false;
-   document.body.style.overflow = "auto";
+
+   enableScroll();
 }
-//burger menu end
+
+function disableScroll() {
+   document.body.style.overflow = "hidden";
+}
+
+function enableScroll() {
+   document.body.style.overflow = "";
+}
+// burger menu end
+
+//===========================================================//
+
 const scrollControllerModal = {
    disabledScroll() {
       document.body.style.overflow = "hidden";
@@ -31,8 +51,8 @@ function openForm() {
    scrollControllerModal.disabledScroll();
 }
 
- // close form window
- document.getElementById("close-form-window").addEventListener("click", () => {
+// close form window
+document.getElementById("close-form-window").addEventListener("click", () => {
    document.getElementById("form-window").style.display = "none";
    document.getElementById("modal-overlay").style.display = "none";
    document.querySelectorAll("#form-window input").forEach((elem) => {
@@ -114,25 +134,25 @@ document.querySelectorAll(".check-form").forEach((elem) =>
                   inputPhone.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is filled out incorrectly";
                   break;
                default:
-                   break;
-           }
-           inputPhone.closest(".input-wrapper").classList.add("error");
-           inputPhone.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-       } else {
-           inputPhone.closest(".input-wrapper").querySelector(".error-text").textContent = "";
-           inputPhone.closest(".input-wrapper").querySelector("input").classList.remove("error-box");
-           inputPhone.closest(".input-wrapper").classList.remove("error");
-       }
-       return regexPhone.test(inputPhone.value);
-   }
-   checkName();
-   checkPhone();
-   if (checkName() && checkPhone()) {
-       scrollControllerModal.disabledScroll();
-       isFormValid = true;
+                  break;
+            }
+            inputPhone.closest(".input-wrapper").classList.add("error");
+            inputPhone.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+         } else {
+            inputPhone.closest(".input-wrapper").querySelector(".error-text").textContent = "";
+            inputPhone.closest(".input-wrapper").querySelector("input").classList.remove("error-box");
+            inputPhone.closest(".input-wrapper").classList.remove("error");
+         }
+         return regexPhone.test(inputPhone.value);
+      }
+      checkName();
+      checkPhone();
+      if (checkName() && checkPhone()) {
+         scrollControllerModal.disabledScroll();
+         isFormValid = true;
 
-   }
-})
+      }
+   })
 ); // close the second window
 document.getElementById("close-second-window").addEventListener("click", () => {
    document.getElementById("second-window").style.display = "none";
@@ -150,12 +170,12 @@ jQuery(".phone-number").inputmask({
 // reCAPTCHA
 listenSubmit();
 function listenSubmit() {
-document.querySelectorAll(".check-form").forEach((elem) =>
-   elem.addEventListener("click", (event) => {
-       event.preventDefault();
-       // submit to the server if the form is valid
-       if (isFormValid) {
-           grecaptcha.ready(function () {
+   document.querySelectorAll(".check-form").forEach((elem) =>
+      elem.addEventListener("click", (event) => {
+         event.preventDefault();
+         // submit to the server if the form is valid
+         if (isFormValid) {
+            grecaptcha.ready(function () {
                grecaptcha.execute(
                   "6LcwRRUaAAAAADavxcmw5ShOEUt1xMBmRAcPf6QP",
                   { action: "submit" }
