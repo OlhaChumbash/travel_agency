@@ -242,3 +242,13 @@ if (getComputedStyle(secondWindow, null).display === "none") {
 }
 scroll(0, 0);
 }
+// loader start
+function hideLoader() {
+    let loader = document.getElementById('box-loader');
+    loader.style.opacity = 0;
+    setTimeout(() => {
+        loader.remove();
+    }, 2500);
+}
+window.addEventListener('load', hideLoader);
+// loader end
