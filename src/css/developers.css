@@ -6,7 +6,7 @@
     --color-about-red: #fe15104d;
     --color-about-yellow: #5497a7;
     --color-about-purple: #b9b9eb;
-    --background: linear-gradient(180deg, #6B7BB1 5.88%, rgba(6, 124, 161, 0.00) 96.45%);;
+    --background: linear-gradient(180deg, rgba(107, 123, 177, 0.65) 5.88%, rgba(6, 124, 161, 0.00) 96.45%);
     --backgtound-burger-menu: #cac7c7;
     --student-about-color-light: #fff;
     --student-about-color-dark: #333;
@@ -31,12 +31,15 @@ h2 {
     font-size: 40px;
     font-style: normal; 
     line-height: normal;  
+    font-weight: 400;
 }
 
 body {
     font-family: Roboto;
 }
-
+a{
+   text-decoration: none;
+}
 .center_containerd {
     text-align: center;
 }
@@ -133,7 +136,7 @@ body {
 }
 
 .mentors {
-    background: linear-gradient(180deg, #243B73 25.88%, rgba(6, 124, 161, 0.00) 96.45%);
+    background: var(--background);
     width: 180px;
     height: 120px;
     display: flex;
@@ -172,7 +175,11 @@ body {
     background: none;
     border: none;
     font-size: 18px;
-    color: #2f497a;
+    color: #462A16;
+}
+
+.translate_one{ 
+   color:#3A3B46;
 }
 
 .link_intita:hover {
@@ -563,7 +570,7 @@ body {
 }
 
 .btn-1:hover {
-    background: #1abc8c82;
+    background: #6B7BB1;
     transform: translateY(-3px);
 }
 
@@ -587,7 +594,7 @@ body {
 }
 
 .btn-white::after {
-    background: #5497a7;
+    background: #6B7BB1;
 }
 
 .btn-animation-1:hover::after {
@@ -627,10 +634,18 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
+    padding-bottom: 80px;
     margin: 0 auto;
     width: 1024px;
 }
-
+.dix_button img{
+   width: 50px;
+   height: 50px;
+}
+.dix_button img:hover {
+   width: 60px;
+   height: 60px;
+}
 #topBtn {
     cursor: pointer;
 }
@@ -821,11 +836,10 @@ body {
    .br_header {
       height: 30px;
    }
-   
+  
    .translate {
         font-size: 14px;       
-        font-weight: 300;
-        color: #fff;
+        font-weight: 300;       
     }
 
     .container_header {
@@ -1027,11 +1041,11 @@ body {
     }
 
     .container_Technologi {
-        margin-right: 14px;
+        margin-right: 20px;
         margin-top: 24px;
     }
 
-    .container_Technologies {
+   .container_Technologies {
         width: 385px;
     }
 
@@ -1505,9 +1519,22 @@ body {
         margin-top: 24px;
     }
 
-    .dix_button {
-        display: none;
-    }
+    .container_Technologi:last-child {     
+       margin-top: -20px;
+      } 
+      .dix_button {   
+         padding-right: 8px;
+         padding-bottom: 22px;     
+      }  
+      .text_technologi h2{
+        font-size: 24px;
+      }
+      .translate {
+       color: #fff;
+      }
+      .translate_one{
+        color: #A9A9A9;
+      }
 }
 
 @media screen and (max-width: 475px) {
@@ -1542,5 +1569,6 @@ body {
 
     .container_student {
         margin-left: 24px;
-    }
+    } 
+   
 }
