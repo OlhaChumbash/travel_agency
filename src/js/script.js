@@ -227,25 +227,6 @@ $(document).ready(function () {
          })
       );
    }
-<<<<<<< HEAD
-   secondWindow.style.display = "block";
-   document.getElementById("modal-overlay").style.display = "block";
-   document.getElementById("form-window").style.display = "none";
-   document.getElementById("second-window").style.display = "block";
-}
-scroll(0, 0);
-}
-// loader start
-function hideLoader() {
-    let loader = document.getElementById('box-loader');
-    loader.style.opacity = 0;
-    setTimeout(() => {
-        loader.remove();
-    }, 2500);
-}
-window.addEventListener('load', hideLoader);
-// loader end
-=======
    function entrantSubmitResponse(errorStr) {
       const secondWindow = document.getElementById("second-window");
       if (getComputedStyle(secondWindow, null).display === "none") {
@@ -341,8 +322,15 @@ window.addEventListener('load', hideLoader);
          }
       }
    });
-   //----------------------------------------------------
-
-   
+   //----------------------------------------------------   
 });
->>>>>>> develop
+// loader start
+function hideLoader() {
+   let loader = document.getElementById('box-loader');
+   loader.style.opacity = 0;
+   setTimeout(() => {
+       loader.remove();
+   }, 2500);
+}
+window.addEventListener('load', hideLoader);
+// loader end
