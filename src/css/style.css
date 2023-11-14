@@ -782,8 +782,7 @@ button:not(:disabled) {
    font-size: 40px;
    margin: 0 auto;
    width: 68%;
-   margin-bottom: 16px;
-   /* padding: 0px 63px 0px 52px; */
+   margin-bottom: 16px;  
    line-height: 1.1;
 }
 
