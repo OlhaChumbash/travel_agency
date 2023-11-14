@@ -204,10 +204,9 @@ button:not(:disabled) {
 
 
 /*-- main-block-TUI start --*/
-
 #mainTUI .wraper-main {
    width: 100%;
-   background-image: url(../images/main_init_mobile-min.png);
+   background-image: url(../images/main-block/backgraund-main-block-1024.png);
    background-size: cover;
    background-repeat: no-repeat;
    margin: 0 auto;
@@ -262,6 +261,45 @@ button:not(:disabled) {
    min-width: 310px;
    text-align: center;
 }
+#mainTUI .box-button:hover{
+   border-radius: 4px;
+   border: 1px solid var(--blue-1, #243B73);
+   background: var(--blue-2, #6B7BB1);
+}
+#mainTUI .button-main:hover{
+   color: var(--white, #FFF);
+   font-family: Montserrat;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+#mainTUI .box-button:active{
+   border-radius: 4px;
+   border: 1px solid var(--blue-1, #243B73);
+   background: var(--blue-1, #243B73);
+}
+#mainTUI .button-main:active{
+   color: var(--white, #FFF);
+   font-family: Montserrat;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+#mainTUI .box-button:disabled{
+   border-radius: 4px;
+   border: 1px solid var(--blue-1, #243B73);
+   background: var(--gray, #A9A9A9);
+}
+#mainTUI .button-main:disabled{
+   color: var(--blue-1, #243B73);
+   font-family: Montserrat;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}  
 
 #mainTUI .button-main {
    background: none;
@@ -273,7 +311,6 @@ button:not(:disabled) {
    line-height: 24px;
    letter-spacing: 0em;
    text-align: center;
-
 }
 
 #mainTUI .div-icons {
@@ -738,6 +775,11 @@ button:not(:disabled) {
 
 
    /*-- main-block-TUI start --*/
+   #mainTUI .wraper-main {
+      width: 100%;
+      background-image: url(../images/main-block/backgraund-main-block-1440.png);
+      padding: 5% 0;
+   }
    #mainTUI .conteiner {
       position: relative;
    }
