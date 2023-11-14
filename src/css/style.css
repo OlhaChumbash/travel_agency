@@ -1105,7 +1105,83 @@ button:not(:disabled) {
 
 /*-- footer start --*/
 #footer {
-   margin-top: 24px;
+   max-width: 1024px;
+   margin: 24px auto;
+   display: flex;
+   justify-content: center;
+}
+
+#footer .footer-container {
+   display: flex;
+   position: relative;
+}
+
+#footer .footer-container .dev-group {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#footer .footer-container .dev-group a {
+   text-decoration: underline;
+   color: var(--color-black);
+   font-size: 16px;
+   font-family: 'Forum';
+}
+
+#footer .footer-container .dev-group a p {
+   margin: 0 0 0 12px;
+}
+
+#footer .footer-container .dev-group img {
+   width: 58px;
+}
+
+#footer .footer-container .scrollup {
+   position: fixed;
+   z-index: 999;
+   bottom: 32px;
+   right: 16px;
+}
+
+#footer .footer-container .scrollup .outer-circle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 50%;
+}
+
+#footer .footer-container .scrollup .outer-circle .inner-circle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 34px;
+   height: 34px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 50%;
+}
+
+#footer .footer-container .scrollup:hover .outer-circle,
+#footer .footer-container .scrollup:active .outer-circle,
+#footer .footer-container .scrollup:focus .outer-circle,
+#footer .footer-container .scrollup:active .outer-circle .inner-circle,
+#footer .footer-container .scrollup:hover .outer-circle .inner-circle,
+#footer .footer-container .scrollup:focus .outer-circle .inner-circle {
+   border: 2px solid var(--сolor-white);
+   background-color: var(--color-blue-1);
+}
+
+#footer .footer-container .scrollup .outer-circle .inner-circle .icon-accordion-up {
+   font-size: 12px;
+   margin: 0 5px;
+}
+
+#footer .footer-container .scrollup:hover .outer-circle .inner-circle .icon-accordion-up::before,
+#footer .footer-container .scrollup:focus .outer-circle .inner-circle .icon-accordion-up::before {
+   color: white;
 }
 
 /*-- footer end --*/
@@ -1720,7 +1796,35 @@ button:not(:disabled) {
 
    /*-- footer start --*/
    #footer {
-      margin-top: 32px;
+      margin: 32px auto;
+   }
+
+   #footer .footer-container .dev-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #footer .footer-container .dev-group a {
+      text-decoration: underline;
+      color: var(--color-black);
+      font-size: 18px;
+      font-family: 'Forum';
+   }
+
+   #footer .footer-container .dev-group a p {
+      margin: 0 0 0 24px;
+   }
+
+   #footer .footer-container .dev-group img {
+      width: 58px;
+   }
+
+   #footer .footer-container .scrollup {
+      position: fixed;
+      z-index: 999;
+      bottom: 36px;
+      right: 23px;
    }
 
    /*-- footer end --*/
