@@ -708,12 +708,13 @@ button:not(:disabled) {
 
 
 /*-- types tours start --*/
-#typesTours{
+#typesTours {
    padding-top: 16px;
    margin: 0 auto;
    max-width: 654px;
    margin-bottom: 16px;
 }
+
 #typesTours h2 {
    max-width: 546px;
    color: #000;
@@ -725,37 +726,44 @@ button:not(:disabled) {
    line-height: 1.1;
    font-family: "Forum";
 }
+
 #typesTours h5 {
    font-family: 'Manrope';
    margin: 12px 0px 0px 0px;
 }
+
 .types-tours_wrapper {
    display: flex;
    flex-direction: column;
    padding: 0px 34px;
 }
+
 .types-tours_row {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    margin-bottom: 40px;
 }
-.types-tours_row:last-child{
+
+.types-tours_row:last-child {
    margin-bottom: 0px;
 }
+
 .types-tours_item {
    display: flex;
    flex-direction: column;
 }
+
 .types-tours_img {
    margin: 0 auto;
 }
-.types-tours_img img{
-  width: 54px;
-  height: auto;
+
+.types-tours_img img {
+   width: 54px;
+   height: auto;
 }
-.types-tours_text {
-}
+
+.types-tours_text {}
 
 /*-- types tours end --*/
 
@@ -1615,9 +1623,8 @@ button:not(:disabled) {
    #header .hamburger-menu .row .menu-wrap-dt {
       display: flex;
       justify-content: space-evenly;
-      max-width: 1024px;
+      max-width: 1440px;
       padding: 0;
-      /* margin-left: 4px; */
    }
 
    #header .hamburger-menu .row .menu-wrap-dt div a img {
@@ -1826,11 +1833,12 @@ button:not(:disabled) {
 
 
    /*-- types tours start --*/
-   #typesTours{
+   #typesTours {
       padding-top: 24px;
       max-width: 745px;
       margin-bottom: 32px;
    }
+
    #typesTours h2 {
       max-width: 546px;
       color: #000;
@@ -1840,34 +1848,42 @@ button:not(:disabled) {
       margin-bottom: 24px;
 
    }
+
    #typesTours h5 {
       margin: 12px 0px 0px 0px;
    }
+
    .types-tours_wrapper {
       flex-direction: row;
       justify-content: space-between;
       padding: 0px;
    }
+
    .types-tours_row {
       margin-bottom: 0px;
       width: 45%;
    }
-   .types-tours_row:last-child{
+
+   .types-tours_row:last-child {
       margin-right: 0px;
    }
+
    .types-tours_item {
       display: flex;
       flex-direction: column;
    }
+
    .types-tours_img {
       margin: 0 auto;
    }
-   .types-tours_img img{
-     width: 54px;
-     height: auto;
+
+   .types-tours_img img {
+      width: 54px;
+      height: auto;
    }
-   .types-tours_text {
-   }
+
+   .types-tours_text {}
+
    /*-- types tours end --*/
 
 
@@ -2090,7 +2106,30 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
+/*-----------------------------------------------------*/
+@media (min-width: 1101px) {
 
+   /*-- header start --*/
+   #header .hamburger-menu .row .menu-wrap-dt {
+      margin: auto;
+      justify-content: space-between;
+      max-width: 1440px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .logo-container {
+      margin-left: 56px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop {
+      margin-right: 64px;
+   }
+}
 
 /*-----------------------------------------------------*/
 @media (min-width: 1440px) {
@@ -2099,8 +2138,7 @@ button:not(:disabled) {
 
 
    /*-- header start --*/
-   /*-- header end --*/
-
+   /*-- header start --*/
 
    /*-- main-block-TUI start --*/
    /*-- main-block-TUI end --*/
@@ -2111,6 +2149,10 @@ button:not(:disabled) {
 
 
    /*-- types tours start --*/
+   #typesTours {
+      max-width: 1048px;
+   }
+
    /*-- types tours end --*/
 
 
@@ -2328,42 +2370,6 @@ button:not(:disabled) {
    }
 
    /*-- footer end --*/
-}
-
-@media (min-width: 1101px) {
-
-   /*-- header start --*/
-   #header .hamburger-menu .row .menu-wrap-dt {
-      margin: auto;
-   }
-
-   #header .hamburger-menu .row .menu-wrap-dt .logo-container {
-      margin-left: -36px;
-   }
-
-   #header .hamburger-menu .row .menu-wrap-dt .menu {
-      display: flex;
-      justify-content: center;
-      margin-left: 8px;
-      margin-right: 64px;
-   }
-
-   /*-- header end --*/
-}
-
-@media (min-width: 1440px) {
-   /*-- types tours start --*/
-   #typesTours{
-      max-width: 1048px;
-   }
-/*-- types tours end --*/
-
-
-/*-- prepare your trip with us start --*/
-   #prepareTripUs .list-item {
-      max-width: 1024px;
-   }
-/*-- prepare your trip with us end --*/
 }
 
 /*-----------------------------------------------------*/
