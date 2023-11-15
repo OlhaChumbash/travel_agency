@@ -62,7 +62,9 @@ body {
 }
 
 .container-xxl {
-   max-width: 1024px;
+   max-width: 1440px;
+   --bs-gutter-x: 0rem;
+   padding: 0px !important;
 }
 
 a {
@@ -193,11 +195,8 @@ button:not(:disabled) {
 
 /*-- loader end --*/
 
-/*-- header start --*/
-.container-xxl {
-   padding: 0px !important;
-}
 
+/*-- header start --*/
 #header .hamburger-menu {
    background: linear-gradient(157deg, rgba(226, 211, 206, 0.16) -5.39%, rgba(226, 211, 206, 0.15) 108.05%);
    border-radius: 0px;
@@ -558,6 +557,7 @@ button:not(:disabled) {
 
 /*-- main-block-TUI end --*/
 
+
 /*-- form-block start --*/
 #modal-overlay {
    position: fixed;
@@ -700,6 +700,7 @@ button:not(:disabled) {
 
 /*-- form-block end --*/
 
+
 /*-- travel search (plugin) start --*/
 #travelSearch {}
 
@@ -707,7 +708,54 @@ button:not(:disabled) {
 
 
 /*-- types tours start --*/
-#typesTours {}
+#typesTours{
+   padding-top: 16px;
+   margin: 0 auto;
+   max-width: 654px;
+   margin-bottom: 16px;
+}
+#typesTours h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-bottom: 12px;
+   padding: 0 50px 0 44px;
+   line-height: 1.1;
+   font-family: "Forum";
+}
+#typesTours h5 {
+   font-family: 'Manrope';
+   margin: 12px 0px 0px 0px;
+}
+.types-tours_wrapper {
+   display: flex;
+   flex-direction: column;
+   padding: 0px 34px;
+}
+.types-tours_row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+.types-tours_row:last-child{
+   margin-bottom: 0px;
+}
+.types-tours_item {
+   display: flex;
+   flex-direction: column;
+}
+.types-tours_img {
+   margin: 0 auto;
+}
+.types-tours_img img{
+  width: 54px;
+  height: auto;
+}
+.types-tours_text {
+}
 
 /*-- types tours end --*/
 
@@ -734,7 +782,6 @@ button:not(:disabled) {
    max-width: 1440px;
    padding: 16px 16px 30px 12px;
    margin-top: 16px;
-   background-color: var(--background);
 }
 
 #prepareTripUs h2 {
@@ -789,8 +836,87 @@ button:not(:disabled) {
 
 /*-- prepare your trip with us end --*/
 
+
+/*-- background-between start --*/
+
+.background-between {
+   width: 100%;
+   position: relative;
+}
+
+.background-between .img-background {
+   object-fit: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   margin: -70px 0px 0px 0px;
+}
+
+/*-- background-between end --*/
+
+
 /*-- reviews start --*/
-#reviews {}
+#reviews .reviews-section {
+   position: relative;
+   padding: 0px 0px 30px 0px;
+   font-family: 'Forum';
+   font-size: 20px;
+   color: #000;
+
+}
+
+#reviews .reviews-section .title h2 {
+   font-family: 'Forum';
+   font-weight: 400;
+   font-size: 40px;
+   text-align: center;
+   margin: 16px 0px 16px 0px;
+
+}
+
+#reviews .reviews-section .swiper {
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+   margin: 0px auto;
+   padding: 0px 0px 0px 0px;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 343px;
+   min-height: 420px;
+   padding: 15px 22px 0px 22px;
+   margin: 0px auto;
+   background-image: url(../images/reviews/frame-reviews.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   overflow: hidden;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content h5 {
+   text-align: center;
+   font-size: 24px;
+   line-height: 30px;
+   font-weight: 400;
+   margin: 15px 0px 10px 0px;
+}
+
+#reviews .reviews-section .swiper-pagination {
+   bottom: 0px;
+   font-size: 22px;
+   color: var(--button-blue-2);
+}
+
+#reviews .reviews-section .swiper-pagination-bullet {
+   width: 20px;
+   height: 20px;
+   line-height: 20px;
+   font-size: 14px;
+   background-color: var(--button-blue-2);
+}
 
 /*-- reviews end --*/
 
@@ -807,6 +933,7 @@ button:not(:disabled) {
    text-align: center;
    font-size: 40px;
    margin: 0 auto;
+   margin-top: 16px;
    margin-bottom: 16px;
    line-height: 1.1;
    font-family: 'Forum';
@@ -1076,8 +1203,6 @@ button:not(:disabled) {
    margin: 0;
 }
 
-
-
 #contacts .contacts-wrap .field-frame .under-frame .contact-form .second-window #close-second-window-btn {
    position: absolute;
    top: 17px;
@@ -1190,7 +1315,6 @@ button:not(:disabled) {
 
 /*=============================================================*/
 /*------------------------ @ media ----------------------------*/
-
 @media (max-width: 374px) {
 
    /*-- prepare your trip with us start --*/
@@ -1199,8 +1323,43 @@ button:not(:disabled) {
    }
 
    /*-- prepare your trip with us end --*/
+
+
+   /*-- reviews start --*/
+   #reviews .reviews-section {
+      font-size: 18px;
+   }
+
+   /*-- reviews end--*/
 }
 
+
+
+/*-----------------------------------------------------*/
+@media (max-width:991px) {
+
+   /*-- reviews start --*/
+   .swiper-button-next:after,
+   .swiper-rtl .swiper-button-prev:after {
+      display: none;
+   }
+
+   .swiper-button-prev:after,
+   .swiper-rtl .swiper-button-next:after {
+      display: none;
+   }
+
+   .icon-swiper2_prev,
+   .icon-swiper2_next {
+      display: none;
+   }
+
+   /*-- reviews end--*/
+}
+
+
+
+/*-----------------------------------------------------*/
 @media (min-width: 768px) {
    /*-- loader start --*/
    /*-- loader end --*/
@@ -1238,8 +1397,17 @@ button:not(:disabled) {
    /*-- prepare your trip with us end --*/
 
 
-   /*-- reviews start --*/
-   /*-- reviews end --*/
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -200px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
 
 
    /*-- questions and answers start --*/
@@ -1258,6 +1426,8 @@ button:not(:disabled) {
    /*-- footer end --*/
 }
 
+
+/*-----------------------------------------------------*/
 @media (min-width:900px) {
 
    /*-- instagram gallery (plugin) start --*/
@@ -1267,6 +1437,8 @@ button:not(:disabled) {
 
    /*-- instagram gallery (plugin) end --*/
 }
+
+
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
@@ -1344,7 +1516,60 @@ button:not(:disabled) {
    /*-- prepare your trip with us end --*/
 
 
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -300px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- reviews start --*/
+   #reviews .reviews-section {
+      max-width: 875px;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   #reviews .reviews-section .title h2 {
+      font-size: 50px;
+   }
+
+   #reviews .reviews-section .swiper {
+      max-width: 736px;
+   }
+
+   #reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
+      max-width: 361px;
+      height: 434px;
+      padding: 30px 30px 55px 30px;
+   }
+
+   .swiper-button-next:after,
+   .swiper-rtl .swiper-button-prev:after {
+      display: none;
+   }
+
+   .swiper-button-prev:after,
+   .swiper-rtl .swiper-button-next:after {
+      display: none;
+   }
+
+   .icon-swiper2_prev,
+   .icon-swiper2_next {
+      font-size: 100px;
+      top: 58%;
+   }
+
+   #reviews .reviews-section .swiper-pagination {
+      bottom: -20px;
+   }
+
    /*-- reviews end --*/
 
 
@@ -1601,6 +1826,48 @@ button:not(:disabled) {
 
 
    /*-- types tours start --*/
+   #typesTours{
+      padding-top: 24px;
+      max-width: 745px;
+      margin-bottom: 32px;
+   }
+   #typesTours h2 {
+      max-width: 546px;
+      color: #000;
+      text-align: center;
+      font-size: 50px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+
+   }
+   #typesTours h5 {
+      margin: 12px 0px 0px 0px;
+   }
+   .types-tours_wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px;
+   }
+   .types-tours_row {
+      margin-bottom: 0px;
+      width: 45%;
+   }
+   .types-tours_row:last-child{
+      margin-right: 0px;
+   }
+   .types-tours_item {
+      display: flex;
+      flex-direction: column;
+   }
+   .types-tours_img {
+      margin: 0 auto;
+   }
+   .types-tours_img img{
+     width: 54px;
+     height: auto;
+   }
+   .types-tours_text {
+   }
    /*-- types tours end --*/
 
 
@@ -1662,7 +1929,229 @@ button:not(:disabled) {
    /*-- prepare your trip with us end --*/
 
 
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -400px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- questions and answers start --*/
+   #questionsAnswers {
+      margin-bottom: 24px;
+   }
+
+   #questionsAnswers h2 {
+      font-size: 50px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+   }
+
+   #questionsAnswers .accordion .field-frame {
+      width: 79%;
+   }
+
+   #questionsAnswers .element-frame {
+      width: 120px;
+   }
+
+   #questionsAnswers .above-frame {
+      width: 110%;
+   }
+
+   #questionsAnswers .accordion,
+   .accordion-header,
+   .accordion-body {
+      font-size: 16px;
+   }
+
+   #questionsAnswers .accordion-body {
+      font-size: 20px;
+   }
+
+   #questionsAnswers .accordion-flush .accordion-item .accordion-button {
+      font-size: 26px;
+   }
+
+   /*-- questions and answers end --*/
+
+
+   /*-- contacts start --*/
+   #contacts {
+      margin: 0 auto;
+      padding: 24px 0 0;
+   }
+
+
+   #contacts h2 {
+      font-size: 50px;
+   }
+
+   #contacts .contacts-wrap {
+      display: flex;
+      justify-content: center;
+   }
+
+   #contacts .contacts-wrap .field-frame {
+      margin: 0;
+      width: 371px;
+   }
+
+   #contacts .contacts-wrap .field-frame:first-child {
+      margin-right: 28px;
+   }
+
+   #contacts .contacts-wrap .field-frame:last-child {
+      margin-left: 55px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame {
+      margin-top: 30px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .element-frame {
+      margin-top: -21px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info,
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form {
+      width: 408px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group {
+      padding: 44px 0 0 34px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item {
+      font-size: 20px;
+      margin-bottom: 45px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item:last-child {
+      margin-bottom: 23px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
+      width: 352px;
+      height: 133px;
+      margin: 0 0 27px 24px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window {
+      padding: 84px 46px 99px 48px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper {
+      height: 45px;
+      margin-bottom: 32px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input {
+      height: 45px;
+      padding: 14px 0 12px 12px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .input-wrapper input::placeholder {
+      font-size: 20px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button {
+      height: 83px;
+      width: 225px;
+   }
+
+   #contacts .contacts-wrap .field-frame .under-frame .contact-form .form-window .field-button .img-button .text-button {
+      width: 272px;
+      height: 49px;
+      margin: 0px -24px -11px -24px;
+      font-size: 26px;
+   }
+
+   /*-- contacts end --*/
+
+
+   /*-- form window start --*/
+   /*-- form window end --*/
+
+
+   /*-- footer start --*/
+   #footer {
+      margin-top: 32px;
+   }
+
+   /*-- footer end --*/
+}
+
+
+
+/*-----------------------------------------------------*/
+@media (min-width: 1440px) {
+   /*-- loader start --*/
+   /*-- loader end --*/
+
+
+   /*-- header start --*/
+   /*-- header end --*/
+
+
+   /*-- main-block-TUI start --*/
+   /*-- main-block-TUI end --*/
+
+
+   /*-- travel search (plugin) start --*/
+   /*-- travel search (plugin) end --*/
+
+
+   /*-- types tours start --*/
+   /*-- types tours end --*/
+
+
+   /*-- more popular destinations start --*/
+   /*-- more popular destinations end --*/
+
+
+   /*-- instagram gallery (plugin) start --*/
+   /*-- instagram gallery (plugin) end --*/
+
+
+   /*-- prepare your trip with us start --*/
+   #prepareTripUs .list-item {
+      max-width: 1024px;
+   }
+
+   /*-- prepare your trip with us end --*/
+
+
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -500px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- reviews start --*/
+   #reviews .reviews-section {
+      max-width: 1250px;
+   }
+
+   #reviews .reviews-section .swiper {
+      max-width: 1111px;
+   }
+
    /*-- reviews end --*/
 
 
@@ -1863,9 +2352,18 @@ button:not(:disabled) {
 }
 
 @media (min-width: 1440px) {
+   /*-- types tours start --*/
+   #typesTours{
+      max-width: 1048px;
+   }
+/*-- types tours end --*/
+
+
+/*-- prepare your trip with us start --*/
    #prepareTripUs .list-item {
       max-width: 1024px;
    }
+/*-- prepare your trip with us end --*/
 }
 
 /*-----------------------------------------------------*/
