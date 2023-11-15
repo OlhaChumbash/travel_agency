@@ -789,7 +789,6 @@ button:not(:disabled) {
 
 /*-- prepare your trip with us end --*/
 
-
 /*-- reviews start --*/
 #reviews {}
 
@@ -878,7 +877,6 @@ button:not(:disabled) {
 
 /*-- questions and answers end --*/
 
-
 /*-- contacts start --*/
 #contacts {
    max-width: 1440px;
@@ -965,8 +963,6 @@ button:not(:disabled) {
 #contacts .contacts-wrap .field-frame .under-frame .contact-info .contacts-group .contacts-group-item .phone a:first-child p {
    margin-bottom: 12px;
 }
-
-
 
 #contacts .contacts-wrap .field-frame .under-frame .contact-info .google-map {
    width: 330px;
