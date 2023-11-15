@@ -322,7 +322,15 @@ $(document).ready(function () {
          }
       }
    });
-   //----------------------------------------------------
-
-   
+   //----------------------------------------------------   
 });
+// loader start
+function hideLoader() {
+   let loader = document.getElementById('box-loader');
+   loader.style.opacity = 0;
+   setTimeout(() => {
+       loader.remove();
+   }, 2500);
+}
+window.addEventListener('load', hideLoader);
+// loader end
