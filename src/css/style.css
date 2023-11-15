@@ -1161,12 +1161,16 @@ button:not(:disabled) {
 }
 
 #footer .footer-container .scrollup:hover .outer-circle,
+#footer .footer-container .scrollup:hover .outer-circle .inner-circle {
+   border: 1px solid var(--сolor-white);
+   background-color: var(--color-blue-2);
+}
+
 #footer .footer-container .scrollup:active .outer-circle,
 #footer .footer-container .scrollup:focus .outer-circle,
 #footer .footer-container .scrollup:active .outer-circle .inner-circle,
-#footer .footer-container .scrollup:hover .outer-circle .inner-circle,
 #footer .footer-container .scrollup:focus .outer-circle .inner-circle {
-   border: 2px solid var(--сolor-white);
+   border: 1px solid var(--сolor-white);
    background-color: var(--color-blue-1);
 }
 
@@ -1415,6 +1419,17 @@ button:not(:disabled) {
       line-height: normal;
       font-family: 'Forum';
       margin: 0 12px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a:hover {
+      color: var(--color-beige);
+   }
+
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a:active,
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a:focus {
+      color: var(--сolor-white);
+      text-decoration: underline;
    }
 
    #header .hamburger-menu .row .mob-desktop {
