@@ -324,36 +324,22 @@ const swiper = new Swiper('.swiper', {
 
    speed: 800,
 
-   /*number of slides on page*/
-   breakpoints: {
-      320: {
-         slidesPerView: 1,
-      },
-      992: {
-         slidesPerView: 2,
-         spaceBetween: 14,
-      },
-      1440: {
-         slidesPerView: 3,
-         spaceBetween: 14,
-      }
-   }
-});
-//----------------------------------------------------
-
-// footer scroll-up start //
-$(document).ready(function () {
-   $(window).scroll(function () {
-      if ($(this).scrollTop() > 400) {
-         $(".scrollup").fadeIn();
-      } else {
-         $(".scrollup").fadeOut();
+      /*number of slides on page*/
+      breakpoints: {
+         320: {
+            slidesPerView: 1,
+         },
+         992: {
+            slidesPerView: 2,
+            spaceBetween: 14,
+         },
+         1440: {
+            slidesPerView: 3,
+            spaceBetween: 14,
+         }
       }
    });
+   //----------------------------------------------------
 
-   $(".scrollup").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 600);
-      return false;
-   });
+
 });
-// footer scroll-up start //
