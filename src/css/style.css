@@ -190,7 +190,7 @@ button:not(:disabled) {
 
 /*===================== mobile version 375px ===================== */
 /*-- loader start --*/
-#loader .box-loader{
+#loader .box-loader {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -202,11 +202,13 @@ button:not(:disabled) {
    height: 100%;
    z-index: 999;
 }
-#loader .loader{
+
+#loader .loader {
    position: relative;
    width: 120px;
    height: 120px;
 }
+
 #loader .loader span:before {
    content: "";
    position: absolute;
@@ -214,32 +216,36 @@ button:not(:disabled) {
    left: 0;
    width: 100px;
    height: 100px;
-   border-radius:50%;
+   border-radius: 50%;
    background-image: url(../images/main-block/Earth.png);
    background-size: cover;
    background-repeat: no-repeat;
 }
+
 #loader .loader span {
    transform: rotate(calc(18deg * var(--i)));
 }
-@keyframes animate{
-   0%
-   {
+
+@keyframes animate {
+   0% {
       transform: scale(0);
    }
-   10%
-   {
+
+   10% {
       transform: scale(1.2);
    }
-   80%,100%
-   {
+
+   80%,
+   100% {
       transform: scale(0);
    }
 }
-#loader .loader span:before{
+
+#loader .loader span:before {
    animation: animate 19s linear infinite;
 }
-#loader .plane:before{
+
+#loader .plane:before {
    content: '\f072';
    font-family: fontAwesome;
    position: absolute;
@@ -249,7 +255,8 @@ button:not(:disabled) {
    font-size: 40px;
    transform: rotate(180deg);
 }
-#loader .plane{
+
+#loader .plane {
    position: absolute;
    top: 0;
    left: 0;
@@ -258,13 +265,13 @@ button:not(:disabled) {
    animation: rotating 2s linear infinite;
    animation-delay: -1s;
 }
-@keyframes rotating{
-   0%
-   {
+
+@keyframes rotating {
+   0% {
       transform: rotate(10deg);
    }
-   100%
-   {
+
+   100% {
       transform: rotate(370deg);
    }
 }
@@ -597,28 +604,34 @@ button:not(:disabled) {
    min-width: 310px;
    text-align: center;
 }
-#mainTUI .box-button:hover{
+
+#mainTUI .box-button:hover {
    border-radius: 4px;
    border: 1px solid var(--blue-1, #243B73);
    background: var(--blue-2, #6B7BB1);
 }
-#mainTUI .button-main:hover{
+
+#mainTUI .button-main:hover {
    color: var(--white, #FFF);
 }
-#mainTUI .box-button:active{
+
+#mainTUI .box-button:active {
    border-radius: 4px;
    border: 1px solid var(--blue-1, #243B73);
    background: var(--blue-1, #243B73);
 }
-#mainTUI .button-main:active{
+
+#mainTUI .button-main:active {
    color: var(--white, #FFF);
 }
-#mainTUI .box-button:disabled{
+
+#mainTUI .box-button:disabled {
    border-radius: 4px;
    border: 1px solid var(--blue-1, #243B73);
    background: var(--gray, #A9A9A9);
 }
-#mainTUI .button-main:disabled{
+
+#mainTUI .button-main:disabled {
    color: var(--blue-1, #243B73);
 }
 
@@ -920,6 +933,7 @@ button:not(:disabled) {
 #prepareTripUs .list-item .list-number p {
    margin: 0;
 }
+
 #prepareTripUs .list-item .list-number .first {
    padding-right: 5px;
 }
@@ -1370,7 +1384,7 @@ button:not(:disabled) {
 }
 
 #footer .footer-container .dev-group img {
-   width: 58px;
+   width: 50px;
 }
 
 #footer .footer-container .scrollup {
@@ -1815,6 +1829,7 @@ button:not(:disabled) {
       background-image: url(../images/main-block/backgraund-main-block-1440.png);
       padding: 5% 0;
    }
+
    #mainTUI .conteiner {
       position: relative;
    }
@@ -1993,6 +2008,7 @@ button:not(:disabled) {
       width: 54px;
       height: auto;
    }
+
    /*-- types tours end --*/
 
 
@@ -2466,10 +2482,6 @@ button:not(:disabled) {
 
    #footer .footer-container .dev-group a p {
       margin: 0 0 0 24px;
-   }
-
-   #footer .footer-container .dev-group img {
-      width: 58px;
    }
 
    #footer .footer-container .scrollup {
