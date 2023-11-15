@@ -1,4 +1,3 @@
-
 //burger menu start
 const menuBox = document.getElementById('menuBox');
 function toggleMenu() {
@@ -324,22 +323,49 @@ const swiper = new Swiper('.swiper', {
 
    speed: 800,
 
-      /*number of slides on page*/
-      breakpoints: {
-         320: {
-            slidesPerView: 1,
-         },
-         992: {
-            slidesPerView: 2,
-            spaceBetween: 14,
-         },
-         1440: {
-            slidesPerView: 3,
-            spaceBetween: 14,
-         }
+   /*number of slides on page*/
+   breakpoints: {
+      320: {
+         slidesPerView: 1,
+      },
+      992: {
+         slidesPerView: 2,
+         spaceBetween: 14,
+      },
+      1440: {
+         slidesPerView: 3,
+         spaceBetween: 14,
+      }
+   }
+});
+//----------------------------------------------------
+
+// loader start
+function hideLoader() {
+   let loader = document.getElementById('box-loader');
+   loader.style.opacity = 0;
+   setTimeout(() => {
+      loader.remove();
+   }, 2500);
+}
+window.addEventListener('load', hideLoader);
+// loader end
+
+//----------------------------------------------------
+
+// footer scroll-up start //
+$(document).ready(function () {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 400) {
+         $(".scrollup").fadeIn();
+      } else {
+         $(".scrollup").fadeOut();
       }
    });
-   //----------------------------------------------------
 
-
+   $(".scrollup").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+   });
 });
+// footer scroll-up start //
