@@ -732,7 +732,7 @@ button:not(:disabled) {
    position: absolute;
    height: 35px;
    width: 35px;
-   top: 17px;
+   top: 11px;
    right: 28px;
    line-height: 20px;
    font-size: 55px;
@@ -1611,13 +1611,13 @@ button:not(:disabled) {
 
    #modal-overlay #second-window #close-second-window,
    #modal-overlay #form-window #close-form-window {
-      top: 23px;
+      top: 18px;
       right: 35px;
    }
 
    #modal-overlay #form-window .input-wrapper,
    #form-window .input-wrapper {
-      margin-bottom: 32px;
+      margin-bottom: 34px;
    }
 
    /*--form-block end"--*/
