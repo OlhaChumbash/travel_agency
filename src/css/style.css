@@ -1591,6 +1591,7 @@ button:not(:disabled) {
    #form-window .input-wrapper input {
       padding: 12px 10px 12px 12px;
       height: 46px;
+      font-size: 20px;
    }
 
    #modal-overlay #form-window .input-wrapper input::placeholder,
