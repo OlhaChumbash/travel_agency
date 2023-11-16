@@ -6,7 +6,7 @@
    --color-about-red: #fe15104d;
    --color-about-yellow: #5497a7;
    --color-about-purple: #b9b9eb;
-   --background: linear-gradient(180deg, rgba(107, 123, 177, 0.65) 5.88%, rgba(6, 124, 161, 0.00) 96.45%);
+   --background: linear-gradient(180deg,  rgba(226, 211, 206, 1) 5.88%, rgba(6, 124, 161, 0.00) 96.45%);
    --backgtound-burger-menu: #cac7c7;
    --student-about-color-light: #fff;
    --student-about-color-dark: #333;
@@ -866,7 +866,8 @@ a {
 
    .btn_progect_br {
       border: none;
-      color: #462A16;
+      color: #fff;
+      background-color: var(--background-buttons);
       font-size: 16px;
       font-weight: 400;
       letter-spacing: 0em;
@@ -876,7 +877,9 @@ a {
       border-radius: 25px 25px 0 25px;
       margin: 0;
    }
-
+   .btn_progect_br:hover {   
+      background-color: #6B7BB1;     
+   }
    .foter_mobile {
       width: auto;
       display: flex;
@@ -1202,13 +1205,14 @@ a {
       position: fixed;
       right: 0;
       top: 0;
-      background: var(--background-buttons);
+      background: #E2D3CE;
       transition: all 0.9s ease 0s;
       z-index: 1;
       font-size: 18px;
       height: 300px;
       width: 250px !important;
       line-height: 1;
+      border: none;
    }
 
    .posterior_background {
@@ -1256,7 +1260,7 @@ a {
 
    .link_burger {
       text-decoration: none;
-      color: #fff;
+      color: #000000;
       font-size: 16px;
       font-weight: 300;
    }
