@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/css/icomoon.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+   <div id="wrapper" class="wrapper" >
+      <!--header start-->
+      <header id="header">
+         <div class="hamburger-menu hamburger-menu-404">
+            <div class="row">
+               <div class="menu-block menu-wrap-dt">
+                  <div class="logo-container">
+                     <a href="index.html">
+                        <img class="icon_img" src="./src/images/logo.png" alt="Logo"></a>
+                  </div>
+                  <div class="menu">
+                     <ul class="list-unstyled d-flex menu-desktop">
+                        <li><a class="" href="#popularDestinations">Популярні напрямки</a></li>
+                        <li><a class="" href="#reviews">Відгуки</a></li>
+                        <li><a class="" href="#questionsAnswers">Часті запитання</a></li>
+                        <li><a class="" href="#contacts">Контакти</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mob-desktop switch-languages">
+                     <a class="text-language" href="#" id="uaLang">Ua</a>
+                     <a class="text-language" href="index-en.html" id="enLang">Eng</a>
+                  </div>
+               </div>
+
+               <input id="menu__toggle" type="checkbox" />
+               <label id="dropdownMenuButton" class="menu__btn" for="menu__toggle" onclick="toggleMenu()">
+                  <span></span>
+               </label>
+               <div class="menu__box" id="menuBox">
+                  <a href="index.html" target="_blank">
+                     <img class="header-burger icon-img" src="./src/images/logo.png" alt="Logo"></a>
+                  <div class="menu-wrap-bg">
+                     <ul>
+                        <li><a class="menu__item" href="#"
+                              onclick="navigateTo('popularDestinations'); closeMenu();">Популярні напрямки</a>
+                        </li>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('reviews'); closeMenu()">Відгуки</a>
+                        </li>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('questionsAnswers'); closeMenu()">Часті
+                              запитання</a>
+                        </li>
+                        <li><a class="menu__item menu__item__contacts" href="#"
+                              onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
+                     </ul>
+                     <button class="header-nav-btn check-form" onclick="openForm()">Зв’язатись з оператором</button>
+                     <div class="share-section text-center">
+                        <h2 class="text-center text-share">Поділитись</h2>
+                     </div>
+                     <div class="social-icons">
+                        <div class="icons-start">
+                           <ul class="social-options list-unstyled d-flex icons-menu">
+                              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-Facebook"></i></a>
+                              </li>
+                              <li><a href="https://twitter.com/intent/tweet?url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-twitter"></i></a>
+                              </li>
+                              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-linkedin"></i></a>
+                              </li>
+                              <li><a href="https://t.me/share/url?url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-Telegram"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <div class="switch-languages">
+                           <a class="text-language" href="#" id="uaLang">Ua</a>
+                           <a class="text-language" href="index-en.html" id="enLang">En</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--"header end"-->
+
+      <!-- main start-->
+      <section id="index_404">
+         <div class="main">
+            <div class="main-block">
+               <div class="main-title">
+                  <h2 class="main-h2">Упс!</h2>
+                  <div class="main-center">
+                     <div class="block_4"><img class="main-img" src="./src/images/404/namber_4.png" alt="namber_4.png"></div>
+                     <div class="block_compass"><img class="main-compass-img" src="./src/images/404/compass.png" alt="compass.png"></div>
+                     <div class="block_4"><img class="main-img" src="./src/images/404/namber_4.png" alt="namber_4.png"></div>
+                  </div>
+               </div>
+               <h2 class="main-block-h2" >Сторінка, яку Ви шукали, наразі не існує.</h2>
+            </div>
+            <div class="field-button main-button">
+               <div class="img-button button-background">
+                 <button class="text-button button-return-main"><a class="button-text-a" href="index">Повернутись на головну</a></button>
+                 <img class="button-return-background" src="./src/images/404/Group 18.png" alt=" ">
+               </div>
+             </div>
+         </div>
+      </section>
+      <!-- main end-->
+      
+      <!--"footer start"-->
+      <footer id="footer" class="footer-main">
+         <div class=" conteiner-main-footer">
+            <div class="dev-group main-footer">
+               <a href="developers.html"><img class="main-logo-footer" src="./src/images/footer-dev-logo.png"></a>
+               <a href="developers.html">
+                  <p class="main-footer-title" >Розроблено студентами<br>
+                     Вінницької ІТ-Академії 2023</p>
+               </a>
+            </div>
+         </div>
+      </footer>
+      <!--"footer end"-->
+   </div>    
+   <!--Boostrap 5.3.2 start-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+   <!--Boostrap 5.3.2 end-->
+   <script src="src/js/script.js"></script>
+</body>
+</html>

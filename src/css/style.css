@@ -1428,8 +1428,6 @@ button:not(:disabled) {
 
 /*-- footer start --*/
 #footer {
-   max-width: 1024px;
-   margin: 24px auto;
    display: flex;
    justify-content: center;
 }
@@ -1437,6 +1435,7 @@ button:not(:disabled) {
 #footer .footer-container {
    display: flex;
    position: relative;
+   margin: 24px auto;
 }
 
 #footer .footer-container .dev-group {
@@ -1513,6 +1512,135 @@ button:not(:disabled) {
 
 /*-- footer end --*/
 
+/* 404 start*/
+#header .hamburger-menu-404{
+   background: var(--blue-1, #243B73);
+   backdrop-filter: blur(23.72395133972168px);
+}
+#index_404 .main{
+   width: 100%;
+}
+#index_404 .main-title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+#index_404 .main-block{
+   margin: 84px 0 0 0 ;
+   
+}
+#index_404 h2{
+   text-align: center;
+}
+#index_404 .main-center{
+   display: flex;
+   align-items:center;
+   margin: 20px 0;
+}
+#index_404 .main-h2{
+   color: var(--Blue-1, #2F497A);
+   text-align: center;
+   font-family: Forum;
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+#index_404 .main-block-h2{
+   color: #2F497A;
+   text-align: center;
+   font-family: Forum;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin: 13px auto;
+   width: 351px;
+}
+#index_404 .main-img{
+   width: 79px;
+   height: 127px;
+   margin: 0 -13px;
+}
+#index_404 .main-compass-img{
+   width: 181px;
+   height: 181px;
+   margin: 6px 0 0 8px;
+}
+#index_404 .main-button{
+   text-align: center;
+   margin: 33px auto 0;
+}
+#index_404 .button-return-main{
+   border-radius: 20px;
+   background: var(--blue-1, #243B73); 
+   color: var(--white, #FFF);
+   font-family: Forum;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   height: 38px;
+   width: 265px;
+   padding: 10px;
+}
+#index_404 .button-return-main:active,
+#index_404 .button-return-main:hover{
+   border-radius: 20px;
+   border: 1px solid var(--white, #FFF);
+   background: var(--blue-2, #6B7BB1);
+}
+#index_404 .button-return-main:disabled{
+   background: var(--gray, #A9A9A9);
+}
+#index_404 .button-return-background{
+   display: none;
+}
+#index_404 .button-text-a{
+   color: #FFF;
+}
+#wrapper{
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+#wrapper .footer-main{
+   margin-top: auto!important;
+   display: block;
+   /* margin: 0; */
+   max-width: none;
+}
+#footer .main-footer{
+   display: flex;
+   justify-content: center;
+   padding: 10px 0;
+}
+#footer .main-logo-footer{
+   margin: 0 5px;
+   width: 50px;
+   height: 50px;
+}
+#footer .main-footer-title{
+   margin: 3px 0 0 0!important;
+   color: var(--icon-color-white);
+   font-family: Forum;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-decoration-line: underline;
+}
+#footer .conteiner-main-footer{
+   background: var(--blue-1, #243B73);
+   backdrop-filter: blur(23.72395133972168px);
+   margin: 55px 0 0 0 ;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+/* 404 end*/
+
 
 
 /*=============================================================*/
@@ -1551,6 +1679,14 @@ button:not(:disabled) {
    }
 
    /*-- reviews end--*/
+   /* 404 start*/
+   #index_404 .main-img{
+      width: 70px;
+   }
+   #index_404 .main-block-h2{
+      width: 320px;
+   }
+   /* 404 end*/
 }
 
 
@@ -2442,6 +2578,52 @@ button:not(:disabled) {
    }
 
    /*-- footer end --*/
+    /* 404 start*/
+   #index_404 .main-block {
+      margin: 97px 0 0 0;
+   }
+   #index_404 .main-h2{
+      font-size: 50px;
+   }
+   #index_404 .main-compass-img{
+      width: 100%;
+      height: 400px;
+      margin: -20px 0;
+   }
+   #index_404 .main-img{
+      margin: 30px -27px 0 -52px;
+      width: auto;
+      height: auto;
+   }
+   #index_404 .main-center{
+      margin: 20px 0 0 0;
+   }
+   #index_404 .main-block-h2{
+      width: 100%;
+      font-size: 50px;
+      margin: 62px auto 0;
+   }
+   #index_404 .main-button{
+      margin: 50px auto;
+   }
+   #index_404 .button-background{
+      width: 325px;
+      background: none;
+      position: relative;
+   }
+   #index_404 .button-return-main{
+      width: 375px;
+      height: 46px;
+      font-size: 26px;
+      padding: 0;
+      z-index: 1;
+   }
+   #index_404 .button-return-background{
+      position: absolute;
+      top: -3px;
+      display: block;
+   }
+   /* 404 end*/
 }
 
 /*-----------------------------------------------------*/
@@ -2633,7 +2815,7 @@ button:not(:disabled) {
 
 
    /*-- footer start --*/
-   #footer {
+   #footer .footer-container {
       margin: 32px auto;
    }
 
