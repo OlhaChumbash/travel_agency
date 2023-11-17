@@ -297,8 +297,9 @@ function entrantSubmitResponse(errorStr) {
    scroll(0, 0);
 }
 
-//------------------- REVIEWS-SWIPER -------------------
-const swiper = new Swiper('.swiper', {
+//------------------- PopularDestinations-SWIPER -------------------
+//--- mobile-version ---
+const swipepopDestSwiper = new Swiper('.popDestSwiper', {
 
    direction: 'horizontal',
    loop: true, /*infinity */
@@ -344,6 +345,114 @@ const swiper = new Swiper('.swiper', {
    breakpoints: {
       320: {
          slidesPerView: 1,
+         spaceBetween: 14,
+      },
+   }
+});
+
+
+//-- desktop-version --
+let mainSliderSelector = '.popDestRightSwiper',
+   navSliderSelector = '.popDestLeftSwiper',
+   interleaveOffset = 0.5;
+
+// Main Slider
+let mainSliderOptions = {
+   loop: true,
+   speed: 1000,
+   autoplay: {
+      delay: 3000
+   },
+   slidesPerView: 1,
+   on: {
+      imagesReady: function () {
+         this.el.classList.remove('loading');
+      },
+      click: function () {
+         navSlider.autoplay.stop();
+      }
+   }
+};
+let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
+
+// Navigation Slider
+let navSliderOptions = {
+   loop: true,
+   speed: 1000,
+   autoplay: {
+      delay: 1500
+   },
+   slidesPerView: 1,
+   initialSlide: 3,
+   on: {
+      init: function () {
+         this.autoplay.stop();
+      },
+      imagesReady: function () {
+         this.el.classList.remove('loading');
+         this.autoplay.start();
+      },
+
+   },
+   effect: "creative",
+   creativeEffect: {
+      limitProgress: 2,    // increase the number of displayed slides
+      prev: {
+         translate: [-70, 50, -500], //([horizontal, vertical, depth])
+      },
+      next: {
+         translate: [70, -70, -400], //([horizontal, vertical, depth])
+      },
+   }
+};
+let navSlider = new Swiper(navSliderSelector, navSliderOptions);
+
+// Matching sliders
+mainSlider.controller.control = navSlider;
+navSlider.controller.control = mainSlider;
+
+
+//------------------- REVIEWS-SWIPER -------------------
+const swiperreviewsSwiper = new Swiper('.reviewsSwiper', {
+
+   direction: 'horizontal',
+   loop: true, /*infinity */
+
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+   },
+
+   /*drag the slide with the handle at an angle of 45 degrees*/
+   simulateTouch: true,
+   grabCursor: true,
+   touchAngle: 45,
+   slideToClickedSlide: true,/*flipping the slide with a mouse click*/
+
+   mousewheel: {
+      sentivity: 1,
+      eventsTarget: ".swiper"
+   },
+
+   slidesPerGroup: 1,/*the number of slide rewinds*/
+
+   initialSlide: 0, /*from which slide we start the show*/
+
+   freeMode: true, /*free scrolling of slides*/
+
+   speed: 800,
+
+   /*number of slides on page*/
+   breakpoints: {
+      320: {
+         slidesPerView: 1,
+         spaceBetween: 14,
       },
       992: {
          slidesPerView: 2,

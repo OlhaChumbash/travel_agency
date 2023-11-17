@@ -547,6 +547,7 @@ button:not(:disabled) {
 
 /*-- header end --*/
 
+
 /*-- main-block-TUI start --*/
 #mainTUI .wraper-main {
    width: 100%;
@@ -580,8 +581,6 @@ button:not(:disabled) {
    letter-spacing: 0em;
    text-align: center;
    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
-
-
 }
 
 #mainTUI .title-p {
@@ -813,12 +812,6 @@ button:not(:disabled) {
 /*-- form-block end --*/
 
 
-/*-- travel search (plugin) start --*/
-#travelSearch {}
-
-/*-- travel search (plugin) end --*/
-
-
 /*-- types tours start --*/
 #typesTours {
    padding-top: 16px;
@@ -875,15 +868,98 @@ button:not(:disabled) {
    height: auto;
 }
 
-.types-tours_text {}
-
 /*-- types tours end --*/
 
 
 /*-- more popular destinations start --*/
-#popularDestinations {}
+#popularDestinations .popularD-section .containerDesk-swiper {
+   display: none;
+}
+
+#popularDestinations .popularD-section {
+   font-family: 'Forum';
+   font-size: 22px;
+   font-weight: 400;
+   line-height: normal;
+   color: #000;
+   padding: 16px 16px 35px 16px;
+}
+
+#popularDestinations .popularD-section .title {
+   position: relative;
+}
+
+#popularDestinations .popularD-section .title .title-text {
+   font-size: 40px;
+   text-align: center;
+}
+
+#popularDestinations .popularD-section .title .dotted-line {
+   display: none;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper {
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+   margin: 0px auto;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper swiper-slide .content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 343px;
+   min-height: 490px;
+   margin: 0px auto;
+   overflow: hidden;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block {
+   margin: 0px 0px 0px 8px;
+   display: flex;
+   align-items: start;
+
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .images-countries img {
+   width: 170px;
+   height: 170px;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
+   width: 177px;
+   height: 72px;
+   margin: 0px 0px 0px -43px;
+   transform: rotate(-2deg) scale(1);
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .name-text h3 {
+   font-size: 28px;
+   text-align: center;
+}
 
 /*-- more popular destinations end --*/
+
+
+/*-- background-between start --*/
+#bacground-waves .img-background {
+   object-fit: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -2;
+   margin: -130px 0px 0px 0px;
+}
+
+#bacground-waves .image_palm img {
+   max-width: 104px;
+   max-height: 118px;
+   position: absolute;
+   z-index: 0;
+   margin-top: -370px;
+}
+
+/*-- background-between end --*/
 
 
 /*-- instagram gallery (plugin) start --*/
@@ -1007,6 +1083,10 @@ button:not(:disabled) {
    width: 100%;
    margin: 0px auto;
    padding: 0px 0px 0px 0px;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper {
+   margin-bottom: 30px;
 }
 
 #reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
@@ -1346,12 +1426,6 @@ button:not(:disabled) {
 /*-- contacts end --*/
 
 
-/*-- form window start --*/
-#modalWindow {}
-
-/*-- form window end --*/
-
-
 /*-- footer start --*/
 #footer {
    max-width: 1024px;
@@ -1443,8 +1517,26 @@ button:not(:disabled) {
 
 
 /*=============================================================*/
+
+
 /*------------------------ @ media ----------------------------*/
 @media (max-width: 374px) {
+
+   /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      padding: 16px 10px 35px 10px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
+      width: 145px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .name-text h3 {
+      font-size: 19px;
+   }
+
+   /*-- more popular destinations end --*/
+
 
    /*-- prepare your trip with us start --*/
    #prepareTripUs h2 {
@@ -1487,35 +1579,85 @@ button:not(:disabled) {
 }
 
 
-
 /*-----------------------------------------------------*/
-@media (min-width: 768px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
-
-
-   /*-- header start --*/
-   /*-- header end --*/
-
-
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
-
-
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
-
-
-   /*-- types tours start --*/
-   /*-- types tours end --*/
-
+@media (min-width: 425px) {
 
    /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      margin: 27px;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block {
+      align-items: center;
+      justify-content: center;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
+      margin: 0px 0px 0px -10px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .text-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .text-block p {
+      max-width: 450px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper {
+      display: none;
+   }
+
    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -140px 0px 0px 0px;
+   }
+
+   #bacground-waves .image_palm img {
+      max-width: 200px;
+      max-height: 270px;
+      margin-top: -420px;
+   }
+
+   /*-- background-between end --*/
+}
+
+
+/*-----------------------------------------------------*/
+@media (min-width: 768px) {
+
+   /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      margin: 0px 100px 0px 100px;
+      padding: 16px 16px 65px 16px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .text-block p {
+      max-width: 500px;
+   }
+
+   /*-- more popular destinations end --*/
+
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -254px 0px 0px 0px;
+   }
+
+   #bacground-waves .image_palm img {
+      max-width: 300px;
+      max-height: 370px;
+      margin-top: -430px;
+   }
+
+   /*-- background-between end --*/
 
 
    /*-- prepare your trip with us start --*/
@@ -1537,27 +1679,19 @@ button:not(:disabled) {
    }
 
    /*-- background-between end --*/
-
-
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
-
-
-   /*-- contacts start --*/
-   /*-- contacts end --*/
-
-
-   /*-- form window start --*/
-   /*-- form window end --*/
-
-
-   /*-- footer start --*/
-   /*-- footer end --*/
 }
 
 
 /*-----------------------------------------------------*/
 @media (min-width:900px) {
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -295px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
 
    /*-- instagram gallery (plugin) start --*/
    #instagramGallery .widbox-load-button {
@@ -1571,16 +1705,6 @@ button:not(:disabled) {
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
-
-
-   /*-- header start --*/
-   /*-- header end --*/
-
-
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
 
    /*--form-block start"--*/
    #modal-overlay #form-window {
@@ -1622,21 +1746,6 @@ button:not(:disabled) {
 
    /*--form-block end"--*/
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
-
-
-   /*-- types tours start --*/
-   /*-- types tours end --*/
-
-
-   /*-- more popular destinations start --*/
-   /*-- more popular destinations end --*/
-
-
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
-
 
    /*-- prepare your trip with us start --*/
    #prepareTripUs .list-item {
@@ -1674,6 +1783,10 @@ button:not(:disabled) {
       max-width: 736px;
    }
 
+   #reviews .reviews-section .swiper .swiper-wrapper {
+      margin-bottom: 50px;
+   }
+
    #reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
       max-width: 361px;
       height: 434px;
@@ -1693,40 +1806,16 @@ button:not(:disabled) {
    .icon-swiper2_prev,
    .icon-swiper2_next {
       font-size: 100px;
-      top: 58%;
-   }
-
-   #reviews .reviews-section .swiper-pagination {
-      bottom: -20px;
+      top: 50%;
    }
 
    /*-- reviews end --*/
 
-
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
-
-
-   /*-- contacts start --*/
-   /*-- contacts end --*/
-
-
-   /*-- form window start --*/
-   /*-- form window end --*/
-
-
-   /*-- footer start --*/
-   /*-- footer end --*/
 }
-
-
 
 
 /*-----------------------------------------------------*/
 @media (min-width: 1024px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
-
 
    /*-- header start --*/
    #header .hamburger-menu {
@@ -1956,10 +2045,6 @@ button:not(:disabled) {
    /*-- main-block-TUI end --*/
 
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
-
-
    /*-- types tours start --*/
    #typesTours {
       padding-top: 24px;
@@ -2014,11 +2099,118 @@ button:not(:disabled) {
 
 
    /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section .container-swiper {
+      display: none;
+   }
+
+   #popularDestinations .popularD-section .title .title-text br {
+      display: none;
+   }
+
+   #popularDestinations .popularD-section {
+      max-width: 1024px !important;
+      max-height: 700px;
+      padding: 0px 16px 65px 16px;
+      margin: 0px 70px 0px 70px;
+   }
+
+   #popularDestinations .popularD-section .title .title-text {
+      font-size: 50px;
+      text-align: center;
+      margin: 32px 0px 25px 0px;
+   }
+
+
+   #popularDestinations .popularD-section .title .dotted-line {
+      display: block;
+      position: relative;
+      height: 70px;
+   }
+
+   #popularDestinations .popularD-section .title .dotted-line img {
+      position: absolute;
+      margin-left: calc(375px + (652 - 375) * ((100vw - 1024px) / (1920 - 1024)));
+      margin-top: 35px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper {
+      display: flex;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block {
+      margin: -190px 50px -110px -40px;
+      width: calc(490px + (700 - 490) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper {
+      width: 100%;
+      height: 700px;
+      overflow: hidden;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide {
+      position: relative;
+      cursor: pointer;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide figure {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide figure .image-item {
+      width: 300px;
+      height: 300px;
+      transform: rotate(45deg);
+      overflow: hidden;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide figure .image-item img {
+      max-width: 100%;
+      transform: rotate(-45deg) scale(1.42);
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .oval-block .image-oval img {
+      width: 405px;
+      height: 240px;
+      transform: rotate(360deg);
+      margin-top: calc(-428px + (-450 + 428) * ((100vw - 1024px) / (1440 - 1024)));
+      margin-left: calc(55px + (100 - 55) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block {
+      width: calc(370px + (500 - 370) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .name-countries h3 {
+      font-size: calc(34px + (40 - 34) * ((100vw - 1024px) / (1440 - 1024)));
+      text-align: center;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .text-block {
+      font-size: calc(26px + (30 - 26) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -360px 0px 0px 0px;
+   }
+
+   #bacground-waves .image_palm img {
+      max-width: 500px;
+      max-height: 470px;
+      margin-top: -650px;
+   }
+
+   /*-- background-between end --*/
 
 
    /*-- prepare your trip with us start --*/
@@ -2124,6 +2316,7 @@ button:not(:disabled) {
 
    /*-- questions and answers end --*/
 
+
    /*-- background-between start --*/
    .contacts-qa-bg {
       width: 100%;
@@ -2140,6 +2333,7 @@ button:not(:disabled) {
    }
 
    /*-- background-between end --*/
+
 
    /*-- contacts start --*/
    #contacts {
@@ -2227,10 +2421,6 @@ button:not(:disabled) {
    /*-- contacts end --*/
 
 
-   /*-- form window start --*/
-   /*-- form window end --*/
-
-
    /*-- footer start --*/
    #footer {
       margin-top: 26px;
@@ -2282,20 +2472,6 @@ button:not(:disabled) {
 
 /*-----------------------------------------------------*/
 @media (min-width: 1440px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
-
-
-   /*-- header start --*/
-   /*-- header start --*/
-
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
-
-
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
-
 
    /*-- types tours start --*/
    #typesTours {
@@ -2306,11 +2482,51 @@ button:not(:disabled) {
 
 
    /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      max-width: 1440px !important;
+      padding: 0px 16px 145px 16px;
+   }
+
+   #popularDestinations .popularD-section .title .dotted-line img {
+      margin-left: 470px;
+      margin-top: 35px;
+      width: 370px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block {
+      width: 700px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .oval-block .image-oval img {
+      margin-top: -450px;
+      margin-left: 100px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block {
+      width: 500px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .name-countries h3 {
+      font-size: 40px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .text-block {
+      font-size: 30px;
+   }
+
    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -475px 0px 0px 0px;
+   }
+
+   #bacground-waves .image_palm img {
+      margin-top: -710px;
+   }
+
+   /*-- background-between end --*/
 
 
    /*-- prepare your trip with us start --*/
@@ -2384,6 +2600,7 @@ button:not(:disabled) {
 
    /*-- questions and answers end --*/
 
+
    /*-- background-between start --*/
    .contacts-qa-bg {
       width: 100%;
@@ -2401,6 +2618,7 @@ button:not(:disabled) {
 
    /*-- background-between end --*/
 
+
    /*-- contacts start --*/
    #contacts .contacts-wrap .contact-info {
       margin-right: 30px;
@@ -2414,8 +2632,6 @@ button:not(:disabled) {
 
    /*-- contacts end --*/
 
-   /*-- form window start --*/
-   /*-- form window end --*/
 
    /*-- footer start --*/
    #footer {
@@ -2450,6 +2666,18 @@ button:not(:disabled) {
       height: 90vh;
       z-index: -1;
       margin: -150px 0 80vh 0px;
+   }
+
+   /*-- background-between end --*/
+}
+
+
+/*-----------------------------------------------------*/
+@media (min-width: 2560px) {
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin-top: calc(-475px + (-740 + 475) * ((100vw - 1440px) / (2560 - 1440)));
    }
 
    /*-- background-between end --*/
