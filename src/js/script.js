@@ -71,58 +71,58 @@ document.querySelectorAll(".check-form").forEach((elem) =>
       const form = elem.closest(".registration-form");
       elemForCheckCaptcha = form;
       // function to check the correctness of the entered project name
-     
-        function checkName() {
-            const inputName = form.querySelector(".input-name");
-            const regexName = /^[a-zA-Zа-яА-ЯїЇєЄіІґҐ\s'-]*$/;
-            const containsNumber = /\d/.test(inputName.value);
 
-            if (inputName.value.trim() == "") {
-                switch (lang) {
-                    case "uk":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Це поле є обов’язковим для заповнення";
-                        break;
-                    case "en":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "This field is required";
-                        break;
-                    default:
-                        break;
-                }
-                inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-            } else if (inputName.value.trim().length < 2) {
-                switch (lang) {
-                    case "uk":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле має містити не менше двох символів";
-                        break;
-                    case "en":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field must contain at least two characters";
-                        break;
-                    default:
-                        break;
-                }
-                inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-                inputName.closest(".input-wrapper").classList.add("error");
-            }  else if (!regexName.test(inputName.value) || containsNumber) {
-               switch (lang) {
-                   case "uk":
-                       inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле заповнено некоректно.";
-                       break;
-                   case "en":
-                       inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is not filled in correctly.";
-                       break;
-                   default:
-                       break;
-               }
-               inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-               inputName.closest(".input-wrapper").classList.add("error");
+      function checkName() {
+         const inputName = form.querySelector(".input-name");
+         const regexName = /^[a-zA-Zа-яА-ЯїЇєЄіІґҐ\s'-]*$/;
+         const containsNumber = /\d/.test(inputName.value);
+
+         if (inputName.value.trim() == "") {
+            switch (lang) {
+               case "uk":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Це поле є обов’язковим для заповнення";
+                  break;
+               case "en":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "This field is required";
+                  break;
+               default:
+                  break;
             }
- else {
-                inputName.closest(".input-wrapper").querySelector(".error-text").innerHTML = "";
-                inputName.closest(".input-wrapper").classList.remove("error");
-                inputName.closest(".input-wrapper").querySelector("input").classList.remove("error-box");
+            inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+         } else if (inputName.value.trim().length < 2) {
+            switch (lang) {
+               case "uk":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле має містити не менше двох символів";
+                  break;
+               case "en":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field must contain at least two characters";
+                  break;
+               default:
+                  break;
             }
-            return regexName.test(inputName.value) && !containsNumber;
-        }
+            inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+            inputName.closest(".input-wrapper").classList.add("error");
+         } else if (!regexName.test(inputName.value) || containsNumber) {
+            switch (lang) {
+               case "uk":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле заповнено некоректно.";
+                  break;
+               case "en":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is not filled in correctly.";
+                  break;
+               default:
+                  break;
+            }
+            inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+            inputName.closest(".input-wrapper").classList.add("error");
+         }
+         else {
+            inputName.closest(".input-wrapper").querySelector(".error-text").innerHTML = "";
+            inputName.closest(".input-wrapper").classList.remove("error");
+            inputName.closest(".input-wrapper").querySelector("input").classList.remove("error-box");
+         }
+         return regexName.test(inputName.value) && !containsNumber;
+      }
 
       // function to check the correctness of the entered phone number
       function checkPhone() {
@@ -297,8 +297,9 @@ function entrantSubmitResponse(errorStr) {
    scroll(0, 0);
 }
 
-//------------------- REVIEWS-SWIPER -------------------
-const swiper = new Swiper('.swiper', {
+//------------------- PopularDestinations-SWIPER -------------------
+//--- mobile-version ---
+const swipepopDestSwiper = new Swiper('.popDestSwiper', {
 
    direction: 'horizontal',
    loop: true, /*infinity */
@@ -344,6 +345,114 @@ const swiper = new Swiper('.swiper', {
    breakpoints: {
       320: {
          slidesPerView: 1,
+         spaceBetween: 14,
+      },
+   }
+});
+
+
+//-- desktop-version --
+let mainSliderSelector = '.popDestRightSwiper',
+   navSliderSelector = '.popDestLeftSwiper',
+   interleaveOffset = 0.5;
+
+// Main Slider
+let mainSliderOptions = {
+   loop: true,
+   speed: 1000,
+   autoplay: {
+      delay: 3000
+   },
+   slidesPerView: 1,
+   on: {
+      imagesReady: function () {
+         this.el.classList.remove('loading');
+      },
+      click: function () {
+         navSlider.autoplay.stop();
+      }
+   }
+};
+let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
+
+// Navigation Slider
+let navSliderOptions = {
+   loop: true,
+   speed: 1000,
+   autoplay: {
+      delay: 1500
+   },
+   slidesPerView: 1,
+   initialSlide: 3,
+   on: {
+      init: function () {
+         this.autoplay.stop();
+      },
+      imagesReady: function () {
+         this.el.classList.remove('loading');
+         this.autoplay.start();
+      },
+
+   },
+   effect: "creative",
+   creativeEffect: {
+      limitProgress: 2,    // increase the number of displayed slides
+      prev: {
+         translate: [-70, 50, -500], //([horizontal, vertical, depth])
+      },
+      next: {
+         translate: [70, -70, -400], //([horizontal, vertical, depth])
+      },
+   }
+};
+let navSlider = new Swiper(navSliderSelector, navSliderOptions);
+
+// Matching sliders
+mainSlider.controller.control = navSlider;
+navSlider.controller.control = mainSlider;
+
+
+//------------------- REVIEWS-SWIPER -------------------
+const swiperreviewsSwiper = new Swiper('.reviewsSwiper', {
+
+   direction: 'horizontal',
+   loop: true, /*infinity */
+
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+   },
+
+   /*drag the slide with the handle at an angle of 45 degrees*/
+   simulateTouch: true,
+   grabCursor: true,
+   touchAngle: 45,
+   slideToClickedSlide: true,/*flipping the slide with a mouse click*/
+
+   mousewheel: {
+      sentivity: 1,
+      eventsTarget: ".swiper"
+   },
+
+   slidesPerGroup: 1,/*the number of slide rewinds*/
+
+   initialSlide: 0, /*from which slide we start the show*/
+
+   freeMode: true, /*free scrolling of slides*/
+
+   speed: 800,
+
+   /*number of slides on page*/
+   breakpoints: {
+      320: {
+         slidesPerView: 1,
+         spaceBetween: 14,
       },
       992: {
          slidesPerView: 2,
