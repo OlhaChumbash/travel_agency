@@ -1781,6 +1781,7 @@ button:not(:disabled) {
    #reviews .reviews-section .swiper {
       max-width: 736px;
    }
+
    #reviews .reviews-section .swiper .swiper-wrapper {
       margin-bottom: 50px;
    }
@@ -1806,6 +1807,7 @@ button:not(:disabled) {
       font-size: 100px;
       top: 50%;
    }
+
    /*-- reviews end --*/
 
 }
@@ -2100,7 +2102,7 @@ button:not(:disabled) {
       display: none;
    }
 
-   #popularDestinations br {
+   #popularDestinations .popularD-section .title .title-text br {
       display: none;
    }
 
