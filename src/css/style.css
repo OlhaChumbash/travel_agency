@@ -1387,6 +1387,7 @@ button:not(:disabled) {
 }
 
 #footer .footer-container .scrollup {
+   display: none;
    position: fixed;
    z-index: 999;
    bottom: 32px;

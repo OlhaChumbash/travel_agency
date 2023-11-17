@@ -71,58 +71,58 @@ document.querySelectorAll(".check-form").forEach((elem) =>
       const form = elem.closest(".registration-form");
       elemForCheckCaptcha = form;
       // function to check the correctness of the entered project name
-     
-        function checkName() {
-            const inputName = form.querySelector(".input-name");
-            const regexName = /^[a-zA-Zа-яА-ЯїЇєЄіІґҐ\s'-]*$/;
-            const containsNumber = /\d/.test(inputName.value);
 
-            if (inputName.value.trim() == "") {
-                switch (lang) {
-                    case "uk":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Це поле є обов’язковим для заповнення";
-                        break;
-                    case "en":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "This field is required";
-                        break;
-                    default:
-                        break;
-                }
-                inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-            } else if (inputName.value.trim().length < 2) {
-                switch (lang) {
-                    case "uk":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле має містити не менше двох символів";
-                        break;
-                    case "en":
-                        inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field must contain at least two characters";
-                        break;
-                    default:
-                        break;
-                }
-                inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-                inputName.closest(".input-wrapper").classList.add("error");
-            }  else if (!regexName.test(inputName.value) || containsNumber) {
-               switch (lang) {
-                   case "uk":
-                       inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле заповнено некоректно.";
-                       break;
-                   case "en":
-                       inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is not filled in correctly.";
-                       break;
-                   default:
-                       break;
-               }
-               inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
-               inputName.closest(".input-wrapper").classList.add("error");
+      function checkName() {
+         const inputName = form.querySelector(".input-name");
+         const regexName = /^[a-zA-Zа-яА-ЯїЇєЄіІґҐ\s'-]*$/;
+         const containsNumber = /\d/.test(inputName.value);
+
+         if (inputName.value.trim() == "") {
+            switch (lang) {
+               case "uk":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Це поле є обов’язковим для заповнення";
+                  break;
+               case "en":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "This field is required";
+                  break;
+               default:
+                  break;
             }
- else {
-                inputName.closest(".input-wrapper").querySelector(".error-text").innerHTML = "";
-                inputName.closest(".input-wrapper").classList.remove("error");
-                inputName.closest(".input-wrapper").querySelector("input").classList.remove("error-box");
+            inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+         } else if (inputName.value.trim().length < 2) {
+            switch (lang) {
+               case "uk":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле має містити не менше двох символів";
+                  break;
+               case "en":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field must contain at least two characters";
+                  break;
+               default:
+                  break;
             }
-            return regexName.test(inputName.value) && !containsNumber;
-        }
+            inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+            inputName.closest(".input-wrapper").classList.add("error");
+         } else if (!regexName.test(inputName.value) || containsNumber) {
+            switch (lang) {
+               case "uk":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле заповнено некоректно.";
+                  break;
+               case "en":
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is not filled in correctly.";
+                  break;
+               default:
+                  break;
+            }
+            inputName.closest(".input-wrapper").querySelector("input").classList.add("error-box");
+            inputName.closest(".input-wrapper").classList.add("error");
+         }
+         else {
+            inputName.closest(".input-wrapper").querySelector(".error-text").innerHTML = "";
+            inputName.closest(".input-wrapper").classList.remove("error");
+            inputName.closest(".input-wrapper").querySelector("input").classList.remove("error-box");
+         }
+         return regexName.test(inputName.value) && !containsNumber;
+      }
 
       // function to check the correctness of the entered phone number
       function checkPhone() {
@@ -363,6 +363,7 @@ function hideLoader() {
    loader.style.opacity = 0;
    setTimeout(() => {
       loader.remove();
+      $(".scrollup").fadeIn();
    }, 2500);
 }
 window.addEventListener('load', hideLoader);
@@ -372,6 +373,8 @@ window.addEventListener('load', hideLoader);
 
 // footer scroll-up start //
 $(document).ready(function () {
+   $(".scrollup").hide();
+
    $(window).scroll(function () {
       if ($(this).scrollTop() > 400) {
          $(".scrollup").fadeIn();
