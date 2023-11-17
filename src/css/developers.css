@@ -313,7 +313,8 @@ a {
 .container_about_one {
    width: 380px;
    height: 71px;
-   background-color: rgba(254, 88, 85, 0.8);
+   background-color: var(--background-buttons);
+   color: #FFFFFF;
    border-radius: 50px;
    text-align: center;
    font-size: 18px;
@@ -328,8 +329,9 @@ a {
 .container_about_two {
    width: 380px;
    height: 92px;
-   background: rgba(255, 255, 255, 0.3);
-   border-radius: 30px 0px;
+   background: #E3984A;
+   color: #FFFFFF;
+   border-radius: 50px 0px;
    text-align: center;
    font-size: 18px;
    line-height: 20px;
@@ -343,7 +345,8 @@ a {
 .container_about_three {
    width: 380px;
    height: 72px;
-   background: #8A8AFC;
+   background: #6B7BB1;
+   color: #FFFFFF;
    border-radius: 50px;
    margin: 0 auto;
    margin-top: 24px;
@@ -356,13 +359,14 @@ a {
 .container_about_four {
    width: 380px;
    height: 55px;
-   background-color: rgba(255, 213, 46, 0.4);
+   background-color: #BAA097;
+   color: #FFFFFF;
    padding: 16px 57px 16px 57px;
    font-size: 18px;
    line-height: 25px;
    margin: 0 auto;
    margin-top: 24px;
-   border-radius: 0 25px;
+   border-radius: 0 50px;
    font-weight: 400;
 }
 
@@ -1542,7 +1546,7 @@ a {
    }
 
    .translate {
-      color: #fff;
+      /* color: #fff; */
    }
 
    .translate_one {
