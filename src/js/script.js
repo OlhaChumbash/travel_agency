@@ -472,6 +472,7 @@ function hideLoader() {
    loader.style.opacity = 0;
    setTimeout(() => {
       loader.remove();
+      $(".scrollup").fadeIn();
    }, 2500);
 }
 window.addEventListener('load', hideLoader);
@@ -481,6 +482,8 @@ window.addEventListener('load', hideLoader);
 
 // footer scroll-up start //
 $(document).ready(function () {
+   $(".scrollup").hide();
+
    $(window).scroll(function () {
       if ($(this).scrollTop() > 400) {
          $(".scrollup").fadeIn();
