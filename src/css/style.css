@@ -903,6 +903,7 @@ button:not(:disabled) {
    overflow: hidden;
    width: 100%;
    margin: 0px auto;
+   z-index: 0;
 }
 
 #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper swiper-slide .content {
@@ -955,7 +956,7 @@ button:not(:disabled) {
    max-width: 104px;
    max-height: 118px;
    position: absolute;
-   z-index: 0;
+   z-index: -1;
    margin-top: -370px;
 }
 
@@ -2163,30 +2164,54 @@ button:not(:disabled) {
       align-items: flex-start;
    }
 
-   #mainTUI .sharing {
+   #mainTUI .sharing-box .sharing {
       margin: 0 0 55px 0;
    }
 
-   #mainTUI .twitter {
+   #mainTUI .sharing-box .sharing .twitter {
       margin-right: 10px;
    }
 
-   #mainTUI .sharing a {
+   #mainTUI .sharing-box .sharing a {
       display: inline-block;
-      transition: transform 0.3s ease;
+      font-family: 'Forum';
+      font-size: 18px;
+      border: 1px solid var(--button-white);
+      padding: 8px;
+      border-radius: 10px;
+      gap: 6px;
+      opacity: 0;
+      color: var(--button-white);
    }
 
-   #mainTUI .sharing a:hover {
-      transform: scale(1.6);
+   #mainTUI .sharing-box .sharing a span {
+      opacity: 0;
    }
 
-   .icons a {
-      display: inline-block;
-      transition: transform 0.3s ease;
+   #mainTUI .sharing-box .sharing a:hover {
+      animation: bar-opacity 0.3s forwards ease-in-out;
+
    }
 
-   .icons a:hover {
-      transform: scale(1.6);
+   @keyframes bar-opacity {
+      from {
+         opacity: 0;
+      }
+
+      to {
+         opacity: 1;
+      }
+   }
+
+   #mainTUI .sharing .icon-over {
+      position: relative;
+      left: 125px;
+      top: 3px;
+      pointer-events: none;
+   }
+
+   #mainTUI .icon-over.en {
+      left: 82px;
    }
 
    /*-- main-block-TUI end --*/
