@@ -818,6 +818,7 @@ button:not(:disabled) {
    margin: 0 auto;
    max-width: 654px;
    margin-bottom: 16px;
+   margin-top: 16px;
 }
 
 #typesTours h2 {
@@ -2049,6 +2050,7 @@ button:not(:disabled) {
       padding-top: 24px;
       max-width: 745px;
       margin-bottom: 32px;
+      margin-top: 32px;
    }
 
    #typesTours h2 {
