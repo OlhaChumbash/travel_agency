@@ -86,7 +86,7 @@ a {
    align-items: center;
    justify-content: flex-start;
    border: 1px solid var(--color-blue-1);
-   border-radius: 10px;
+   border-radius: 20px;
    margin-top: 30px;
 }
 
@@ -102,8 +102,8 @@ a {
    background-color: var(--background);
    border: 1px solid var(--color-blue-1);
    padding: 17px;
-   border-radius: 10px;
-   width: 103%;
+   border-radius: 20px;
+   width: 104%;
    margin: 21px -18px 5px -18px;
 }
 
@@ -1027,6 +1027,7 @@ button:not(:disabled) {
 #prepareTripUs .list-item .list-container h3 {
    font-size: 24px;
    margin-bottom: 10px;
+   line-height: 1;
 }
 
 #prepareTripUs .list-item .list-container .list-description {
@@ -1202,14 +1203,14 @@ button:not(:disabled) {
    flex-shrink: 0;
    color: #243B73;
    margin-left: auto;
+   margin-right: 10px;
    content: "\e901";
    font-family: 'icomoon';
    background-image: none;
 }
 
 #questionsAnswers .accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
-   margin-right: -10px;
-   margin-left: 10px;
+   margin-right: 0px;   
 }
 
 /*-- questions and answers end --*/
