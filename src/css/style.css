@@ -1640,6 +1640,17 @@ button:not(:disabled) {
    justify-content: space-evenly;
 }
 /* 404 end*/
+/* Galery start */
+.widbox-copyright-logo {
+   background: none !important;
+}
+.widbox-copyright-text {
+   display: none;
+}
+.widbox-copyright-icon{
+   display: none !important;
+}
+/* Galery end*/
 
 
 
