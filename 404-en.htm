@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,15 +22,15 @@
                   </div>
                   <div class="menu">
                      <ul class="list-unstyled d-flex menu-desktop">
-                        <li><a class="" href="#popularDestinations">Популярні напрямки</a></li>
-                        <li><a class="" href="#reviews">Відгуки</a></li>
-                        <li><a class="" href="#questionsAnswers">Часті запитання</a></li>
-                        <li><a class="" href="#contacts">Контакти</a>
+                        <li><a class="" href="#popularDestinations">The popular destinations</a></li>
+                        <li><a class="" href="#reviews">Feedbacks</a></li>
+                        <li><a class="" href="#questionsAnswers">Frequently asked questions</a></li>
+                        <li><a class="" href="#contacts">Contacts</a>
                         </li>
                      </ul>
                   </div>
                   <div class="mob-desktop switch-languages">
-                     <a class="text-language" href="#" id="uaLang">Ua</a>
+                     <a class="text-language" href="index.html" id="uaLang">Ua</a>
                      <a class="text-language" href="index-en.html" id="enLang">Eng</a>
                   </div>
                </div>
@@ -44,20 +44,20 @@
                      <img class="header-burger icon-img" src="./src/images/logo.png" alt="Logo"></a>
                   <div class="menu-wrap-bg">
                      <ul>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('popularDestinations'); closeMenu();">The
+                              popular destinations</a>
+                        </li>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('reviews'); closeMenu()">Feedbacks</a>
+                        </li>
                         <li><a class="menu__item" href="#"
-                              onclick="navigateTo('popularDestinations'); closeMenu();">Популярні напрямки</a>
-                        </li>
-                        <li><a class="menu__item" href="#" onclick="navigateTo('reviews'); closeMenu()">Відгуки</a>
-                        </li>
-                        <li><a class="menu__item" href="#" onclick="navigateTo('questionsAnswers'); closeMenu()">Часті
-                              запитання</a>
+                              onclick="navigateTo('questionsAnswers'); closeMenu()">Frequently asked questions</a>
                         </li>
                         <li><a class="menu__item menu__item__contacts" href="#"
-                              onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
+                              onclick="navigateTo('contacts'); closeMenu()">Contacts</a></li>
                      </ul>
-                     <button class="header-nav-btn check-form" onclick="openForm()">Зв’язатись з оператором</button>
+                     <button class="header-nav-btn check-form" onclick="openForm()">Connect with operator</button>
                      <div class="share-section text-center">
-                        <h2 class="text-center text-share">Поділитись</h2>
+                        <h2 class="text-center text-share">Share</h2>
                      </div>
                      <div class="social-icons">
                         <div class="icons-start">
@@ -95,18 +95,18 @@
          <div class="main">
             <div class="main-block">
                <div class="main-title">
-                  <h2 class="main-h2">Упс!</h2>
+                  <h2 class="main-h2">Whoops.</h2>
                   <div class="main-center">
                      <div class="block_4"><img class="main-img" src="./src/images/404/namber_4.png" alt="namber_4.png"></div>
                      <div class="block_compass"><img class="main-compass-img" src="./src/images/404/compass.png" alt="compass.png"></div>
                      <div class="block_4"><img class="main-img" src="./src/images/404/namber_4.png" alt="namber_4.png"></div>
                   </div>
                </div>
-               <h2 class="main-block-h2" >Сторінка, яку Ви шукали, наразі не існує.</h2>
+               <h2 class="main-block-h2" >The page you were looking for does not exist.</h2>
             </div>
             <div class="field-button main-button">
                <div class="img-button button-background">
-                 <button class="text-button button-return-main"><a class="button-text-a" href="index.html">Повернутись на головну</a></button>
+                 <button class="text-button button-return-main"><a class="button-text-a" href="index-en.html">Return to the main page</a></button>
                  <img class="button-return-background" src="./src/images/404/Group 18.png" alt=" ">
                </div>
              </div>
@@ -120,8 +120,8 @@
             <div class="dev-group main-footer">
                <a href="developers.html"><img class="main-logo-footer" src="./src/images/footer-dev-logo.png"></a>
                <a href="developers.html">
-                  <p class="main-footer-title" >Розроблено студентами<br>
-                     Вінницької ІТ-Академії 2023</p>
+                  <p class="main-footer-title" >Developed by<br>
+                     Vinnytsia IT Academy’s students 2023</p>
                </a>
             </div>
          </div>

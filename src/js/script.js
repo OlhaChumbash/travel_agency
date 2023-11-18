@@ -105,10 +105,10 @@ document.querySelectorAll(".check-form").forEach((elem) =>
          } else if (!regexName.test(inputName.value) || containsNumber) {
             switch (lang) {
                case "uk":
-                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле заповнено некоректно.";
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "Поле заповнено некоректно";
                   break;
                case "en":
-                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is not filled in correctly.";
+                  inputName.closest(".input-wrapper").querySelector(".error-text").textContent = "The field is not filled in correctly";
                   break;
                default:
                   break;
@@ -472,6 +472,7 @@ function hideLoader() {
    loader.style.opacity = 0;
    setTimeout(() => {
       loader.remove();
+      $(".scrollup").fadeIn();
    }, 2500);
 }
 window.addEventListener('load', hideLoader);
@@ -481,6 +482,8 @@ window.addEventListener('load', hideLoader);
 
 // footer scroll-up start //
 $(document).ready(function () {
+   $(".scrollup").hide();
+
    $(window).scroll(function () {
       if ($(this).scrollTop() > 400) {
          $(".scrollup").fadeIn();
