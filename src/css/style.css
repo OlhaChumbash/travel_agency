@@ -86,7 +86,7 @@ a {
    align-items: center;
    justify-content: flex-start;
    border: 1px solid var(--color-blue-1);
-   border-radius: 10px;
+   border-radius: 20px;
    margin-top: 30px;
 }
 
@@ -102,8 +102,8 @@ a {
    background-color: var(--background);
    border: 1px solid var(--color-blue-1);
    padding: 17px;
-   border-radius: 10px;
-   width: 103%;
+   border-radius: 20px;
+   width: 104%;
    margin: 21px -18px 5px -18px;
 }
 
@@ -818,6 +818,7 @@ button:not(:disabled) {
    margin: 0 auto;
    max-width: 654px;
    margin-bottom: 16px;
+   margin-top: 16px;
 }
 
 #typesTours h2 {
@@ -975,20 +976,18 @@ button:not(:disabled) {
 #prepareTripUs {
    font-family: 'Forum';
    font-weight: 400;
-   margin: 0 auto;
-   max-width: 1440px;
-   padding: 16px 16px 30px 12px;
+   margin: 0 auto;  
+   padding-right: 8px !important;
    margin-top: 16px;
 }
 
 #prepareTripUs h2 {
-
    max-width: 546px;
    color: #000;
    text-align: center;
    font-size: 40px;
    margin: 0 auto;
-   width: 68%;
+   width: 69%;
    margin-bottom: 16px;
    line-height: 1.1;
 }
@@ -998,35 +997,34 @@ button:not(:disabled) {
    display: flex;
    margin-bottom: 14px;
    max-width: 1024px;
+   display: flex;
+   justify-content: space-between;
 }
 
 #prepareTripUs .list-item .list-number {
-   color: var(--button-blue-2);
+   color: var(--button-blue-1);
    text-align: end;
    font-size: 64px;
-   width: 14%;
+   width: 12%;
+}
+#prepareTripUs .list-item .list-number .first{
+   padding-right: 5px;
 }
 
 #prepareTripUs .list-item .list-number p {
    margin: 0;
 }
 
-#prepareTripUs .list-item .list-number .first {
-   padding-right: 5px;
-}
-
-
 #prepareTripUs .list-item .list-container {
-   width: 88%;
+   width: 83%;
    display: flex;
-   flex-direction: column;
-   padding-left: 18px;
-   padding-right: 8px;
+   flex-direction: column;   
 }
 
 #prepareTripUs .list-item .list-container h3 {
    font-size: 24px;
    margin-bottom: 10px;
+   line-height: 1;
 }
 
 #prepareTripUs .list-item .list-container .list-description {
@@ -1202,14 +1200,14 @@ button:not(:disabled) {
    flex-shrink: 0;
    color: #243B73;
    margin-left: auto;
+   margin-right: 10px;
    content: "\e901";
    font-family: 'icomoon';
    background-image: none;
 }
 
 #questionsAnswers .accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
-   margin-right: -10px;
-   margin-left: 10px;
+   margin-right: 0px;   
 }
 
 /*-- questions and answers end --*/
@@ -2222,6 +2220,7 @@ button:not(:disabled) {
       padding-top: 24px;
       max-width: 745px;
       margin-bottom: 32px;
+      margin-top: 32px;
    }
 
    #typesTours h2 {
@@ -2403,28 +2402,21 @@ button:not(:disabled) {
 
    #prepareTripUs .list-item .list-number {
       font-size: 100px;
-      text-align: start;
-      width: 13%;
+      text-align: center;
+      width: 12%;
    }
 
    #prepareTripUs .list-item .list-number p {
-      padding-left: 20px;
-      margin-top: -12px;
-   }
-
-   #prepareTripUs .list-item .list-number p.first {
-      padding-left: 20px;
-   }
-
-   #prepareTripUs .list-item .list-container {
-      padding-left: 4px;
+           margin-top: -12px;
    }
 
    #prepareTripUs .list-item .list-container h3 {
       font-size: 40px;
       margin-bottom: 8px;
    }
-
+   #prepareTripUs .list-item .list-number .first {
+      padding-right: 0;
+   }
    #prepareTripUs .list-item .list-container .list-description {
       font-size: 20px;
    }
@@ -2749,7 +2741,7 @@ button:not(:disabled) {
 
    /*-- prepare your trip with us start --*/
    #prepareTripUs .list-item {
-      max-width: 1024px;
+      max-width: 900px;
    }
 
    /*-- prepare your trip with us end --*/
