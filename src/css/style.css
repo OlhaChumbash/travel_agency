@@ -140,7 +140,7 @@ a {
    align-items: center;
    width: 230px;
    height: 90px;
-   background-image: url(../images/frame_button.png);
+   background-image: url(../images/frame_button.svg);
    background-repeat: no-repeat;
 }
 
@@ -1251,7 +1251,7 @@ button:not(:disabled) {
    padding: 0;
    width: 342px;
    height: 381px;
-   background-image: url(../images/contacts/contact-info-bg-mb.png);
+   background-image: url(../images/contacts/contact-info-bg-mb.svg);
    background-repeat: no-repeat;
 }
 
@@ -1310,7 +1310,7 @@ button:not(:disabled) {
    padding: 0;
    width: 342px;
    height: 271px;
-   background: url(../images/contacts/contact-form-bg-mb.png);
+   background: url(../images/contacts/contact-form-bg-mb.svg);
    background-repeat: no-repeat;
 }
 
@@ -2547,7 +2547,7 @@ button:not(:disabled) {
       width: 408px;
       height: 455px;
       margin-top: 16px;
-      background: url(../images/contacts/contacts-bg-dt.png);
+      background: url(../images/contacts/contacts-bg-dt.svg);
       background-repeat: no-repeat;
    }
 

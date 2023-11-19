@@ -1,5 +1,6 @@
 //burger menu start
 const menuBox = document.getElementById('menuBox');
+
 function toggleMenu() {
    menuBox.classList.toggle('active');
 
@@ -33,6 +34,11 @@ function disableScroll() {
 function enableScroll() {
    document.body.style.overflow = "";
 }
+
+//==========================//
+
+
+//==============================//
 //burger menu end
 
 const scrollControllerModal = {
@@ -43,10 +49,12 @@ const scrollControllerModal = {
       document.body.style.overflow = "";
    },
 };
+
 function openForm() {
    document.getElementById("form-window").style.display = "flex";
    document.getElementById("modal-overlay").style.display = "block";
-   scrollControllerModal.disabledScroll();
+
+
 }
 
 // close form window
@@ -60,6 +68,7 @@ document.getElementById("close-form-window").addEventListener("click", () => {
    document.querySelectorAll("#form-window .error-text").forEach((elem) => (elem.innerText = ""));
    scrollControllerModal.enabledScroll();
 });
+
 const lang = document.documentElement.lang;
 let isFormValid = false;
 let elemForCheckCaptcha;
