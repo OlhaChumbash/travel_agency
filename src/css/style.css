@@ -1596,6 +1596,9 @@ button:not(:disabled) {
 #index_404 .button-return-background{
    display: none;
 }
+#index_404 .button-return-background_2{
+   display: none;
+}
 #index_404 .button-text-a{
    color: #FFF;
 }
@@ -1621,7 +1624,7 @@ button:not(:disabled) {
    height: 50px;
 }
 #footer .main-footer-title{
-   margin: 3px 0 0 0!important;
+   margin: 6px 0 0 0!important;
    color: var(--icon-color-white);
    font-family: Forum;
    font-size: 16px;
@@ -2092,7 +2095,7 @@ button:not(:disabled) {
       min-width: 0 !important;
       position: absolute;
       top: 20%;
-      left: 2.5%;
+      left: 2.8%;
       flex-direction: column;
       align-items: flex-start;
    }
@@ -2649,8 +2652,17 @@ button:not(:disabled) {
    }
    #index_404 .button-return-background{
       position: absolute;
-      top: -3px;
+      top: -5px;
       display: block;
+      width: 320px;
+   }
+   #index_404 .button-return-background_2{
+      position: absolute;
+      top: 70px;
+      display: block;
+   }
+   #footer .main-footer-title{
+      font-size: 18px;
    }
    /* 404 end*/
 }
