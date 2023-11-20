@@ -1020,7 +1020,8 @@ button:not(:disabled) {
    font-size: 64px;
    width: 12%;
 }
-#prepareTripUs .list-item .list-number .first{
+
+#prepareTripUs .list-item .list-number .first {
    padding-right: 5px;
 }
 
@@ -1160,7 +1161,7 @@ button:not(:disabled) {
 
 #questionsAnswers .accordion .field-frame {
    width: 90%;
-   border-radius: 10px;
+   border-radius: 20px;
 }
 
 #questionsAnswers .accordion,
@@ -1622,10 +1623,12 @@ button:not(:disabled) {
 #index_404 .button-return-background {
    display: none;
 }
-#index_404 .button-return-background_2{
+
+#index_404 .button-return-background_2 {
    display: none;
 }
-#index_404 .button-text-a{
+
+#index_404 .button-text-a {
    color: #FFF;
 }
 
@@ -2448,16 +2451,18 @@ button:not(:disabled) {
    }
 
    #prepareTripUs .list-item .list-number p {
-           margin-top: -12px;
+      margin-top: -12px;
    }
 
    #prepareTripUs .list-item .list-container h3 {
       font-size: 40px;
       margin-bottom: 8px;
    }
+
    #prepareTripUs .list-item .list-number .first {
       padding-right: 0;
    }
+
    #prepareTripUs .list-item .list-container .list-description {
       font-size: 20px;
    }
@@ -2693,12 +2698,14 @@ button:not(:disabled) {
       display: block;
       width: 320px;
    }
-   #index_404 .button-return-background_2{
+
+   #index_404 .button-return-background_2 {
       position: absolute;
       top: 70px;
       display: block;
    }
-   #footer .main-footer-title{
+
+   #footer .main-footer-title {
       font-size: 18px;
    }
 
