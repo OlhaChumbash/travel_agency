@@ -739,6 +739,19 @@ button:not(:disabled) {
    color: var(--button-blue-1);
 }
 
+#modal-overlay #second-window #close-second-window,
+#modal-overlay #form-window #close-form {
+   position: absolute;
+   height: 35px;
+   width: 35px;
+   top: 11px;
+   right: 28px;
+   line-height: 20px;
+   font-size: 55px;
+   cursor: pointer;
+   color: var(--button-blue-1);
+}
+
 #modal-overlay #second-window {
    display: none;
    text-align: center;

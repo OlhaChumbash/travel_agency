@@ -118,7 +118,8 @@
                         <li><a class="menu__item menu__item__contacts" href="#"
                               onclick="navigateTo('contacts'); closeMenu()">Contacts</a></li>
                      </ul>
-                     <button class="header-nav-btn check-form" onclick="openForm()">Connect with operator</button>
+                     <button class="header-nav-btn check-form" id="headerFormBtn" onclick="openForm1()">Connect with
+                        operator</button>
                      <div class="share-section text-center">
                         <h2 class="text-center text-share">Share</h2>
                      </div>
@@ -220,6 +221,7 @@
          <form id="form-window" class="registration-form" method="post" accept-charset="utf-8"
             action="https://intita.com/api/v1/entrant">
             <span id="close-form-window" type="button" class="icon-close">&#215;</span>
+            <span id="close-form" type="button" class="icon-close" style="display: none;">&#215;</span>
             <div class="input-wrapper">
                <input class="input-name" maxlength="30" type="text" name="name" placeholder="Name*" value="">
                <p class="error-text"></p>
