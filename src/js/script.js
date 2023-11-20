@@ -1,5 +1,6 @@
 //burger menu start
 const menuBox = document.getElementById('menuBox');
+
 function toggleMenu() {
    menuBox.classList.toggle('active');
 
@@ -33,6 +34,10 @@ function disableScroll() {
 function enableScroll() {
    document.body.style.overflow = "";
 }
+
+//==========================//
+
+//==============================//
 //burger menu end
 
 const scrollControllerModal = {
@@ -43,11 +48,38 @@ const scrollControllerModal = {
       document.body.style.overflow = "";
    },
 };
+
 function openForm() {
    document.getElementById("form-window").style.display = "flex";
    document.getElementById("modal-overlay").style.display = "block";
-   scrollControllerModal.disabledScroll();
+   document.body.style.overflow = "hidden";
+
 }
+function openForm1() {
+   document.getElementById("form-window").style.display = "flex";
+   document.getElementById("modal-overlay").style.display = "block";
+   let close = document.getElementById("close-form-window");
+   let closeButton = document.getElementById("close-form");
+   close.style.display = "none";
+   closeButton.style.display = "block";
+}
+
+// close form window
+document.getElementById("close-form").addEventListener("click", () => {
+   document.getElementById("form-window").style.display = "none";
+   document.getElementById("modal-overlay").style.display = "none";
+   document.querySelectorAll("#form-window input").forEach((elem) => {
+      elem.value = "";
+      elem.classList.remove("error-box");
+   });
+   document.querySelectorAll("#form-window .error-text").forEach((elem) => (elem.innerText = ""));
+   let close = document.getElementById("close-form-window");
+   let closeButton = document.getElementById("close-form");
+   close.style.display = "block";
+   closeButton.style.display = "none";
+   document.body.style.overflow = "hidden";
+   // scrollControllerModal.enabledScroll();
+});
 
 // close form window
 document.getElementById("close-form-window").addEventListener("click", () => {
@@ -58,8 +90,10 @@ document.getElementById("close-form-window").addEventListener("click", () => {
       elem.classList.remove("error-box");
    });
    document.querySelectorAll("#form-window .error-text").forEach((elem) => (elem.innerText = ""));
-   scrollControllerModal.enabledScroll();
+   document.body.style.overflow = "auto";
+   // scrollControllerModal.enabledScroll();
 });
+
 const lang = document.documentElement.lang;
 let isFormValid = false;
 let elemForCheckCaptcha;
