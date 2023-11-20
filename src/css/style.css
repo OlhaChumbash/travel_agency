@@ -111,7 +111,7 @@ a {
     <div class="field-frame">
         <div class="under-frame">
             <div class="element-frame">
-                <img src="./src/images/frame.png" alt="It is frame">
+                <img src="./src/images/frame.svg" alt="It is frame">
             </div>
             <div class="above-frame">
               Lorem text
@@ -666,6 +666,10 @@ button:not(:disabled) {
    display: none;
 }
 
+#mainTUI .icons:hover {
+   transform: scale(1.6);
+}
+
 /*-- main-block-TUI end --*/
 
 
@@ -963,7 +967,7 @@ button:not(:disabled) {
    position: absolute;
    width: 100%;
    z-index: -2;
-   margin: -130px 0px 0px 0px;
+   margin: -180px 0px 0px 0px;
 }
 
 #bacground-waves .image_palm img {
@@ -1065,7 +1069,7 @@ button:not(:disabled) {
    position: absolute;
    width: 100%;
    z-index: -1;
-   margin: -70px 0px 0px 0px;
+   margin: -50px 0px 0px 0px;
 }
 
 /*-- background-between end --*/
@@ -1110,7 +1114,7 @@ button:not(:disabled) {
    min-height: 420px;
    padding: 15px 22px 0px 22px;
    margin: 0px auto;
-   background-image: url(../images/reviews/frame-reviews.png);
+   background-image: url(../images/reviews/frame-reviews.svg);
    background-repeat: no-repeat;
    background-size: contain;
    overflow: hidden;
@@ -1126,16 +1130,32 @@ button:not(:disabled) {
 
 #reviews .reviews-section .swiper-pagination {
    bottom: 0px;
-   font-size: 22px;
-   color: var(--button-blue-2);
 }
 
 #reviews .reviews-section .swiper-pagination-bullet {
    width: 20px;
    height: 20px;
    line-height: 20px;
-   font-size: 14px;
-   background-color: var(--button-blue-2);
+   opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+   background: var(--swiper-pagination-bullet-inactive-color, var(--background));
+}
+
+#reviews .reviews-section .swiper-pagination-bullet-active {
+   background-color: var(--button-blue-1) !important;
+}
+
+#reviews .reviews-section .swiper-pagination-bullet-active:hover {
+   background-color: var(--button-blue-2) !important;
+}
+
+#reviews .reviews-section .swiper-pagination-bullet-active-next,
+#reviews .reviews-section .swiper-pagination-bullet-active-prev,
+#reviews .reviews-section .swiper-pagination-bullet-active-next-next,
+#reviews .reviews-section .swiper-pagination-bullet-active-prev-prev {
+   background-color: var(--background) !important;
+   border-color: var(--button-blue-1);
+   border-style: solid;
+   border-width: 1px;
 }
 
 /*-- reviews end --*/
@@ -1237,7 +1257,7 @@ button:not(:disabled) {
    position: absolute;
    width: 100%;
    z-index: -1;
-   margin: -85px 0 0px 0px;
+   margin: -4px 0 0px 0px;
 }
 
 /*-- background-between end --*/
@@ -1807,7 +1827,7 @@ button:not(:disabled) {
 
    /*-- background-between start --*/
    #bacground-waves .img-background {
-      margin: -140px 0px 0px 0px;
+      margin: -225px 0px 0px 0px;
    }
 
    #bacground-waves .image_palm img {
@@ -1838,7 +1858,7 @@ button:not(:disabled) {
 
    /*-- background-between start --*/
    #bacground-waves .img-background {
-      margin: -254px 0px 0px 0px;
+      margin: -360px 0px 0px 0px;
    }
 
    #bacground-waves .image_palm img {
@@ -1865,7 +1885,7 @@ button:not(:disabled) {
       position: absolute;
       width: 100%;
       z-index: -1;
-      margin: -200px 0px 0px 0px;
+      margin: -155px 0px 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -1877,7 +1897,7 @@ button:not(:disabled) {
 
    /*-- background-between start --*/
    #bacground-waves .img-background {
-      margin: -295px 0px 0px 0px;
+      margin: -430px 0px 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -1952,7 +1972,7 @@ button:not(:disabled) {
       position: absolute;
       width: 100%;
       z-index: -1;
-      margin: -300px 0px 0px 0px;
+      margin: -255px 0px 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -2256,6 +2276,10 @@ button:not(:disabled) {
       left: 82px;
    }
 
+   #mainTUI .icons:hover {
+      transform: scale(1.6);
+   }
+
    /*-- main-block-TUI end --*/
 
 
@@ -2344,8 +2368,8 @@ button:not(:disabled) {
 
    #popularDestinations .popularD-section .title .dotted-line img {
       position: absolute;
-      margin-left: calc(375px + (652 - 375) * ((100vw - 1024px) / (1920 - 1024)));
-      margin-top: 35px;
+      margin-left: calc(350px + (652 - 375) * ((100vw - 1024px) / (1920 - 1024)));
+      margin-top: 20px;
    }
 
    #popularDestinations .popularD-section .containerDesk-swiper {
@@ -2416,7 +2440,7 @@ button:not(:disabled) {
 
    /*-- background-between start --*/
    #bacground-waves .img-background {
-      margin: -360px 0px 0px 0px;
+      margin-top: calc(-625px + (-790 + 625) * ((100vw - 1440px) / (1440 - 1024)));
    }
 
    #bacground-waves .image_palm img {
@@ -2481,7 +2505,7 @@ button:not(:disabled) {
       position: absolute;
       width: 100%;
       z-index: -1;
-      margin: -400px 0px 0px 0px;
+      margin: -255px 0px 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -2533,7 +2557,7 @@ button:not(:disabled) {
       position: absolute;
       width: 100%;
       z-index: -1;
-      margin: -260px 0 0px 0px;
+      margin: -135px 0 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -2786,7 +2810,7 @@ button:not(:disabled) {
 
    /*-- background-between start --*/
    #bacground-waves .img-background {
-      margin: -475px 0px 0px 0px;
+      margin-top: calc(-750px + (-1250 + 750) * ((100vw - 1440px) / (2560 - 1440)))
    }
 
    #bacground-waves .image_palm img {
@@ -2811,7 +2835,7 @@ button:not(:disabled) {
       position: absolute;
       width: 100%;
       z-index: -1;
-      margin: -500px 0px 0px 0px;
+      margin: -315px 0px 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -2875,7 +2899,7 @@ button:not(:disabled) {
       position: absolute;
       width: 100%;
       z-index: -1;
-      margin: -280px 0 0px 0px;
+      margin: -200px 0 0px 0px;
    }
 
    /*-- background-between end --*/
@@ -2939,7 +2963,7 @@ button:not(:disabled) {
 
    /*-- background-between start --*/
    #bacground-waves .img-background {
-      margin-top: calc(-475px + (-740 + 475) * ((100vw - 1440px) / (2560 - 1440)));
+      margin-top: -1250px;
    }
 
    /*-- background-between end --*/
