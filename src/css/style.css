@@ -947,7 +947,7 @@ button:not(:disabled) {
 }
 
 #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
-   width: 177px;
+   width: 140px;
    height: 72px;
    margin: 0px 0px 0px -43px;
    transform: rotate(-2deg) scale(1);
@@ -2368,8 +2368,9 @@ button:not(:disabled) {
 
    #popularDestinations .popularD-section .title .dotted-line img {
       position: absolute;
-      margin-left: calc(350px + (652 - 375) * ((100vw - 1024px) / (1920 - 1024)));
+      margin-left: calc(360px + (652 - 375) * ((100vw - 1024px) / (1920 - 1024)));
       margin-top: 20px;
+      width: 210px;
    }
 
    #popularDestinations .popularD-section .containerDesk-swiper {
@@ -2781,7 +2782,6 @@ button:not(:disabled) {
    #popularDestinations .popularD-section .title .dotted-line img {
       margin-left: 470px;
       margin-top: 35px;
-      width: 370px;
    }
 
    #popularDestinations .popularD-section .containerDesk-swiper .left-block {
