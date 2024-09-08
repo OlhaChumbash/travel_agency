@@ -1,84 +1,83 @@
 @font-face {
-   font-family: 'icomoon';
-   src: url('fonts/icomoon.eot?hdw03c');
-   src: url('fonts/icomoon.eot?hdw03c#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?hdw03c') format('truetype'),
-      url('fonts/icomoon.woff?hdw03c') format('woff'),
-      url('fonts/icomoon.svg?hdw03c#icomoon') format('svg');
-   font-weight: normal;
-   font-style: normal;
-   font-display: block;
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?z10a4m');
+  src:  url('../fonts/icomoon.eot?z10a4m#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?z10a4m') format('truetype'),
+    url('../fonts/icomoon.woff?z10a4m') format('woff'),
+    url('../fonts/icomoon.svg?z10a4m#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-   /* use !important to prevent issues with browser extensions that change fonts */
-   font-family: 'icomoon' !important;
-   speak: never;
-   font-style: normal;
-   font-weight: normal;
-   font-variant: normal;
-   text-transform: none;
-   line-height: 1;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-   /* Better Font Rendering =========== */
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-Arrow:before {
-   content: "\e900";
-   color: #243b73;
-}
-
-.icon-Arrow-Scroll .path1:before {
-   content: "\e901";
-   color: rgb(226, 211, 206);
-}
-
-.icon-Arrow-Scroll .path2:before {
-   content: "\e902";
-   margin-left: -1em;
-   color: rgb(226, 211, 206);
-}
-
-.icon-Arrow-Scroll .path3:before {
-   content: "\e903";
-   margin-left: -1em;
-   color: rgb(36, 59, 115);
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-twitter:before {
-   content: "\e904";
-   color: #fff;
+  content: "\e900";
+  color: #fff;
 }
-
-.icon-linkedin:before {
-   content: "\e905";
-   color: #fff;
+.icon-accordion-down:before {
+  content: "\e901";
+  color: #243b73;
 }
-
-.icon-instagram:before {
-   content: "\e906";
-   color: #fff;
+.icon-accordion-up:before {
+  content: "\e902";
+  color: #243b73;
 }
-
-.icon-Viber:before {
-   content: "\e907";
-   color: #fff;
-}
-
 .icon-Facebook:before {
-   content: "\e908";
-   color: #fff;
+  content: "\e905";
+  color: #fff;
 }
-
+.icon-instagram:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-linkedin:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-map:before {
+  content: "\e908";
+  color: #243b73;
+}
+.icon-swiper1_next:before {
+  content: "\e90a";
+  color: #243b73;
+}
+.icon-swiper1_prev:before {
+  content: "\e90b";
+  color: #243b73;
+}
+.icon-swiper2_next:before {
+  content: "\e90c";
+  color: #243b73;
+}
+.icon-swiper2_prev:before {
+  content: "\e90d";
+  color: #243b73;
+}
 .icon-Telegram:before {
-   content: "\e909";
-   color: #fff;
+  content: "\e90e";
+  color: #fff;
 }
-
+.icon-Viber:before {
+  content: "\e90f";
+  color: #fff;
+}
 .icon-whatsapp:before {
-   content: "\e90a";
-   color: #fff;
+  content: "\e910";
+  color: #fff;
 }

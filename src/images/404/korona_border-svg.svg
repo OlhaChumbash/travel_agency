@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347 54" width="347" height="54">
+	<title>korona_border-svg</title>
+	<style>
+		.s0 { fill: none;stroke: #ffffff } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m208 13h98.2c53.1 0 53.1 51 0 51h-98.2"/>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m139 13h-98.2c-53.1 0-53.1 51 0 51h98.2"/>
+	<path id="Layer" class="s1" d="m169.5 4.4l4.3-4.4 4.3 4.4-4.3 4.3z"/>
+	<path id="Layer" class="s1" d="m178.9 7.8l3-3 2.9 3-2.9 3z"/>
+	<path id="Layer" class="s1" d="m183.6 11.3l1.7-1.7 1.7 1.7-1.7 1.7z"/>
+	<path id="Layer" class="s1" d="m160 11.3l1.7-1.7 1.7 1.7-1.7 1.7z"/>
+	<path id="Layer" class="s1" d="m163.2 7.8l2.9-3 3 3-3 3z"/>
+	<path id="Layer" class="s1" d="m169.5 78.6l4.3 4.4 4.3-4.4-4.3-4.3z"/>
+	<path id="Layer" class="s1" d="m178.9 75.2l3 3 2.9-3-2.9-3z"/>
+	<path id="Layer" class="s1" d="m183.6 71.7l1.7 1.7 1.7-1.7-1.7-1.7z"/>
+	<path id="Layer" class="s1" d="m160 71.7l1.7 1.7 1.7-1.7-1.7-1.7z"/>
+	<path id="Layer" class="s1" d="m163.2 75.2l2.9 3 3-3-3-3z"/>
+</svg>

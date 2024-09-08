@@ -35,6 +35,7 @@
    --color-blue-2: #6B7BB1;
    --color-gray: #A9A9A9;
    --color-error: #f00;
+   --color-error-text: #FF2D19;
    --icon-color-white: #fff;
    --icon-color-beige: #E2D3CE;
    --icon-color-gray: #A9A9A9;
@@ -57,10 +58,13 @@ body {
    font-weight: 400;
    font-style: normal;
    line-height: normal;
+   background-color: var(--background);
 }
 
 .container-xxl {
-   max-width: 1024px;
+   max-width: 1440px;
+   --bs-gutter-x: 0rem;
+   padding: 0px !important;
 }
 
 a {
@@ -69,13 +73,9 @@ a {
 }
 
 
-
-
-
 /*--------frame/рамка--start--------*/
 .field-frame {
    width: 70%;
-   height: 100vh;
    margin: 0 auto;
    background-color: var(--background);
 }
@@ -91,7 +91,7 @@ a {
 }
 
 .element-frame {
-   width: 31px;
+   width: 51px;
    background-color: var(--background);
    padding: 0px 10px 0px 10px;
    margin: -17px;
@@ -103,16 +103,17 @@ a {
    border: 1px solid var(--color-blue-1);
    padding: 17px;
    border-radius: 20px;
-   margin: 23px -18px 7px -18px;
+   width: 104%;
+   margin: 21px -18px 5px -18px;
 }
 
 /* !зразок не видаляти!
     <div class="field-frame">
         <div class="under-frame">
             <div class="element-frame">
-                <img src="./src/images/frame.png" alt="It is frame">
+                <img src="./src/images/frame.svg" alt="It is frame">
             </div>
-            <div class="above-frame"> 
+            <div class="above-frame">
               Lorem text
             </div>
         </div>
@@ -139,7 +140,7 @@ a {
    align-items: center;
    width: 230px;
    height: 90px;
-   background-image: url(../images/frame_button.png);
+   background-image: url(../images/frame_button.svg);
    background-repeat: no-repeat;
 }
 
@@ -180,7 +181,7 @@ button:not(:disabled) {
 /*!зразок не видаляти!
       <div class="field-button">
         <div class="img-button">
-          <button class="text-button">Залишити завку</button> 
+          <button class="text-button">Залишити завку</button>
         </div>
       </div>
 */
@@ -189,251 +190,2783 @@ button:not(:disabled) {
 
 /*===================== mobile version 375px ===================== */
 /*-- loader start --*/
-#loader {}
+#loader .box-loader {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   min-height: 100vh;
+   background: #03a9f4;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   z-index: 999;
+}
+
+#loader .loader {
+   position: relative;
+   width: 120px;
+   height: 120px;
+}
+
+#loader .loader span:before {
+   content: "";
+   position: absolute;
+   top: 19px;
+   left: 0;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-image: url(../images/main-block/Earth.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+#loader .loader span {
+   transform: rotate(calc(18deg * var(--i)));
+}
+
+@keyframes animate {
+   0% {
+      transform: scale(0);
+   }
+
+   10% {
+      transform: scale(1.2);
+   }
+
+   80%,
+   100% {
+      transform: scale(0);
+   }
+}
+
+#loader .loader span:before {
+   animation: animate 19s linear infinite;
+}
+
+#loader .plane:before {
+   content: '\f072';
+   font-family: fontAwesome;
+   position: absolute;
+   top: 75px;
+   left: 85px;
+   color: #fff;
+   font-size: 40px;
+   transform: rotate(180deg);
+}
+
+#loader .plane {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   animation: rotating 2s linear infinite;
+   animation-delay: -1s;
+}
+
+@keyframes rotating {
+   0% {
+      transform: rotate(10deg);
+   }
+
+   100% {
+      transform: rotate(370deg);
+   }
+}
 
 /*-- loader end --*/
 
 
 /*-- header start --*/
-#header {}
+#header .hamburger-menu {
+   background: linear-gradient(157deg, rgba(226, 211, 206, 0.16) -5.39%, rgba(226, 211, 206, 0.15) 108.05%);
+   border-radius: 0px;
+   height: 59px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1;
+}
+
+#header #menu__toggle {
+   opacity: 0;
+}
+
+#header .menu__btn {
+   display: flex;
+   position: absolute;
+   top: 26px;
+   right: 28px;
+   width: 50px;
+   height: 28px;
+   cursor: pointer;
+   z-index: 999;
+}
+
+#header .menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   border-radius: 4px;
+   background-color: var(--сolor-white);
+}
+
+#header .menu__btn>span::before {
+   content: "";
+   top: -12px;
+}
+
+#header .menu__btn>span::after {
+   content: "";
+   top: 12px;
+}
+
+.pointer {
+   cursor: pointer;
+}
+
+#header .menu__box {
+   position: fixed;
+   visibility: hidden;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 8px 0 0 0;
+}
+
+#header .menu__box ul {
+   list-style: none;
+   padding: 0;
+   margin: 0 auto;
+   max-width: 343px;
+}
+
+#header .menu__box a img {
+   margin-left: 16px;
+   margin-bottom: 8px;
+}
+
+#header #menu__toggle:checked~.menu__box {
+   height: 100vh;
+   background: rgba(36, 59, 115, 0.90);
+   backdrop-filter: blur(23.72395133972168px);
+   border-radius: 0px;
+   top: 0;
+   z-index: 2;
+   z-index: 2;
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item {
+   display: block;
+   padding-bottom: 24px;
+   color: var(--сolor-white);
+   font-family: 'Forum';
+   font-size: 20px;
+   font-weight: 400;
+   text-decoration: none;
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item:hover {
+   color: var(--color-beige);
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item:active,
+#header .hamburger-menu .row .menu__box li .menu__item:focus {
+   color: var(--сolor-white);
+   text-decoration: underline;
+}
+
+#header .hamburger-menu .row .menu__box li .menu__item__contacts {
+   padding-bottom: 42px;
+}
+
+#header #menu__toggle:checked~.menu__btn>span {
+   transform: rotate(45deg);
+}
+
+#header #menu__toggle:checked~.menu__btn>span::before {
+   top: 0;
+   transform: rotate(0);
+}
+
+#header #menu__toggle:checked~.menu__btn>span::after {
+   top: 0;
+   transform: rotate(90deg);
+}
+
+#header #menu__toggle:checked~.menu__box {
+   visibility: visible;
+   right: 0;
+}
+
+#header .menu {
+   display: none;
+}
+
+#header .mob-lang-select {
+   display: block;
+   padding-top: 17px;
+}
+
+#header .mob-desktop {
+   display: none;
+}
+
+#header .hamburger-menu .row .menu__box .header-nav-btn {
+   display: block;
+   width: 307px;
+   height: 46px;
+   font-family: 'Montserrat';
+   font-size: 20px;
+   font-weight: 400;
+   border-radius: 0;
+   margin: 0 auto 42px auto;
+   border-radius: 4px;
+   border: 1px solid var(--color-blue-1);
+   background-color: var(--сolor-white);
+   color: var(--color-blue-1);
+}
+
+#header .hamburger-menu .row .menu-wrap-bg {
+   padding-top: 40px;
+}
+
+#header .hamburger-menu .row .menu__box .header-nav-btn:hover,
+#header .hamburger-menu .row .menu__box .header-nav-btn:active,
+#header .hamburger-menu .row .menu__box .header-nav-btn:focus {
+   background-color: var(--color-blue-1);
+   color: var(--сolor-white);
+}
+
+#header .hamburger-menu .row .menu__box .header-nav-btn:disabled {
+   background-color: var(--button-gray);
+   color: var(--color-blue-1);
+}
+
+#header a {
+   text-decoration: none;
+}
+
+#header .icon_img {
+   padding: 8px;
+   padding-left: 16px;
+}
+
+#header .row {
+   margin-right: 0;
+}
+
+#header .hamburger-menu .row .menu__box .share-section {
+   border-top: 2px solid var(--сolor-white);
+   width: 278px;
+   margin: 0 auto;
+   padding-top: 8px;
+}
+
+#header .hamburger-menu .row .menu__box .share-section h2 {
+   font-family: 'Forum';
+   font-size: 20px;
+   font-weight: 400;
+   color: var(--сolor-white);
+   margin-bottom: 0;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons {
+   margin-top: 26px;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li {
+   margin: 0 16px;
+   font-size: 23px;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-Facebook,
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-linkedin {
+   font-size: 24px;
+}
+
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-twitter,
+#header .hamburger-menu .row .menu__box .social-icons .icons-start .icons-menu li a .icon-Telegram {
+   font-size: 22px;
+}
+
+#header .social-options {
+   display: none;
+   list-style: none;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+#header .social-options li a {
+   text-decoration: none;
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   font-family: 'Manrope';
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language {
+   font-size: 20px;
+   color: var(--color-gray);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language:first-child {
+   color: var(--сolor-white);
+   margin-bottom: 20px;
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language:hover,
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language:active {
+   color: var(--сolor-white);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:last-child {
+   color: var(--сolor-white);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:first-child {
+   color: var(--color-gray);
+}
+
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:hover,
+#header .hamburger-menu .row .menu__box .text-center .switch-languages .text-language-en:active {
+   color: var(--сolor-white);
+}
 
 /*-- header end --*/
 
 
 /*-- main-block-TUI start --*/
-#mainTUI {}
+#mainTUI .wraper-main {
+   width: 100%;
+   background-image: url(../images/main-block/backgraund-main-block-1024.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: 0 auto;
+}
+
+#mainTUI .conteiner {
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+#mainTUI .title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 44px 30.5px;
+}
+
+#mainTUI .title-h1 {
+   margin: 67px 0 60px 0;
+   width: 320px;
+   color: white;
+   font-family: Genos;
+   font-size: 64px;
+   font-weight: 700;
+   line-height: 77px;
+   letter-spacing: 0em;
+   text-align: center;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+}
+
+#mainTUI .title-p {
+   color: white;
+   margin: 0 0 24px 0;
+   font-family: Montserrat;
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 29px;
+   letter-spacing: 0em;
+   text-align: left;
+}
+
+#mainTUI .box-button {
+   border: 1px solid #243B73;
+   padding: 1px;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   margin: 36px 0;
+   min-width: 310px;
+   text-align: center;
+}
+
+#mainTUI .box-button:hover {
+   border-radius: 4px;
+   border: 1px solid var(--blue-1, #243B73);
+   background: var(--blue-2, #6B7BB1);
+}
+
+#mainTUI .button-main:hover {
+   color: var(--white, #FFF);
+}
+
+#mainTUI .box-button:active {
+   border-radius: 4px;
+   border: 1px solid var(--blue-1, #243B73);
+   background: var(--blue-1, #243B73);
+}
+
+#mainTUI .button-main:active {
+   color: var(--white, #FFF);
+}
+
+#mainTUI .box-button:disabled {
+   border-radius: 4px;
+   border: 1px solid var(--blue-1, #243B73);
+   background: var(--gray, #A9A9A9);
+}
+
+#mainTUI .button-main:disabled {
+   color: var(--blue-1, #243B73);
+}
+
+#mainTUI .button-main {
+   background: none;
+   border: none;
+   color: #243B73;
+   font-family: Montserrat;
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 24px;
+   letter-spacing: 0em;
+   text-align: center;
+}
+
+#mainTUI .div-icons {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   min-width: 265px;
+   margin: 32px 0 0 0;
+}
+
+#mainTUI .icons {
+   width: 36px;
+   height: 36px;
+   text-align: center;
+   margin: 0 16px;
+}
+
+#mainTUI .sharing-box {
+   display: none;
+}
+
+#mainTUI .icons:hover {
+   transform: scale(1.6);
+}
 
 /*-- main-block-TUI end --*/
 
 
-/*-- travel search (plugin) start --*/
-#travelSearch {}
+/*-- form-block start --*/
+#modal-overlay {
+   position: fixed;
+   z-index: 2004;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(36, 59, 115, 0.90);
+   display: none;
+}
 
-/*-- travel search (plugin) end --*/
+#modal-overlay #form-window {
+   display: none;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--background);
+   position: absolute;
+   width: 90%;
+   max-width: 408px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 67px 12px 24px 12px;
+   border-radius: 20px;
+}
+
+#modal-overlay #form-window .input-wrapper,
+#form-window .input-wrapper {
+   max-width: 313px;
+   width: 100%;
+   height: 42px;
+   margin-bottom: 24px;
+}
+
+#modal-overlay #form-window .input-wrapper input,
+#form-window .input-wrapper input {
+   width: 100%;
+   height: 42px;
+   max-width: 337px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 20px;
+   background-color: transparent;
+   padding: 12px;
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+}
+
+#modal-overlay #form-window .input-wrapper input::placeholder,
+#form-window .input-wrapper input::placeholder {
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+}
+
+#modal-overlay #second-window #close-second-window,
+#modal-overlay #form-window #close-form-window {
+   position: absolute;
+   height: 35px;
+   width: 35px;
+   top: 11px;
+   right: 28px;
+   line-height: 20px;
+   font-size: 55px;
+   cursor: pointer;
+   color: var(--button-blue-1);
+}
+
+#modal-overlay #second-window #close-second-window,
+#modal-overlay #form-window #close-form {
+   position: absolute;
+   height: 35px;
+   width: 35px;
+   top: 11px;
+   right: 28px;
+   line-height: 20px;
+   font-size: 55px;
+   cursor: pointer;
+   color: var(--button-blue-1);
+}
+
+#modal-overlay #second-window {
+   display: none;
+   text-align: center;
+   width: 343px;
+   height: 157px;
+   padding: 65px 20px 30px 20px;
+   background-color: var(--background);
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'Forum';
+   border-radius: 20px;
+   font-size: 20px;
+}
+
+#modal-overlay #second-window p {
+   margin: 0;
+}
+
+#modal-overlay .icon-close {
+   width: 20px;
+   height: 20px;
+   color: var(--text-default);
+}
+
+#form-window .field-button .img-button .text-button {
+   width: 232px;
+   height: 42px;
+   font-size: 20px;
+}
+
+#form-window .field-button .img-button .text-button p {
+   margin: 0;
+}
+
+/* classes for validation errors */
+#form-window .error-text,
+#modal-overlay .error-text {
+   color: var(--color-error-text) !important;
+   font-size: 14px;
+   margin-left: 8px;
+}
+
+#form-window .error-box,
+#modal-overlay .error-box {
+   border: 1px solid var(--color-error) !important;
+   color: var(--color-error) !important;
+}
+
+#form-window .error-box::placeholder,
+#modal-overlay .error-box::placeholder {
+   color: var(--color-error) !important;
+}
+
+#modal-overlay .registration-form .input-wrapper input:focus,
+#form-window .input-wrapper input:focus {
+   outline: none;
+}
+
+#modal-overlay .registration-form .input-wrapper input:autofill,
+#form-window .input-wrapper input:autofill {
+   transition: background-color 5000s ease-in-out 0s;
+   -webkit-text-fill-color: var(--color-black);
+}
+
+.grecaptcha-badge {
+   display: none !important;
+}
+
+/*-- form-block end --*/
 
 
 /*-- types tours start --*/
-#typesTours {}
+#typesTours {
+   padding-top: 16px;
+   margin: 0 auto;
+   max-width: 654px;
+   margin-bottom: 16px;
+   margin-top: 16px;
+}
+
+#typesTours h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-bottom: 12px;
+   padding: 0 50px 0 44px;
+   line-height: 1.1;
+   font-family: "Forum";
+}
+
+#typesTours h5 {
+   font-family: 'Manrope';
+   margin: 12px 0px 0px 0px;
+}
+
+.types-tours_wrapper {
+   display: flex;
+   flex-direction: column;
+   padding: 0px 34px;
+}
+
+.types-tours_row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+
+.types-tours_row:last-child {
+   margin-bottom: 0px;
+}
+
+.types-tours_item {
+   display: flex;
+   flex-direction: column;
+}
+
+.types-tours_img {
+   margin: 0 auto;
+}
+
+.types-tours_img img {
+   width: 54px;
+   height: auto;
+}
 
 /*-- types tours end --*/
 
 
 /*-- more popular destinations start --*/
-#popularDestinations {}
+#popularDestinations .popularD-section .containerDesk-swiper {
+   display: none;
+}
+
+#popularDestinations .popularD-section {
+   font-family: 'Forum';
+   font-size: 22px;
+   font-weight: 400;
+   line-height: normal;
+   color: #000;
+   padding: 16px 16px 35px 16px;
+}
+
+#popularDestinations .popularD-section .title {
+   position: relative;
+}
+
+#popularDestinations .popularD-section .title .title-text {
+   font-size: 40px;
+   text-align: center;
+}
+
+#popularDestinations .popularD-section .title .dotted-line {
+   display: none;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper {
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+   margin: 0px auto;
+   z-index: 0;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper swiper-slide .content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 343px;
+   min-height: 490px;
+   margin: 0px auto;
+   overflow: hidden;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block {
+   margin: 0px 0px 0px 8px;
+   display: flex;
+   align-items: start;
+
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .images-countries img {
+   width: 170px;
+   height: 170px;
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
+   width: 140px;
+   height: 72px;
+   margin: 0px 0px 0px -43px;
+   transform: rotate(-2deg) scale(1);
+}
+
+#popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .name-text h3 {
+   font-size: 28px;
+   text-align: center;
+}
 
 /*-- more popular destinations end --*/
 
 
+/*-- background-between start --*/
+#bacground-waves .img-background {
+   object-fit: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -2;
+   margin: -180px 0px 0px 0px;
+}
+
+#bacground-waves .image_palm img {
+   max-width: 104px;
+   max-height: 118px;
+   position: absolute;
+   z-index: -1;
+   margin-top: -370px;
+}
+
+/*-- background-between end --*/
+
+
 /*-- instagram gallery (plugin) start --*/
-#instagramGallery {}
+#instagramGallery .widbox-load-button {
+   width: 120px;
+}
 
 /*-- instagram gallery (plugin) end --*/
 
 
 /*-- prepare your trip with us start --*/
-#prepareTripUs {}
+#prepareTripUs {
+   font-family: 'Forum';
+   font-weight: 400;
+   margin: 0 auto;
+   padding-right: 8px !important;
+   margin-top: 16px;
+}
+
+#prepareTripUs h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   width: 69%;
+   margin-bottom: 16px;
+   line-height: 1.1;
+}
+
+#prepareTripUs .list-item {
+   margin: 0 auto;
+   display: flex;
+   margin-bottom: 14px;
+   max-width: 1024px;
+   display: flex;
+   justify-content: space-between;
+}
+
+#prepareTripUs .list-item .list-number {
+   color: var(--button-blue-1);
+   text-align: end;
+   font-size: 64px;
+   width: 12%;
+}
+
+#prepareTripUs .list-item .list-number .first {
+   padding-right: 5px;
+}
+
+#prepareTripUs .list-item .list-number p {
+   margin: 0;
+}
+
+#prepareTripUs .list-item .list-container {
+   width: 83%;
+   display: flex;
+   flex-direction: column;
+}
+
+#prepareTripUs .list-item .list-container h3 {
+   font-size: 24px;
+   margin-bottom: 10px;
+   line-height: 1;
+}
+
+#prepareTripUs .list-item .list-container .list-description {
+   font-size: 16px;
+}
+
+#prepareTripUs .field-button {
+   margin: 0 auto;
+   margin-top: 30px;
+}
 
 /*-- prepare your trip with us end --*/
 
 
+/*-- background-between start --*/
+
+.background-between {
+   width: 100%;
+   position: relative;
+}
+
+.background-between .img-background {
+   object-fit: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   margin: -50px 0px 0px 0px;
+}
+
+/*-- background-between end --*/
+
+
 /*-- reviews start --*/
-#reviews {}
+#reviews .reviews-section {
+   position: relative;
+   padding: 0px 0px 30px 0px;
+   font-family: 'Forum';
+   font-size: 20px;
+   color: #000;
+
+}
+
+#reviews .reviews-section .title h2 {
+   font-family: 'Forum';
+   font-weight: 400;
+   font-size: 40px;
+   text-align: center;
+   margin: 16px 0px 16px 0px;
+
+}
+
+#reviews .reviews-section .swiper {
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+   margin: 0px auto;
+   padding: 0px 0px 0px 0px;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper {
+   margin-bottom: 30px;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 343px;
+   min-height: 420px;
+   padding: 15px 22px 0px 22px;
+   margin: 0px auto;
+   background-image: url(../images/reviews/frame-reviews.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   overflow: hidden;
+}
+
+#reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content h5 {
+   text-align: center;
+   font-size: 24px;
+   line-height: 30px;
+   font-weight: 400;
+   margin: 15px 0px 10px 0px;
+}
+
+#reviews .reviews-section .swiper-pagination {
+   bottom: 0px;
+}
+
+#reviews .reviews-section .swiper-pagination-bullet {
+   width: 20px;
+   height: 20px;
+   line-height: 20px;
+   opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+   background: var(--swiper-pagination-bullet-inactive-color, var(--background));
+}
+
+#reviews .reviews-section .swiper-pagination-bullet-active {
+   background-color: var(--button-blue-1) !important;
+}
+
+#reviews .reviews-section .swiper-pagination-bullet-active:hover {
+   background-color: var(--button-blue-2) !important;
+}
+
+#reviews .reviews-section .swiper-pagination-bullet-active-next,
+#reviews .reviews-section .swiper-pagination-bullet-active-prev,
+#reviews .reviews-section .swiper-pagination-bullet-active-next-next,
+#reviews .reviews-section .swiper-pagination-bullet-active-prev-prev {
+   background-color: var(--background) !important;
+   border-color: var(--button-blue-1);
+   border-style: solid;
+   border-width: 1px;
+}
 
 /*-- reviews end --*/
 
 
 /*-- questions and answers start --*/
-#questionsAnswers {}
+#questionsAnswers {
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+#questionsAnswers h2 {
+   max-width: 546px;
+   color: #000;
+   text-align: center;
+   font-size: 40px;
+   margin: 0 auto;
+   margin-top: 16px;
+   margin-bottom: 16px;
+   line-height: 1.1;
+   font-family: 'Forum';
+}
+
+#questionsAnswers .accordion .field-frame {
+   width: 90%;
+   border-radius: 20px;
+}
+
+#questionsAnswers .accordion,
+.accordion-header,
+.accordion-body {
+   font-size: 16px;
+   line-height: 17.66px;
+   color: var(--color-black);
+   padding: 0;
+   --bs-accordion-bg: none;
+   --bs-accordion-border-color: none;
+}
+
+#questionsAnswers .accordion-body {
+   padding-top: 12px;
+   font-family: 'Forum';
+}
+
+#questionsAnswers .accordion-flush .accordion-item .accordion-button,
+#questionsAnswers .accordion-flush .accordion-item .accordion-button.collapsed {
+   height: 100%;
+}
+
+#questionsAnswers .accordion-flush .accordion-item .accordion-button {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--background);
+   font-size: 20px;
+   line-height: 22.08px;
+   color: var(--color-black);
+   margin: 0 auto;
+   padding: 0;
+   font-family: 'Forum';
+}
+
+#questionsAnswers .accordion-item {
+   --bs-accordion-btn-focus-border-color: var(--background);
+   --bs-accordion-btn-focus-box-shadow: var(--background);
+}
+
+#questionsAnswers .accordion-button:not(.collapsed)::after {
+   background-image: none;
+   content: "\e901";
+}
+
+#questionsAnswers .accordion-button::after {
+   font-size: 18px;
+   flex-shrink: 0;
+   color: #243B73;
+   margin-left: auto;
+   margin-right: 10px;
+   content: "\e901";
+   font-family: 'icomoon';
+   background-image: none;
+}
+
+#questionsAnswers .accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
+   margin-right: 0px;
+}
 
 /*-- questions and answers end --*/
 
+/*-- background-between start --*/
+
+.contacts-qa-bg {
+   width: 100%;
+}
+
+.contacts-qa-bg .img-background {
+   object-fit: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   margin: -4px 0 0px 0px;
+}
+
+/*-- background-between end --*/
 
 /*-- contacts start --*/
-#contacts {}
+#contacts {
+   max-width: 1440px;
+   padding: 16px 0 0;
+   margin-top: 36px;
+}
+
+#contacts h2 {
+   font-family: 'Forum';
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-align: center;
+}
+
+#contacts .contacts-wrap .contact-info {
+   margin: 17px auto 5px auto;
+   padding: 0;
+   width: 342px;
+   height: 381px;
+   background-image: url(../images/contacts/contact-info-bg-mb.svg);
+   background-repeat: no-repeat;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group {
+   padding: 46px 0 0 16px;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 30px;
+   font-family: 'Forum';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item:nth-child(2) {
+   align-items: flex-start;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item svg {
+   margin-right: 16px;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item:last-child svg {
+   margin-left: 4px;
+   margin-top: -1.5px;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item:last-child p {
+   margin-left: 6px;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item a {
+   color: var(--color-black);
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item p {
+   margin-bottom: 0;
+}
+
+#contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item .phone a:first-child p {
+   margin-bottom: 12px;
+}
+
+#contacts .contacts-wrap .contact-info .google-map {
+   width: 330px;
+   height: 133px;
+   margin: 0 6px 10px 6px;
+}
+
+#contacts .contacts-wrap .contact-form {
+   margin: 15px auto 0 auto;
+   padding: 0;
+   width: 342px;
+   height: 271px;
+   background: url(../images/contacts/contact-form-bg-mb.svg);
+   background-repeat: no-repeat;
+}
+
+#contacts .contacts-wrap .contact-form .form-window {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 408px;
+   padding: 32px 12px 16px 12px;
+   border-radius: 20px;
+   margin: 0 auto;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .input-wrapper {
+   max-width: 313px;
+   width: 100%;
+   height: 42px;
+   margin-bottom: 24px;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .input-wrapper input {
+   width: 100%;
+   height: 42px;
+   max-width: 337px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 20px;
+   background-color: transparent;
+   padding: 12px;
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .input-wrapper input::placeholder {
+   color: var(--color-black);
+   font-family: 'Forum';
+   font-size: 16px;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .field-button .img-button {
+   height: 83px;
+   width: 225px;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .field-button .img-button .text-button {
+   width: 232px;
+   height: 42px;
+   font-size: 20px;
+   padding: 10px 0;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .field-button .img-button .text-button p {
+   margin: 0;
+}
+
+#contacts .contacts-wrap .contact-form .form-window .input-wrapper .error-text {
+   color: var(--color-error-text) !important;
+   font-size: 14px;
+   margin-left: 8px;
+}
+
+.form-window .error-box {
+   border: 1px solid var(--color-error) !important;
+   color: var(--color-error) !important;
+}
+
+.form-window .error-box::placeholder {
+   color: var(--color-error) !important;
+}
+
+#contacts .contacts-wrap .contact-form .registration-form .input-wrapper input:focus {
+   outline: none;
+}
+
+#contacts .contacts-wrap .contact-form .registration-form .input-wrapper input:autofill {
+   transition: background-color 5000s ease-in-out 0s;
+   -webkit-text-fill-color: var(--color-black);
+}
+
+#contacts .contacts-wrap .contact-form .second-window {
+   display: none;
+   text-align: center;
+   width: 343px;
+   height: 157px;
+   padding: 65px 20px 30px 20px;
+   background-color: var(--background);
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'Forum';
+   border-radius: 20px;
+   font-size: 20px;
+}
+
+#contacts .contacts-wrap .contact-form .second-window p {
+   margin: 0;
+}
+
+#contacts .contacts-wrap .contact-form .second-window #close-second-window-btn {
+   position: absolute;
+   top: 17px;
+   right: 28px;
+   line-height: 20px;
+   font-size: 55px;
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   color: var(--text-default);
+}
 
 /*-- contacts end --*/
 
 
-/*-- form window start --*/
-#modalWindow {}
-
-/*-- form window end --*/
-
-
 /*-- footer start --*/
-#footer {}
+#footer {
+   display: flex;
+   justify-content: center;
+}
+
+#footer .footer-container {
+   display: flex;
+   position: relative;
+   margin: 24px auto;
+}
+
+#footer .footer-container .dev-group {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#footer .footer-container .dev-group a {
+   text-decoration: underline;
+   color: var(--color-black);
+   font-size: 16px;
+   font-family: 'Forum';
+}
+
+#footer .footer-container .dev-group a p {
+   margin: 0 0 0 5px;
+}
+
+#footer .footer-container .dev-group img {
+   width: 50px;
+}
+
+#footer .footer-container .scrollup {
+   display: none;
+   position: fixed;
+   z-index: 999;
+   bottom: 24px;
+   right: 16px;
+}
+
+#footer .footer-container .scrollup .outer-circle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 50%;
+}
+
+#footer .footer-container .scrollup .outer-circle .inner-circle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 34px;
+   height: 34px;
+   border: 1px solid var(--color-blue-1);
+   border-radius: 50%;
+}
+
+#footer .footer-container .scrollup:hover .outer-circle,
+#footer .footer-container .scrollup:hover .outer-circle .inner-circle {
+   border: 1px solid var(--сolor-white);
+   background-color: var(--color-blue-2);
+}
+
+#footer .footer-container .scrollup:active .outer-circle,
+#footer .footer-container .scrollup:focus .outer-circle,
+#footer .footer-container .scrollup:active .outer-circle .inner-circle,
+#footer .footer-container .scrollup:focus .outer-circle .inner-circle {
+   border: 1px solid var(--сolor-white);
+   background-color: var(--color-blue-1);
+}
+
+#footer .footer-container .scrollup .outer-circle .inner-circle .icon-accordion-up {
+   font-size: 12px;
+   margin: 0 5px;
+}
+
+#footer .footer-container .scrollup:hover .outer-circle .inner-circle .icon-accordion-up::before,
+#footer .footer-container .scrollup:focus .outer-circle .inner-circle .icon-accordion-up::before {
+   color: white;
+}
 
 /*-- footer end --*/
+
+/* 404 start*/
+#header .hamburger-menu-404 {
+   background: var(--blue-1, #243B73);
+   backdrop-filter: blur(23.72395133972168px);
+}
+
+#index_404 .main {
+   width: 100%;
+}
+
+#index_404 .main-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#index_404 .main-block {
+   margin: 84px 0 0 0;
+
+}
+
+#index_404 h2 {
+   text-align: center;
+}
+
+#index_404 .main-center {
+   display: flex;
+   align-items: center;
+   margin: 20px 0;
+}
+
+#index_404 .main-h2 {
+   color: var(--Blue-1, #2F497A);
+   text-align: center;
+   font-family: Forum;
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+#index_404 .main-block-h2 {
+   color: #2F497A;
+   text-align: center;
+   font-family: Forum;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin: 13px auto;
+   width: 351px;
+}
+
+#index_404 .main-img {
+   width: 79px;
+   height: 127px;
+   margin: 0 -13px;
+}
+
+#index_404 .main-compass-img {
+   width: 181px;
+   height: 181px;
+   margin: 6px 0 0 8px;
+}
+
+#index_404 .main-button {
+   text-align: center;
+   margin: 33px auto 0;
+}
+
+#index_404 .button-return-main {
+   border-radius: 20px;
+   background: var(--blue-1, #243B73);
+   color: var(--white, #FFF);
+   font-family: Forum;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   height: 38px;
+   width: 265px;
+   padding: 10px;
+}
+
+#index_404 .button-return-main:active,
+#index_404 .button-return-main:hover {
+   border-radius: 20px;
+   border: 1px solid var(--white, #FFF);
+   background: var(--blue-2, #6B7BB1);
+}
+
+#index_404 .button-return-main:disabled {
+   background: var(--gray, #A9A9A9);
+}
+
+#index_404 .button-return-background {
+   display: none;
+}
+
+#index_404 .button-return-background_2 {
+   display: none;
+}
+
+#index_404 .button-text-a {
+   color: #FFF;
+}
+
+#wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+#wrapper .footer-main {
+   margin-top: auto !important;
+   display: block;
+   /* margin: 0; */
+   max-width: none;
+}
+
+#footer .main-footer {
+   display: flex;
+   justify-content: center;
+   padding: 10px 0;
+}
+
+#footer .main-logo-footer {
+   margin: 0 5px;
+   width: 50px;
+   height: 50px;
+}
+
+#footer .main-footer-title {
+   margin: 3px 0 0 0 !important;
+   color: var(--icon-color-white);
+   font-family: Forum;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-decoration-line: underline;
+}
+
+#footer .conteiner-main-footer {
+   background: var(--blue-1, #243B73);
+   backdrop-filter: blur(23.72395133972168px);
+   margin: 55px 0 0 0;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+/* 404 end*/
+/* Galery start */
+.widbox-copyright-logo {
+   background: none !important;
+}
+
+.widbox-copyright-text {
+   display: none;
+}
+
+.widbox-copyright-icon {
+   display: none !important;
+}
+
+/* Galery end*/
 
 
 
 /*=============================================================*/
+
+
 /*------------------------ @ media ----------------------------*/
-
-@media (min-width: 768px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
-
-
-   /*-- header start --*/
-   /*-- header end --*/
-
-
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
-
-
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
-
-
-   /*-- types tours start --*/
-   /*-- types tours end --*/
-
+@media (max-width: 374px) {
 
    /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      padding: 16px 10px 35px 10px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
+      width: 145px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .name-text h3 {
+      font-size: 19px;
+   }
+
    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
-
-
    /*-- prepare your trip with us start --*/
+   #prepareTripUs h2 {
+      font-size: 30px;
+   }
+
    /*-- prepare your trip with us end --*/
 
 
    /*-- reviews start --*/
-   /*-- reviews end --*/
+   #reviews .reviews-section {
+      font-size: 18px;
+   }
+
+   /*-- reviews end--*/
+   /* 404 start*/
+   #index_404 .main-img {
+      width: 70px;
+   }
+
+   #index_404 .main-block-h2 {
+      width: 320px;
+   }
+
+   /* 404 end*/
+}
 
 
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
+
+/*-----------------------------------------------------*/
+@media (max-width:991px) {
+
+   /*-- reviews start --*/
+   .swiper-button-next:after,
+   .swiper-rtl .swiper-button-prev:after {
+      display: none;
+   }
+
+   .swiper-button-prev:after,
+   .swiper-rtl .swiper-button-next:after {
+      display: none;
+   }
+
+   .icon-swiper2_prev,
+   .icon-swiper2_next {
+      display: none;
+   }
+
+   /*-- reviews end--*/
+}
 
 
-   /*-- contacts start --*/
-   /*-- contacts end --*/
+/*-----------------------------------------------------*/
+@media (min-width: 425px) {
+
+   /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      margin: 27px;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block {
+      align-items: center;
+      justify-content: center;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .topic-block .name-countries .dotted-line img {
+      margin: 0px 0px 0px -10px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .text-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .text-block p {
+      max-width: 450px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper {
+      display: none;
+   }
+
+   /*-- more popular destinations end --*/
 
 
-   /*-- form window start --*/
-   /*-- form window end --*/
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -225px 0px 0px 0px;
+   }
+
+   #bacground-waves .image_palm img {
+      max-width: 200px;
+      max-height: 270px;
+      margin-top: -420px;
+   }
+
+   /*-- background-between end --*/
+}
 
 
-   /*-- footer start --*/
-   /*-- footer end --*/
+/*-----------------------------------------------------*/
+@media (min-width: 768px) {
+
+   /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      margin: 0px 100px 0px 100px;
+      padding: 16px 16px 65px 16px;
+   }
+
+   #popularDestinations .popularD-section .container-swiper .swiper .swiper-wrapper .swiper-slide .content .text-block p {
+      max-width: 500px;
+   }
+
+   /*-- more popular destinations end --*/
+
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -360px 0px 0px 0px;
+   }
+
+   #bacground-waves .image_palm img {
+      max-width: 300px;
+      max-height: 370px;
+      margin-top: -430px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- prepare your trip with us start --*/
+   #prepareTripUs .list-item {
+      max-width: 680px;
+   }
+
+   /*-- prepare your trip with us end --*/
+
+
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -155px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+}
+
+
+/*-----------------------------------------------------*/
+@media (min-width:900px) {
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin: -430px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- instagram gallery (plugin) start --*/
+   #instagramGallery .widbox-load-button {
+      width: 140px;
+   }
+
+   /*-- instagram gallery (plugin) end --*/
 }
 
 
 
 /*-----------------------------------------------------*/
 @media (min-width: 992px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
 
+   /*--form-block start"--*/
+   #modal-overlay #form-window {
+      padding: 85px 12px 94px 12px;
+   }
 
-   /*-- header start --*/
-   /*-- header end --*/
+   #modal-overlay #form-window .input-wrapper input,
+   #form-window .input-wrapper input {
+      padding: 12px 10px 12px 12px;
+      height: 46px;
+      font-size: 20px;
+   }
 
+   #modal-overlay #form-window .input-wrapper input::placeholder,
+   #form-window .input-wrapper input::placeholder {
+      font-size: 20px;
+   }
 
-   /*-- main-block-TUI start --*/
-   /*-- main-block-TUI end --*/
+   #form-window .field-button .img-button .text-button {
+      width: 272px;
+      height: 49px;
+      font-size: 26px;
+   }
 
+   #form-window .field-button {
+      margin-top: 10px;
+   }
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
+   #modal-overlay #second-window #close-second-window,
+   #modal-overlay #form-window #close-form-window {
+      top: 18px;
+      right: 35px;
+   }
 
+   #modal-overlay #form-window .input-wrapper,
+   #form-window .input-wrapper {
+      margin-bottom: 34px;
+   }
 
-   /*-- types tours start --*/
-   /*-- types tours end --*/
-
-
-   /*-- more popular destinations start --*/
-   /*-- more popular destinations end --*/
-
-
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+   /*--form-block end"--*/
 
 
    /*-- prepare your trip with us start --*/
+   #prepareTripUs .list-item {
+      max-width: 680px;
+   }
+
    /*-- prepare your trip with us end --*/
 
 
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -255px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- reviews start --*/
+   #reviews .reviews-section {
+      max-width: 875px;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   #reviews .reviews-section .title h2 {
+      font-size: 50px;
+   }
+
+   #reviews .reviews-section .swiper {
+      max-width: 736px;
+   }
+
+   #reviews .reviews-section .swiper .swiper-wrapper {
+      margin-bottom: 50px;
+   }
+
+   #reviews .reviews-section .swiper .swiper-wrapper .swiper-slide .content {
+      max-width: 361px;
+      height: 434px;
+      padding: 30px 30px 55px 30px;
+   }
+
+   .swiper-button-next:after,
+   .swiper-rtl .swiper-button-prev:after {
+      display: none;
+   }
+
+   .swiper-button-prev:after,
+   .swiper-rtl .swiper-button-next:after {
+      display: none;
+   }
+
+   .icon-swiper2_prev,
+   .icon-swiper2_next {
+      font-size: 100px;
+      top: 50%;
+   }
+
    /*-- reviews end --*/
 
-
-   /*-- questions and answers start --*/
-   /*-- questions and answers end --*/
-
-
-   /*-- contacts start --*/
-   /*-- contacts end --*/
-
-
-   /*-- form window start --*/
-   /*-- form window end --*/
-
-
-   /*-- footer start --*/
-   /*-- footer end --*/
 }
-
-
 
 
 /*-----------------------------------------------------*/
 @media (min-width: 1024px) {
-   /*-- loader start --*/
-   /*-- loader end --*/
-
 
    /*-- header start --*/
+   #header .hamburger-menu {
+      height: 67px;
+      backdrop-filter: blur(23.72395133972168px);
+   }
+
+   #header .menu__btn {
+      display: none;
+   }
+
+   #header .hamburger-menu .row {
+      display: flex;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt {
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 1440px;
+      padding: 0;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt div a img {
+      padding-top: 12px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu {
+      display: flex;
+      justify-content: center;
+      margin-left: 8px;
+      margin-right: 32px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop {
+      padding: 0;
+      margin-top: 19px;
+
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a {
+      font-size: 20px;
+      color: var(--text-white);
+      font-weight: 400;
+      line-height: normal;
+      font-family: 'Forum';
+      margin: 0 12px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a:hover {
+      color: var(--color-beige);
+   }
+
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a:active,
+   #header .hamburger-menu .row .menu-wrap-dt .menu .menu-desktop li a:focus {
+      color: var(--сolor-white);
+      text-decoration: underline;
+   }
+
+   #header .hamburger-menu .row .mob-desktop {
+      margin-top: 20px;
+      display: flex;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language {
+      font-family: 'Forum';
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--color-gray);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:first-child {
+      color: var(--сolor-white);
+      margin-right: 16px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:hover,
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language:active {
+      color: var(--сolor-white);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:last-child {
+      color: var(--сolor-white);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:first-child {
+      color: var(--color-gray);
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:hover,
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop .text-language-en:active {
+      color: var(--сolor-white);
+   }
+
    /*-- header end --*/
 
 
    /*-- main-block-TUI start --*/
+   #mainTUI .wraper-main {
+      width: 100%;
+      background-image: url(../images/main-block/backgraund-main-block-1440.png);
+      padding: 5% 0;
+   }
+
+   #mainTUI .conteiner {
+      position: relative;
+   }
+
+   #mainTUI .title {
+      padding: 45px 30.5px;
+   }
+
+   #mainTUI .title-h1 {
+      font-family: Genos;
+      font-size: 97px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 500px;
+   }
+
+   #mainTUI .title-p {
+      margin: -31px 0 54px 0;
+   }
+
+   #mainTUI .div-icons {
+      display: flex;
+      min-width: 0 !important;
+      position: absolute;
+      top: 20%;
+      left: 2.8%;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   #mainTUI .icons {
+      text-align: center;
+      margin: 13px 0;
+   }
+
+   #mainTUI .icons:nth-of-type(1) {
+      order: 4;
+   }
+
+   #mainTUI .icons:nth-of-type(2) {
+      order: 5;
+   }
+
+   #mainTUI .icons:nth-of-type(3) {
+      order: 3;
+   }
+
+   #mainTUI .icons:nth-of-type(4) {
+      order: 5;
+   }
+
+   #mainTUI .icons:nth-of-type(5) {
+      order: 1;
+   }
+
+   #mainTUI .border-box-top {
+      width: 2px;
+      height: 78px;
+      background: #D9D9D9;
+      margin: -25px 0 0 20px;
+   }
+
+   #mainTUI .border-box-bottom {
+      width: 2px;
+      height: 75px;
+      background: #D9D9D9;
+      order: 6;
+      margin: -9px 0 0 19px;
+   }
+
+   #mainTUI .box-button {
+      margin: -10px 0 0 0;
+      width: 310px;
+      height: 50px;
+   }
+
+   #mainTUI .button-main {
+      color: var(--blue-1, #243B73);
+      font-family: Forum;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+   }
+
+   #mainTUI .sharing-box {
+      display: flex;
+      min-width: 0 !important;
+      position: absolute;
+      top: 47%;
+      right: 2.8%;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   #mainTUI .sharing-box .sharing {
+      margin: 0 0 55px 0;
+   }
+
+   #mainTUI .sharing-box .sharing .twitter {
+      margin-right: 10px;
+   }
+
+   #mainTUI .sharing-box .sharing a {
+      display: inline-block;
+      font-family: 'Forum';
+      font-size: 18px;
+      border: 1px solid var(--button-white);
+      padding: 8px;
+      border-radius: 10px;
+      gap: 6px;
+      opacity: 0;
+      color: var(--button-white);
+   }
+
+   #mainTUI .sharing-box .sharing a span {
+      opacity: 0;
+   }
+
+   #mainTUI .sharing-box .sharing a:hover {
+      animation: bar-opacity 0.3s forwards ease-in-out;
+
+   }
+
+   @keyframes bar-opacity {
+      from {
+         opacity: 0;
+      }
+
+      to {
+         opacity: 1;
+      }
+   }
+
+   #mainTUI .sharing .icon-over {
+      position: relative;
+      left: 125px;
+      top: 3px;
+      pointer-events: none;
+   }
+
+   #mainTUI .icon-over.en {
+      left: 82px;
+   }
+
+   #mainTUI .icons:hover {
+      transform: scale(1.6);
+   }
+
    /*-- main-block-TUI end --*/
 
 
-   /*-- travel search (plugin) start --*/
-   /*-- travel search (plugin) end --*/
-
-
    /*-- types tours start --*/
+   #typesTours {
+      padding-top: 24px;
+      max-width: 745px;
+      margin-bottom: 32px;
+      margin-top: 32px;
+   }
+
+   #typesTours h2 {
+      max-width: 546px;
+      color: #000;
+      text-align: center;
+      font-size: 50px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+
+   }
+
+   #typesTours h5 {
+      margin: 12px 0px 0px 0px;
+   }
+
+   .types-tours_wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px;
+   }
+
+   .types-tours_row {
+      margin-bottom: 0px;
+      width: 45%;
+   }
+
+   .types-tours_row:last-child {
+      margin-right: 0px;
+   }
+
+   .types-tours_item {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .types-tours_img {
+      margin: 0 auto;
+   }
+
+   .types-tours_img img {
+      width: 54px;
+      height: auto;
+   }
+
    /*-- types tours end --*/
 
 
    /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section .container-swiper {
+      display: none;
+   }
+
+   #popularDestinations .popularD-section .title .title-text br {
+      display: none;
+   }
+
+   #popularDestinations .popularD-section {
+      max-width: 1024px !important;
+      max-height: 700px;
+      padding: 0px 16px 65px 16px;
+      margin: 0px 70px 0px 70px;
+   }
+
+   #popularDestinations .popularD-section .title .title-text {
+      font-size: 50px;
+      text-align: center;
+      margin: 32px 0px 25px 0px;
+   }
+
+
+   #popularDestinations .popularD-section .title .dotted-line {
+      display: block;
+      position: relative;
+      height: 70px;
+   }
+
+   #popularDestinations .popularD-section .title .dotted-line img {
+      position: absolute;
+      margin-left: calc(360px + (652 - 375) * ((100vw - 1024px) / (1920 - 1024)));
+      margin-top: 20px;
+      width: 210px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper {
+      display: flex;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block {
+      margin: -190px 50px -110px -40px;
+      width: calc(490px + (700 - 490) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper {
+      width: 100%;
+      height: 700px;
+      overflow: hidden;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide {
+      position: relative;
+      cursor: pointer;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide figure {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide figure .image-item {
+      width: 300px;
+      height: 300px;
+      transform: rotate(45deg);
+      overflow: hidden;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .swiper-wrapper .swiper-slide figure .image-item img {
+      max-width: 100%;
+      transform: rotate(-45deg) scale(1.42);
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .oval-block .image-oval img {
+      width: 405px;
+      height: 240px;
+      transform: rotate(360deg);
+      margin-top: calc(-428px + (-450 + 428) * ((100vw - 1024px) / (1440 - 1024)));
+      margin-left: calc(55px + (100 - 55) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block {
+      width: calc(370px + (500 - 370) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .name-countries h3 {
+      font-size: calc(34px + (40 - 34) * ((100vw - 1024px) / (1440 - 1024)));
+      text-align: center;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .text-block {
+      font-size: calc(26px + (30 - 26) * ((100vw - 1024px) / (1440 - 1024)));
+   }
+
    /*-- more popular destinations end --*/
 
 
-   /*-- instagram gallery (plugin) start --*/
-   /*-- instagram gallery (plugin) end --*/
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin-top: calc(-625px + (-790 + 625) * ((100vw - 1440px) / (1440 - 1024)));
+   }
+
+   #bacground-waves .image_palm img {
+      max-width: 500px;
+      max-height: 470px;
+      margin-top: -650px;
+   }
+
+   /*-- background-between end --*/
 
 
    /*-- prepare your trip with us start --*/
+   #prepareTripUs {
+      margin-top: 24px;
+   }
+
+   #prepareTripUs h2 {
+      font-size: 50px;
+      margin-bottom: 24px;
+      padding: 0px 8px 0px 0px;
+   }
+
+   #prepareTripUs .list-item {
+      margin-bottom: 10px;
+      max-width: 747px;
+   }
+
+   #prepareTripUs .list-item .list-number {
+      font-size: 100px;
+      text-align: center;
+      width: 12%;
+   }
+
+   #prepareTripUs .list-item .list-number p {
+      margin-top: -12px;
+   }
+
+   #prepareTripUs .list-item .list-container h3 {
+      font-size: 40px;
+      margin-bottom: 8px;
+   }
+
+   #prepareTripUs .list-item .list-number .first {
+      padding-right: 0;
+   }
+
+   #prepareTripUs .list-item .list-container .list-description {
+      font-size: 20px;
+   }
+
+   #prepareTripUs .field-button {
+      margin-top: 26px;
+   }
+
    /*-- prepare your trip with us end --*/
 
 
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -255px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- questions and answers start --*/
+   #questionsAnswers {
+      margin-bottom: 24px;
+   }
+
+   #questionsAnswers h2 {
+      font-size: 50px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+   }
+
+   #questionsAnswers .accordion .field-frame {
+      width: 79%;
+   }
+
+   #questionsAnswers .element-frame {
+      width: 120px;
+   }
+
+   #questionsAnswers .above-frame {
+      width: 110%;
+   }
+
+   #questionsAnswers .accordion,
+   .accordion-header,
+   .accordion-body {
+      font-size: 16px;
+   }
+
+   #questionsAnswers .accordion-body {
+      font-size: 20px;
+   }
+
+   #questionsAnswers .accordion-flush .accordion-item .accordion-button {
+      font-size: 26px;
+   }
+
+   /*-- questions and answers end --*/
+
+
+   /*-- background-between start --*/
+   .contacts-qa-bg .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -135px 0 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- contacts start --*/
+   #contacts {
+      margin: 8px auto 0 auto;
+   }
+
+
+   #contacts h2 {
+      font-size: 50px;
+   }
+
+   #contacts .contacts-wrap {
+      display: flex;
+      justify-content: center;
+   }
+
+   #contacts .contacts-wrap .contact-info,
+   #contacts .contacts-wrap .contact-form {
+      width: 408px;
+      height: 455px;
+      margin-top: 16px;
+      background: url(../images/contacts/contacts-bg-dt.svg);
+      background-repeat: no-repeat;
+   }
+
+   #contacts .contacts-wrap .contact-info {
+      margin-right: 10px;
+      margin-left: 0;
+   }
+
+   #contacts .contacts-wrap .contact-form {
+      margin-right: 0;
+      margin-left: 10px;
+   }
+
+   #contacts .contacts-wrap .contact-info .contacts-group {
+      padding: 66px 0 0 34px;
+   }
+
+   #contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item {
+      font-size: 20px;
+      margin-bottom: 45px;
+   }
+
+   #contacts .contacts-wrap .contact-info .contacts-group .contacts-group-item:last-child {
+      margin-bottom: 23px;
+   }
+
+   #contacts .contacts-wrap .contact-info .google-map {
+      width: 352px;
+      height: 133px;
+      margin: 0 0 27px 24px;
+   }
+
+   #contacts .contacts-wrap .contact-form .form-window {
+      padding: 108px 46px 99px 48px;
+   }
+
+   #contacts .contacts-wrap .contact-form .form-window .input-wrapper {
+      height: 45px;
+      margin-bottom: 32px;
+   }
+
+   #contacts .contacts-wrap .contact-form .form-window .input-wrapper input {
+      height: 45px;
+      padding: 14px 0 12px 12px;
+   }
+
+   #contacts .contacts-wrap .contact-form .form-window .input-wrapper input::placeholder {
+      font-size: 20px;
+   }
+
+   #contacts .contacts-wrap .contact-form .form-window .field-button .img-button {
+      height: 83px;
+      width: 225px;
+   }
+
+   #contacts .contacts-wrap .contact-form .form-window .field-button .img-button .text-button {
+      width: 272px;
+      height: 49px;
+      margin: 0px -24px -11px -24px;
+      font-size: 26px;
+   }
+
+   /*-- contacts end --*/
+
+
+   /*-- footer start --*/
+   #footer .footer-container {
+      margin: 32px auto;
+   }
+
+   #footer .footer-container .dev-group a {
+      text-decoration: underline;
+      color: var(--color-black);
+      font-size: 18px;
+      font-family: 'Forum';
+   }
+
+   #footer .footer-container .scrollup {
+      bottom: 32px;
+      right: 36px;
+   }
+
+   /*-- footer end --*/
+   /* 404 start*/
+   #index_404 .main-block {
+      margin: 97px 0 0 0;
+   }
+
+   #index_404 .main-h2 {
+      font-size: 50px;
+   }
+
+   #index_404 .main-compass-img {
+      width: 100%;
+      height: 400px;
+      margin: -20px 0;
+   }
+
+   #index_404 .main-img {
+      margin: 30px -27px 0 -52px;
+      width: auto;
+      height: auto;
+   }
+
+   #index_404 .main-center {
+      margin: 20px 0 0 0;
+   }
+
+   #index_404 .main-block-h2 {
+      width: 100%;
+      font-size: 50px;
+      margin: 62px auto 0;
+   }
+
+   #index_404 .main-button {
+      margin: 50px auto;
+   }
+
+   #index_404 .button-background {
+      width: 325px;
+      background: none;
+      position: relative;
+   }
+
+   #index_404 .button-return-main {
+      width: 375px;
+      height: 46px;
+      font-size: 26px;
+      padding: 0;
+      z-index: 1;
+   }
+
+   #index_404 .button-return-background {
+      position: absolute;
+      top: -5px;
+      display: block;
+      width: 320px;
+   }
+
+   #index_404 .button-return-background_2 {
+      position: absolute;
+      top: 70px;
+      display: block;
+   }
+
+   #footer .main-footer-title {
+      font-size: 18px;
+   }
+
+   /* 404 end*/
+}
+
+/*-----------------------------------------------------*/
+@media (min-width: 1101px) {
+
+   /*-- header start --*/
+   #header .hamburger-menu .row .menu-wrap-dt {
+      margin: auto;
+      justify-content: space-between;
+      max-width: 1440px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .logo-container {
+      margin-left: 56px;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .menu {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+   }
+
+   #header .hamburger-menu .row .menu-wrap-dt .mob-desktop {
+      margin-right: 64px;
+   }
+}
+
+/*-----------------------------------------------------*/
+@media (min-width: 1440px) {
+
+   /*-- types tours start --*/
+   #typesTours {
+      max-width: 1048px;
+   }
+
+   /*-- types tours end --*/
+
+
+   /*-- more popular destinations start --*/
+   #popularDestinations .popularD-section {
+      max-width: 1440px !important;
+      padding: 0px 16px 145px 16px;
+   }
+
+   #popularDestinations .popularD-section .title .dotted-line img {
+      margin-left: 470px;
+      margin-top: 35px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block {
+      width: 700px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .left-block .swiper .oval-block .image-oval img {
+      margin-top: -450px;
+      margin-left: 100px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block {
+      width: 500px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .name-countries h3 {
+      font-size: 40px;
+   }
+
+   #popularDestinations .popularD-section .containerDesk-swiper .right-block .swiper .swiper-wrapper .swiper-slide .content .text-block {
+      font-size: 30px;
+   }
+
+   /*-- more popular destinations end --*/
+
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin-top: calc(-750px + (-1250 + 750) * ((100vw - 1440px) / (2560 - 1440)))
+   }
+
+   #bacground-waves .image_palm img {
+      margin-top: -710px;
+   }
+
+   /*-- background-between end --*/
+
+
+   /*-- prepare your trip with us start --*/
+   #prepareTripUs .list-item {
+      max-width: 900px;
+   }
+
+   /*-- prepare your trip with us end --*/
+
+
+   /*-- background-between start --*/
+
+   .background-between .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -315px 0px 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- reviews start --*/
+   #reviews .reviews-section {
+      max-width: 1250px;
+   }
+
+   #reviews .reviews-section .swiper {
+      max-width: 1111px;
+   }
+
    /*-- reviews end --*/
 
 
    /*-- questions and answers start --*/
+   #questionsAnswers {
+      margin-bottom: 24px;
+   }
+
+   #questionsAnswers h2 {
+      font-size: 50px;
+      margin-bottom: 25px;
+   }
+
+   #questionsAnswers .accordion .field-frame {
+      width: 79%;
+   }
+
+   #questionsAnswers .element-frame {
+      width: 120px;
+   }
+
+   #questionsAnswers .above-frame {
+      width: 110%;
+   }
+
+   #questionsAnswers .accordion,
+   .accordion-header,
+   .accordion-body {
+      font-size: 16px;
+   }
+
+   #questionsAnswers .accordion-body {
+      font-size: 20px;
+   }
+
+   #questionsAnswers .accordion-flush .accordion-item .accordion-button {
+      font-size: 26px;
+   }
+
    /*-- questions and answers end --*/
 
 
+   /*-- background-between start --*/
+
+   .contacts-qa-bg .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin: -200px 0 0px 0px;
+   }
+
+   /*-- background-between end --*/
+
+
    /*-- contacts start --*/
+   #contacts .contacts-wrap .contact-info {
+      margin-right: 30px;
+      margin-left: 0;
+   }
+
+   #contacts .contacts-wrap .contact-form {
+      margin-right: 0;
+      margin-left: 30px;
+   }
+
    /*-- contacts end --*/
 
 
-   /*-- form window start --*/
-   /*-- form window end --*/
-
-
    /*-- footer start --*/
+   #footer .footer-container {
+      margin: 32px auto;
+   }
+
+   #footer .footer-container .dev-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #footer .footer-container .scrollup {
+      position: fixed;
+      z-index: 999;
+      bottom: 36px;
+      right: 23px;
+   }
+
    /*-- footer end --*/
+
+}
+
+/*-----------------------------------------------------*/
+@media (min-width: 1650px) {
+
+   /*-- background-between start --*/
+   .contacts-qa-bg .img-background {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      height: 90vh;
+      z-index: -1;
+      margin: -320px 0 80vh 0px;
+   }
+
+   /*-- background-between end --*/
+}
+
+
+/*-----------------------------------------------------*/
+@media (min-width: 2560px) {
+
+   /*-- background-between start --*/
+   #bacground-waves .img-background {
+      margin-top: -1250px;
+   }
+
+   /*-- background-between end --*/
 }
 
 /*-----------------------------------------------------*/

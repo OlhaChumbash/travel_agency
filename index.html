@@ -6,79 +6,949 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--"Meta Date"-->
-
+   <meta name="author" content="Ольга Турагенція">
+   <meta name="robots" content="..., ...">
+   <meta name="googlebot" content="..., ...">
+   <meta name="title" content="Підбір турів у Вінниці">
+   <meta name="description" content="Турагенція у Вінниці. Турагент Вінниця">
+   <meta name="keywords"
+      content="Турагенція Вінниця, турагенція, підбір турів в Вінниці, автобусні турі з Вінниці в Европу">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://travelagency.intita.com/">
+   <meta property="og:title" content="Турагенція TUI в Вінниці">
+   <meta property="og:description"
+      content="Підберемо найкращі варіанти для вашого відпочинку! Подорож з намі буде комфортною та цікавою!">
+   <meta property="og:image" content="https://travelagency.intita.com/src/images/sharing-img.png">
+   <!--sharing on twitter start-->
+   <meta name="twitter:title" content="Турагенція  TUI в Вінниці">
+   <meta name="twitter:image" content="https://travelagency.intita.com/src/images/sharing-img.png">
+   <meta name="twitter:description"
+      content="Підберемо найкращі варіанти для вашого відпочинку! Подорож з намі буде комфортною та цікавою!">
+   <meta name="twitter:url" content="https://travelagency.intita.com/">
+   <meta name="twitter:card" content="summary">
+   <!--sharing on twitter end-->
    <!--"Favicon"-->
-
+   <link rel="shortcut icon" sizes="32x32" href="src/images/favicon/favicon_desktop.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="16x16" href="src/images/favicon/favicon_mobile.ico">
    <title>TUI Travel agency</title>
 
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-
+   <!-- loader start -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- loader end -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <link rel="stylesheet" href="src/css/icomoon.css">
    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
    <!--"loader start"-->
-   <div id="loader"></div>
+   <section id="loader">
+      <div class="box-loader" id="box-loader">
+         <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <div class="plane"></div>
+         </div>
+      </div>
+   </section>
    <!--"loader end"-->
 
-   <div id="wrapper" class="container-xxl">
-      <!--"header start"-->
-      <header id="header"></header>
+   <div id="wrapper">
+      <!--header start-->
+      <header id="header">
+         <div class="hamburger-menu">
+            <div class="row">
+               <div class="menu-block menu-wrap-dt">
+                  <div class="logo-container">
+                     <a href="index">
+                        <img class="icon_img" src="./src/images/logo.svg" alt="Logo"></a>
+                  </div>
+                  <div class="menu">
+                     <ul class="list-unstyled d-flex menu-desktop">
+                        <li><a class="" href="#popularDestinations">Популярні напрямки</a></li>
+                        <li><a class="" href="#reviews">Відгуки</a></li>
+                        <li><a class="" href="#questionsAnswers">Часті запитання</a></li>
+                        <li><a class="" href="#contacts">Контакти</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mob-desktop switch-languages">
+                     <a class="text-language" href="index" id="uaLang">Ua</a>
+                     <a class="text-language" href="index-en" id="enLang">Eng</a>
+                  </div>
+               </div>
+
+               <input id="menu__toggle" type="checkbox" />
+               <label id="dropdownMenuButton" class="menu__btn" for="menu__toggle" onclick="toggleMenu()">
+                  <span></span>
+               </label>
+               <div class="menu__box" id="menuBox">
+                  <a href="index">
+                     <img class="header-burger icon-img" src="./src/images/logo.svg" alt="Logo"></a>
+                  <div class="menu-wrap-bg">
+                     <ul>
+                        <li><a class="menu__item" href="#"
+                              onclick="navigateTo('popularDestinations'); closeMenu();">Популярні напрямки</a>
+                        </li>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('reviews'); closeMenu()">Відгуки</a>
+                        </li>
+                        <li><a class="menu__item" href="#" onclick="navigateTo('questionsAnswers'); closeMenu()">Часті
+                              запитання</a>
+                        </li>
+                        <li><a class="menu__item menu__item__contacts" href="#"
+                              onclick="navigateTo('contacts'); closeMenu()">Контакти</a></li>
+                     </ul>
+                     <button class="header-nav-btn check-form" id="headerFormBtn" onclick="openForm1()">Зв’язатись з
+                        оператором</button>
+                     <div class="share-section text-center">
+                        <h2 class="text-center text-share">Поділитись</h2>
+                     </div>
+                     <div class="social-icons">
+                        <div class="icons-start">
+                           <ul class="social-options list-unstyled d-flex icons-menu">
+                              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-Facebook"></i></a>
+                              </li>
+                              <li><a href="https://twitter.com/intent/tweet?url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-twitter"></i></a>
+                              </li>
+                              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-linkedin"></i></a>
+                              </li>
+                              <li><a href="https://t.me/share/url?url=https://travelagency.intita.com"
+                                    target="_blank"><i class="icon-Telegram"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <div class="switch-languages">
+                           <a class="text-language" href="index" id="uaLang">Ua</a>
+                           <a class="text-language" href="index-en" id="enLang">En</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
       <!--"header end"-->
 
       <!--"main-block-TUI start"-->
-      <section id="mainTUI"></section>
+      <section id="mainTUI">
+         <div class="wraper-main">
+            <div class="conteiner container-xxl">
+               <div class="title">
+                  <h1 class="title-h1">TUI travel agency</h1>
+                  <p class="title-p">+38(097) 720-85-54</p>
+                  <p class="title-p">+38(097) 999-89-39</p>
+                  <div class="box-button">
+                     <button class="button-main" onclick="openForm()">Зв’язатись з оператором</button>
+                  </div>
+                  <div class="div-icons">
+                     <div class="border-box-top"></div>
+                     <div class="icons">
+                        <a class="icon-instagram" href="https://www.instagram.com/o_malanska_agent_travel/?hl=ru"
+                           target="_blank"></a>
+                     </div>
+                     <div class="icons">
+                        <a class="icon-Viber"
+                           href="https://invite.viber.com/?g2=AQBosG25WUD2l0rFFsQd1k%2FlmmAqW9zLdaT5%2FeQDR5kbl%2FSF7bVGbLhAF8WUgJyE&lang=ru"
+                           target="_blank"></a>
+                     </div>
+                     <div class="icons ">
+                        <a class="icon-Facebook"
+                           href="https://www.facebook.com/people/Olga-Malanska/pfbid0winMfPP3etdxvyq1CtQW2WC3kgP6VS6bogC3rhaWdwHuiuQu7Xc8exwuTFrcvDK6l/"
+                           target="_blank"></a>
+                     </div>
+                     <div class="icons"><a href="https://t.me/+380977208554" target="_blank" class="icon-Telegram"></a>
+                     </div>
+                     <div class="icons"><a href="https://wa.me/+380977208554" target="_blank" class="icon-whatsapp"></a>
+                     </div>
+                     <div class="border-box-bottom"></div>
+                  </div>
+                  <div class="sharing-box">
+                     <div class="sharing">
+                        <span class="icon-Facebook icon-over"></span>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://travelagency.intita.com"
+                           target="_blank" class="facebook">Поділитись
+                           <span class="icon-Facebook"></span>
+                        </a>
+                     </div>
+                     <div class="sharing">
+                        <span class="icon-twitter icon-over"></span>
+                        <a href="https://twitter.com/intent/tweet?url=https://travelagency.intita.com" target="_blank"
+                           class="twitter">Поділитись
+                           <span class="icon-twitter"></span>
+                        </a>
+                     </div>
+                     <div class="sharing">
+                        <span class="icon-linkedin icon-over"></span>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://travelagency.intita.com"
+                           target="_blank" class="linkedin">Поділитись
+                           <span class="icon-linkedin"></span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!--"main-block-TUI end"-->
 
+      <!--"form-block start"-->
+      <section id="modal-overlay">
+         <form id="form-window" class="registration-form" method="post" accept-charset="utf-8"
+            action="https://intita.com/api/v1/entrant">
+            <span id="close-form-window" type="button" class="icon-close">&#215;</span>
+            <span id="close-form" type="button" class="icon-close" style="display: none;">&#215;</span>
+            <div class="input-wrapper">
+               <input class="input-name" maxlength="30" type="text" name="first_name" placeholder="Ім’я*" value="">
+               <p class="error-text"></p>
+            </div>
+            <div class="input-wrapper">
+               <input class="phone-number" type="tel" name="phone" placeholder="Телефон*" value="">
+               <p class="error-text"></p>
+            </div>
+            <div class="field-button">
+               <div class="img-button">
+                  <button class="text-button check-form order-btn" type="submit">
+                     <p>Залишити заявку</p>
+                  </button>
+               </div>
+            </div>
+            <input type="hidden" name="organization_id" value="112">
+         </form>
+         <div id="second-window">
+            <span id="close-second-window" type="button" class="icon-close">&#215;</span>
+            <span class="form-name-content"> Дякую! <br>Я зателефоную Вам найближчим часом!</span>
+         </div>
+      </section>
+      <!--"form-block end"-->
+
       <!--"travel search (plugin) start"-->
-      <section id="travelSearch"></section>
+      <section id="travelSearch" class="container-xxl">
+         <div id="itTourWidgetWrapper"></div>
+         <script id="itTourWidgetScriptJsx" tourTab="1" euroTab="1" guidedTab="1" ticketsTab="1"
+            src="https://www.ittour.com.ua/tour_search.jsx?id=40813D0510G926N015921792&ver=3"></script>
+      </section>
       <!--"travel search (plugin) end"-->
 
       <!--"types tours start"-->
-      <section id="typesTours"></section>
+      <section id="typesTours" class="container-xxl">
+         <h2>Типи турів</h2>
+         <div class="types-tours_wrapper">
+            <div class="types-tours_row">
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_planet.svg" alt="Зображення планети">
+                  </div>
+                  <h5 class="types-tours_text">Країни</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_ship.svg" alt="Зображення корабля">
+                  </div>
+                  <h5 class="types-tours_text">Круїзи</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_bus.svg" alt="Зображення автобуса">
+                  </div>
+                  <h5 class="types-tours_text">Автобусні</h5>
+               </div>
+            </div>
+            <div class="types-tours_row">
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_mountains.svg" alt="Зображення гiр">
+                  </div>
+                  <h5 class="types-tours_text">Гірські</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_sea.svg" alt="Зображення моря">
+                  </div>
+                  <h5 class="types-tours_text">Морські</h5>
+               </div>
+               <div class="types-tours_item">
+                  <div class="types-tours_img">
+                     <img src="src/images/types-tours/types-tours_buildings.svg" alt="Зображення будiвель">
+                  </div>
+                  <h5 class="types-tours_text">Екскурсії</h5>
+               </div>
+            </div>
+         </div>
+      </section>
       <!--"types tours end"-->
 
       <!--"more popular destinations start"-->
-      <section id="popularDestinations"></section>
+      <section id="popularDestinations" class="container-xxl">
+         <div class="popularD-section">
+            <div class="title">
+               <h2 class="title-text">Популярні <br>напрямки</h2>
+               <div class="dotted-line">
+                  <img src="./src/images/popularDestinations/deskVector-arrow-dotted-line.svg"
+                     alt="There is aroow dotter line">
+               </div>
+            </div>
+            <!--mobile-version-->
+            <div class="container-swiper">
+               <div class="swiper popDestSwiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="content">
+                           <div class="topic-block">
+                              <div class="images-countries">
+                                 <img src="./src/images/popularDestinations/Egypt.svg" alt="There is image Egypt">
+                              </div>
+                              <div class="name-countries">
+                                 <div class="dotted-line">
+                                    <img src="./src/images/popularDestinations/vector-arrow-dotted-line.svg"
+                                       alt="There is aroow dotter line">
+                                 </div>
+                                 <div class="name-text">
+                                    <h3>Єгипет</h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-block">
+                              <p>Єгипет - стародавня історія, пляжі, активний відпочинок та гастрономія. Піраміди,
+                                 дайвінг, смачна єгипетська кухня та екскурсії.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="content">
+                           <div class="topic-block">
+                              <div class="images-countries">
+                                 <img src="./src/images/popularDestinations/Greece.svg" alt="There is image Greece">
+                              </div>
+                              <div class="name-countries">
+                                 <div class="dotted-line">
+                                    <img src="./src/images/popularDestinations/vector-arrow-dotted-line.svg"
+                                       alt="There is aroow dotter line">
+                                 </div>
+                                 <div class="name-text">
+                                    <h3>Греція</h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-block">
+                              <p>Греція - історія, пляжі, гастрономія та природа. Античні пам'ятки, острови, чисті
+                                 пляжі, гастрономія, гори та свята.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="content">
+                           <div class="topic-block">
+                              <div class="images-countries">
+                                 <img src="./src/images/popularDestinations/Turkey.svg" alt="There is image Turkey">
+                              </div>
+                              <div class="name-countries">
+                                 <div class="dotted-line">
+                                    <img src="./src/images/popularDestinations/vector-arrow-dotted-line.svg"
+                                       alt="There is aroow dotter line">
+                                 </div>
+                                 <div class="name-text">
+                                    <h3>Туреччина</h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-block">
+                              <p>Туреччина - унікальна країна з культурною спадщиною, гастрономією та природними
+                                 красами. Пляжі, активний відпочинок, гостинність - все є тут.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="content">
+                           <div class="topic-block">
+                              <div class="images-countries">
+                                 <img src="./src/images/popularDestinations/Spain.svg" alt="There is image Spain">
+                              </div>
+                              <div class="name-countries">
+                                 <div class="dotted-line">
+                                    <img src="./src/images/popularDestinations/vector-arrow-dotted-line.svg"
+                                       alt="There is aroow dotter line">
+                                 </div>
+                                 <div class="name-text">
+                                    <h3>Іспанія</h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-block">
+                              <p>Іспанія - історія, пляжі, гастрономія, фестивалі та природа. Міста, пляжі, кухня,
+                                 свята, гори і історія - все разом.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="content">
+                           <div class="topic-block">
+                              <div class="images-countries">
+                                 <img src="./src/images/popularDestinations/Scandinavia.svg"
+                                    alt="There is image Scandinavia">
+                              </div>
+                              <div class="name-countries">
+                                 <div class="dotted-line">
+                                    <img src="./src/images/popularDestinations/vector-arrow-dotted-line.svg"
+                                       alt="There is aroow dotter line">
+                                 </div>
+                                 <div class="name-text">
+                                    <h3>Скандинавія</h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-block">
+                              <p>Скандинавія - неймовірна природа, архітектура міст, зимові види відпочинку, північне
+                                 сяйво, свіжа кухня та екологія в одному.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--desktop-version-->
+            <div class="containerDesk-swiper">
+               <div class="left-block">
+                  <div class="swiper popDestLeftSwiper loading">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <figure class="content">
+                              <div class="image-item">
+                                 <img src="./src/images/popularDestinations/deskEgypt.svg" alt="There is image Egypt">
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="swiper-slide">
+                           <figure class="content">
+                              <div class="image-item">
+                                 <img src="./src/images/popularDestinations/deskGreece.svg" alt="There is image Greece">
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="swiper-slide">
+                           <figure class="content">
+                              <div class="image-item">
+                                 <img src="./src/images/popularDestinations/deskTurkey.svg" alt="There is image Turkey">
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="swiper-slide">
+                           <figure class="content">
+                              <div class="image-item">
+                                 <img src="./src/images/popularDestinations/deskSpain.svg" alt="There is image Spain">
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="swiper-slide">
+                           <figure class="content">
+                              <div class="image-item">
+                                 <img src="./src/images/popularDestinations/deskScandinavia.svg"
+                                    alt="There is image Scandinavia">
+                              </div>
+                           </figure>
+                        </div>
+                     </div>
+                     <div class="oval-block">
+                        <div class="image-oval">
+                           <img src="./src/images/popularDestinations/deskOval.svg" alt="There is image oval">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="right-block">
+                  <div class="swiper popDestRightSwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="content">
+                              <div class="name-countries">
+                                 <h3>Єгипет</h3>
+                              </div>
+                              <div class="text-block">
+                                 <p>Єгипет - стародавня історія, пляжі, активний відпочинок та гастрономія.
+                                    <br>Піраміди, дайвінг, смачна єгипетська кухня та екскурсії.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="content">
+                              <div class="name-countries">
+                                 <h3>Греція</h3>
+                              </div>
+                              <div class="text-block">
+                                 <p>Греція - історія, пляжі, гастрономія та природа. <br>Античні пам'ятки, острови,
+                                    чисті пляжі, гастрономія, гори та свята.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="content">
+                              <div class="name-countries">
+                                 <h3>Туречина</h3>
+                              </div>
+                              <div class="text-block">
+                                 <p>Туреччина - унікальна країна з культурною спадщиною, гастрономією та природними
+                                    красами. <br>Пляжі, активний відпочинок, гостинність - все є тут.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="content">
+                              <div class="name-countries">
+                                 <h3>Іспанія</h3>
+                              </div>
+                              <div class="text-block">
+                                 <p>Іспанія - історія, пляжі, гастрономія, фестивалі та природа. <br>Міста, пляжі,
+                                    кухня, свята, гори і історія - все разом.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="content">
+                              <div class="name-countries">
+                                 <h3>Скандинавія</h3>
+                              </div>
+                              <div class="text-block">
+                                 <p>Скандинавія - неймовірна природа, архітектура міст, зимові види відпочинку,
+                                    північне сяйво, свіжа кухня та екологія в одному.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- pagination -->
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!--"more popular destinations end"-->
 
+      <div class="background-between" id="bacground-waves">
+         <div class="image_palm">
+            <img src="./src/images/popularDestinations/vector-palm.png" alt="There is palm">
+         </div>
+         <img class="img-background" src="./src/images/popularDestinations/backgroundPopularDestinations.svg"
+            alt="There is background">
+      </div>
+
       <!--"instagram gallery (plugin) start"-->
-      <section id="instagramGallery"></section>
+      <section id="instagramGallery" class="container-xxl">
+         <div id="widbox" style="width: 100%; height: 100%;" data-widbox-widget-id="IHtb1qNrRgVmXNmktVek"></div>
+         <script src="https://widbox.sfo3.cdn.digitaloceanspaces.com/scripts/widbox.min.js" defer></script>
+      </section>
       <!--"instagram gallery (plugin) end"-->
 
       <!--"prepare your trip with us start"-->
-      <section id="prepareTripUs"></section>
+      <section id="prepareTripUs" class="container-xxl">
+         <h2>Налаштуй свою відпустку разом з нами</h2>
+         <div class="list-item">
+            <div class="list-number">
+               <p class="first">1</p>
+            </div>
+            <div class="list-container">
+               <h3>Консультація та обговорення:</h3>
+               <div class="list-description">Початок подорожі - консультація з досвідченими агентами, обговорення
+                  бажань, місць і виду відпочинку та бюджету.
+               </div>
+            </div>
+         </div>
+         <div class="list-item">
+            <div class="list-number">
+               <p>2</p>
+            </div>
+            <div class="list-container">
+               <h3>Персональний маршрут та бронювання:</h3>
+               <div class="list-description">Після консультації розробляємо індивідуальний маршрут з урахуванням
+                  ваших
+                  інтересів, дат, транспорту та розміщення в готелях.
+               </div>
+            </div>
+         </div>
+         <div class="list-item">
+            <div class="list-number">
+               <p>3</p>
+            </div>
+            <div class="list-container">
+               <h3>Підготовка та супровід під час подорожі:</h3>
+               <div class="list-description">Ми не лише бронюємо, але і допомагаємо в оформленні документів,
+                  складанні
+                  списку речей, готуючи вас до від'їзду.
+               </div>
+            </div>
+         </div>
+         <!--"prepare your trip with us button"-->
+         <div class="field-button">
+            <div class="img-button">
+               <button id="prepareTripUs-button" class="text-button order-btn" onclick="openForm()">Залишити
+                  заявку</button>
+            </div>
+         </div>
+      </section>
       <!--"prepare your trip with us end"-->
 
+      <div class="background-between">
+         <img class="img-background" src="./src/images/reviews/reviews_background.svg" alt="There is background">
+      </div>
+
       <!--"reviews start"-->
-      <section id="reviews"></section>
+      <section id="reviews" class="container-xxl">
+         <div class="reviews-section ">
+            <div class="title">
+               <h2>Відгуки</h2>
+            </div>
+            <div class="swiper reviewsSwiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Віталік Богданюк</h5>
+                        <p>Вже багато років користуємось послугами цього оператора. <br> Кожного разу відпочинок на
+                           висоті,
+                           дуже якісний підбір готелів та рекомендації екскурсій! <br>Відпочинок як для
+                           дорослих так і сім’ям з дітьми, всі ваші побажання будуть завжди враховані, а поки будете
+                           обирати ваш майбутній відпочинок розглядаючи фото та відео, вас ще й пригостять чашечкою
+                           смачної
+                           кави ;) <br>Окремо дякую Олі за роботу та особливий підхід до кожного клієнту!</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Oлена Нiжнiк</h5>
+                        <p>Багато разів їздили через дане агенство. <br>Завжди приємна дівчина Ольга надавала якісну
+                           інформацію що до готелів. <br>Відпочинок завжди був підібраний згідно нашим
+                           побажанням, на вищому рівні, багато емоцій і радощів. <br>Рекомендую дане агенство.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Оксана Шляховенко</h5>
+                        <p>Неодноразово відпочивали разом з турагенцією TUI. <br> Менеджер Олічка дуже якісно підбирає
+                           відпочинок під всі ваші побажання. <br> Порадить, підкаже, допоможе з вибором. <br>
+                           Рекомендую, звертайтесь і ви справді не пожалкуєте👍👍👍.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Natalie Lykhvar</h5>
+                        <p>Все супер, підібрали класний відпочинок, а головне подарували нам яскраві емоції та
+                           перезагрузку. <br> Рекомендую, оператор Ольга завжди на зв’язку 👍</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Інна Жосан</h5>
+                        <p>Мені все сподобалось, оператор Ольга була на зв‘язку в потрібні моменти за що їй щире дякую!
+                           <br> Рекомендую даного туроператора.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Iнна Мельник</h5>
+                        <p>Найкращий тур агент для моєї родини та знайомих. <br>Завжди враховуює всі
+                           побажання, комунікабельна, привітна. <br>Має завжди найновішу інформацію. <br>Підбирає
+                           подорожі на любий бюджет зі 100% якістю відпочинку.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Макс Маланський</h5>
+                        <p>Професійно підібраний тур в Домінікану. <br>Все сподобалось. <br>Дякую за сервіс.
+                           <br>Рекомендую.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="content">
+                        <h5>Вiкторiя Сухоцка</h5>
+                        <p>Професійно, <br>майстер своєї справи👍👍👍<br>Рекомендую👍👍👍👍.</p>
+                     </div>
+                  </div>
+
+               </div>
+               <!-- pagination -->
+               <div class="swiper-pagination"></div>
+            </div>
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev icon-swiper2_prev"></div>
+            <div class="swiper-button-next icon-swiper2_next"></div>
+         </div>
+      </section>
       <!--"reviews end"-->
 
       <!--"questions and answers start"-->
-      <section id="questionsAnswers"></section>
+      <section id="questionsAnswers" class="container-xxl">
+         <h2> Часті запитання</h2>
+         <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="field-frame">
+               <div class="under-frame">
+                  <div class="element-frame">
+                     <img src="./src/images/frame.svg" alt="It is frame">
+                  </div>
+                  <div class="above-frame">
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-headingOne">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseOne" aria-expanded="false"
+                              aria-controls="flush-collapseOne">
+                              Коли найкращий час подорожувати в певну країну чи регіон?
+                           </button>
+                        </h3>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                           aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                           <div class="accordion-body">Найкращий час для подорожей залежить від країни і ваших
+                              уподобань.
+                              Літо - для пляжних відпочинків, весна та осінь - для культурних подорожей.</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="field-frame">
+               <div class="under-frame">
+                  <div class="element-frame">
+                     <img src="./src/images/frame.svg" alt="It is frame">
+                  </div>
+                  <div class="above-frame">
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-headingTwo">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                              aria-controls="flush-collapseTwo">
+                              Які турі ви пропонуєте для сімей, молоді, або одиноких мандрівників?
+                           </button>
+                        </h3>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                           aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                           <div class="accordion-body">Наша агенція має різноманітні тури для різних категорій
+                              подорожуючих, а саме сімейні відпустки, молодіжні тури та індивідуальні подорожі. Ми
+                              допоможемо вам знайти оптимальний варіант.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="field-frame">
+               <div class="under-frame">
+                  <div class="element-frame">
+                     <img src="./src/images/frame.svg" alt="It is frame">
+                  </div>
+                  <div class="above-frame">
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-headingThree">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseThree" aria-expanded="false"
+                              aria-controls="flush-collapseThree">
+                              Як можу забронювати тур чи послуги через вашу агенцію?
+                           </button>
+                        </h3>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                           aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                           <div class="accordion-body">Бронювання турів доступне онлайн на сайті, через телефон або в
+                              офісі. Наші менеджери нададуть вам всю необхідну інформацію та допоможуть у виборі
+                              оптимальних варіантів.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="field-frame">
+               <div class="under-frame">
+                  <div class="element-frame">
+                     <img src="./src/images/frame.svg" alt="It is frame">
+                  </div>
+                  <div class="above-frame">
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-headingFour">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseFour" aria-expanded="false"
+                              aria-controls="flush-collapseFour">
+                              Чи потрібна віза для поїздки в певну країну?
+                           </button>
+                        </h3>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                           aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                           <div class="accordion-body">Ми надаємо інформацію про візові вимоги країн та можемо надати
+                              допомогу в оформленні візи.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!--"questions and answers end"-->
 
+      <div class="contacts-qa-bg">
+         <img class="img-background" src="./src/images/contacts/contacts-bg.png" alt="There is background">
+      </div>
+
       <!--"contacts start"-->
-      <section id="contacts"></section>
+      <section id="contacts" class="container-xxl">
+         <h2>Контакти</h2>
+         <div class="contacts-wrap">
+
+            <div class="contact-info">
+               <div class="contacts-group">
+                  <div class="contacts-group-item">
+                     <a href="mailto:luxortravel17@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="26"
+                           height="20" viewBox="0 0 26 20" fill="none">
+                           <rect x="1" y="1" width="24" height="18" rx="2" stroke="#243B73" stroke-width="2" />
+                           <path d="M1 2L11.7195 10.933C12.4612 11.5511 13.5385 11.5511 14.2802 10.933L25 2"
+                              stroke="#243B73" stroke-width="2" />
+                        </svg></a>
+                     <a href="mailto:luxortravel17@gmail.com">
+                        <p>luxortravel17@gmail.com</p>
+                     </a>
+                  </div>
+                  <div class="contacts-group-item">
+                     <a href="tel:+380977208554"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="29"
+                           viewBox="0 0 28 29" fill="none">
+                           <path d="M14.6577 2C20.8608 3.12836 25.3722 8.20599 26.5 13.8478" stroke="#243B73"
+                              stroke-width="2" />
+                           <path d="M14.6577 7.26611C17.9473 7.81462 20.7982 10.7766 21.2368 13.8482" stroke="#243B73"
+                              stroke-width="2" />
+                           <path d="M14.6577 12.5327C15.3156 12.6424 15.8858 13.2348 15.9736 13.8491" stroke="#243B73"
+                              stroke-width="2" />
+                           <path
+                              d="M8.27698 15.0131C9.34294 17.0519 11.623 19.1559 13.6243 20.5705C14.3663 21.0949 15.3662 20.9669 16.0129 20.3287L16.9412 19.4124C17.1838 19.1729 17.6807 19.041 18.1491 18.9737C18.6697 18.8989 19.1768 19.1197 19.5511 19.4891L22.5119 22.4114C22.8746 22.7694 23.3996 23.2875 23.1424 24.1093C23.0779 24.3153 22.94 24.4881 22.7864 24.6397L21.4991 25.9103C19.9798 27.4098 19.4221 28.296 17.9541 27.9096C10.3577 25.9103 5.2934 20.4121 2.25484 14.9139C1.55853 13.6537 1.2428 10.9155 1.74841 9.91555C1.98309 9.4514 3.52869 7.69416 4.55923 6.64509C4.70926 6.49237 4.8821 6.35547 5.09128 6.30992C5.80726 6.15403 6.51705 6.62464 6.81268 6.91642L9.85124 9.91543C10.6615 10.7152 10.1889 11.5815 9.85124 11.9148L8.67273 13.0779C8.15067 13.5932 7.93712 14.3631 8.27698 15.0131Z"
+                              stroke="#243B73" stroke-width="2" />
+                        </svg></a>
+                     <div class="phone">
+                        <a href="tel:+380977208554">
+                           <p>+38 (097) 720-85-54</p>
+                        </a>
+                        <a href="tel:+380979998939">
+                           <p>+38 (097) 999-89-39</p>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="contacts-group-item">
+                     <a href="https://maps.app.goo.gl/ZKkuBrWwdrJ3iraE8" target="_blank"><svg
+                           xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+                           <path
+                              d="M12.0599 13.9137L12.7757 14.612L12.0599 13.9137ZM5.94005 13.9137L5.22426 14.612L5.94005 13.9137ZM14.2222 7.6509C14.2222 8.43944 13.9215 9.4151 13.3777 10.4395C12.8409 11.4507 12.1081 12.4323 11.3441 13.2154L12.7757 14.612C13.6648 13.7007 14.5131 12.5662 15.1442 11.3772C15.7683 10.2015 16.2222 8.89291 16.2222 7.6509H14.2222ZM8.99999 2.55566C11.9037 2.55566 14.2222 4.85622 14.2222 7.6509H16.2222C16.2222 3.71297 12.9692 0.555664 8.99999 0.555664V2.55566ZM3.77777 7.6509C3.77777 4.85622 6.0963 2.55566 8.99999 2.55566V0.555664C5.03081 0.555664 1.77777 3.71297 1.77777 7.6509H3.77777ZM6.65584 13.2154C5.89189 12.4323 5.15908 11.4507 4.62231 10.4395C4.07853 9.4151 3.77777 8.43944 3.77777 7.6509H1.77777C1.77777 8.89291 2.23166 10.2015 2.85577 11.3772C3.4869 12.5662 4.33522 13.7007 5.22426 14.612L6.65584 13.2154ZM8.99999 14.7779C8.86186 14.7779 8.55964 14.7017 8.09667 14.4142C7.65618 14.1407 7.1591 13.7313 6.65584 13.2154L5.22426 14.612C5.80838 15.2108 6.42978 15.7334 7.04166 16.1133C7.63107 16.4793 8.31513 16.7779 8.99999 16.7779V14.7779ZM11.3441 13.2154C10.8409 13.7313 10.3438 14.1407 9.90332 14.4142C9.44035 14.7017 9.13812 14.7779 8.99999 14.7779V16.7779C9.68486 16.7779 10.3689 16.4793 10.9583 16.1133C11.5702 15.7334 12.1916 15.2108 12.7757 14.612L11.3441 13.2154ZM9.77772 7.77778C9.77772 8.20733 9.42949 8.55556 8.99994 8.55556V10.5556C10.5341 10.5556 11.7777 9.3119 11.7777 7.77778H9.77772ZM8.99994 7C9.42949 7 9.77772 7.34822 9.77772 7.77778H11.7777C11.7777 6.24365 10.5341 5 8.99994 5V7ZM8.22216 7.77778C8.22216 7.34822 8.57038 7 8.99994 7V5C7.46581 5 6.22216 6.24365 6.22216 7.77778H8.22216ZM8.99994 8.55556C8.57038 8.55556 8.22216 8.20733 8.22216 7.77778H6.22216C6.22216 9.3119 7.46581 10.5556 8.99994 10.5556V8.55556Z"
+                              fill="#243B73" />
+                           <path
+                              d="M4.60481 17.1052L5.34791 16.436L4.95859 16.0037L4.39034 16.1285L4.60481 17.1052ZM13.3952 17.1052L13.6097 16.1285L13.0414 16.0037L12.6521 16.436L13.3952 17.1052ZM13.0143 17.5117L13.7301 18.21L13.7301 18.21L13.0143 17.5117ZM11.1342 19.0634L10.6067 18.2139L10.6067 18.2139L11.1342 19.0634ZM6.86584 19.0634L7.39334 18.2139L7.39334 18.2139L6.86584 19.0634ZM4.98567 17.5117L4.26987 18.21L4.26987 18.21L4.98567 17.5117ZM4.39034 16.1285C3.24737 16.3795 2.22935 16.7341 1.47036 17.1934C0.763101 17.6213 0 18.3197 0 19.3337H2C2 19.4162 1.95351 19.2387 2.50577 18.9045C3.00629 18.6016 3.79067 18.3078 4.81928 18.082L4.39034 16.1285ZM0 19.3337C0 20.1397 0.490911 20.7483 1.00971 21.1571C1.53977 21.5749 2.24483 21.9073 3.02692 22.168C4.60156 22.6929 6.71329 23.0004 9 23.0004V21.0004C6.86843 21.0004 4.98017 20.7109 3.65937 20.2707C2.99375 20.0488 2.52723 19.8066 2.24765 19.5863C1.9568 19.3571 2 19.2642 2 19.3337H0ZM9 23.0004C11.2867 23.0004 13.3984 22.6929 14.9731 22.168C15.7552 21.9073 16.4602 21.5749 16.9903 21.1571C17.5091 20.7483 18 20.1397 18 19.3337H16C16 19.2642 16.0432 19.3571 15.7523 19.5863C15.4728 19.8066 15.0063 20.0488 14.3406 20.2707C13.0198 20.7109 11.1316 21.0004 9 21.0004V23.0004ZM18 19.3337C18 18.3197 17.2369 17.6213 16.5296 17.1934C15.7707 16.7341 14.7526 16.3795 13.6097 16.1285L13.1807 18.082C14.2093 18.3078 14.9937 18.6016 15.4942 18.9045C16.0465 19.2387 16 19.4162 16 19.3337H18ZM12.6521 16.436C12.535 16.566 12.417 16.692 12.2985 16.8134L13.7301 18.21C13.8676 18.0691 14.0038 17.9238 14.1383 17.7744L12.6521 16.436ZM12.2985 16.8134C11.7414 17.3845 11.1614 17.8694 10.6067 18.2139L11.6617 19.913C12.3878 19.4621 13.0921 18.864 13.7301 18.21L12.2985 16.8134ZM10.6067 18.2139C10.0596 18.5536 9.50275 18.7781 9 18.7781V20.7781C10.0492 20.7781 10.9878 20.3314 11.6617 19.913L10.6067 18.2139ZM9 18.7781C8.49725 18.7781 7.94042 18.5536 7.39334 18.2139L6.33833 19.913C7.01223 20.3314 7.95078 20.7781 9 20.7781V18.7781ZM7.39334 18.2139C6.83858 17.8694 6.25862 17.3845 5.70146 16.8134L4.26987 18.21C4.90791 18.864 5.61219 19.4621 6.33833 19.913L7.39334 18.2139ZM5.70146 16.8134C5.58299 16.692 5.46497 16.566 5.34791 16.436L3.86171 17.7744C3.99622 17.9238 4.13244 18.0692 4.26987 18.21L5.70146 16.8134Z"
+                              fill="#243B73" />
+                        </svg></a>
+                     <p>м. Вінниця, вул. Зодчих 17, оф. 161</p>
+                  </div>
+               </div>
+
+               <iframe class="google-map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.1399044493487!2d28.440713376040904!3d49.21687377541269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b87ecd47a11%3A0x9412c0dfcee34512!2zVFVJINGC0YPRgNCw0LPQtdC90YbRltGP!5e0!3m2!1sru!2sde!4v1699633722292!5m2!1sru!2sde"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+            <div class="contact-form">
+               <form class="form-window registration-form" method="post" accept-charset="utf-8"
+                  action="https://intita.com/api/v1/entrant">
+                  <div class="input-wrapper">
+                     <input class="input-name" maxlength="30" type="text" name="first_name" placeholder="Ім’я*"
+                        value="">
+                     <p class="error-text"></p>
+                  </div>
+                  <div class="input-wrapper">
+                     <input class="phone-number" type="tel" name="phone" placeholder="Телефон*" value="">
+                     <p class="error-text"></p>
+                  </div>
+                  <div class="field-button">
+                     <div class="img-button">
+                        <button class="text-button check-form order-btn" type="submit">
+                           <p>Залишити заявку</p>
+                        </button>
+                     </div>
+                  </div>
+                  <input type="hidden" name="organization_id" value="112">
+               </form>
+               <div id="modal-overlay">
+                  <div class="second-window" id="second-window">
+                     <span id="close-second-window-btn" type="button" class="icon-close">&#215;</span>
+                     <span class="form-name-content"> Дякую! <br>Я зателефоную Вам найближчим часом!</span>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </section>
       <!--"contacts end"-->
 
-      <!--"form window start"-->
-      <section id="modalWindow"></section>
-      <!--form window end-->
-
       <!--"footer start"-->
-      <footer id="footer"></footer>
+      <footer id="footer">
+         <div class="footer-container">
+            <div class="dev-group">
+               <a href="developers"><img src="./src/images/footer-dev-logo.svg"></a>
+               <a href="developers">
+                  <p>Розроблено студентами<br>
+                     Вінницької ІТ-Академії 2023</p>
+               </a>
+            </div>
+            <a href="#" class="scrollup">
+               <div class="outer-circle">
+                  <div class="inner-circle">
+                     <i class="icon-accordion-up"></i>
+                  </div>
+               </div>
+            </a>
+         </div>
+      </footer>
       <!--"footer end"-->
-   </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-   <!-- recaptcha -->
+      <!--Boostrap 5.3.2 start-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+         crossorigin="anonymous"></script>
+      <!--Boostrap 5.3.2 end-->
 
-   <script src="src/js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- recaptcha -->
+      <script type="text/javascript" async=""
+         src="https://www.gstatic.com/recaptcha/releases/gEr-ODersURoIfof1hiDm7R5/recaptcha__ru.js"
+         crossorigin="anonymous"
+         integrity="sha384-TLQJmdPnLiPAQT4yetwoOrytOZ6gFBz1x2lmoy5A/z26Q7wBq8QWOoxzSlcobUUY"></script>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LcwRRUaAAAAADavxcmw5ShOEUt1xMBmRAcPf6QP"></script>
+
+      <script src="src/js/script.js"></script>
 </body>
 
 </html>
